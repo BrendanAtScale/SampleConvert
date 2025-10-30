@@ -1,0 +1,21 @@
+unique_name: dataset_Budget
+object_type: dataset
+label: Budget
+columns:
+  - name: ProjectID
+    data_type: long
+  - name: TaskID
+    data_type: string
+  - name: ResourceID
+    data_type: long
+  - name: Budget Hours
+    data_type: double
+  - name: Budget Cost
+    data_type: double
+  - name: Budget Start Date
+    data_type: datetime
+  - name: countrows1
+    data_type: int
+    sql: '1'
+connection_id: SQL42
+table: Budget

@@ -1,0 +1,8 @@
+unique_name: .Forecast Hours-Craft-Labor
+object_type: metric_calc
+label: .Forecast Hours-Craft-Labor
+expression: >-
+  0 /*CALCULATE([.Forecast Hours],FILTER('Resources',Resources[Resource
+  Name]="Craft Labor")) TODO: Update with valid MDX expression*/
+folder: Forecast\Incremental
+format: '#,0.00'

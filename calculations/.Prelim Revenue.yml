@@ -1,0 +1,6 @@
+unique_name: .Prelim Revenue
+object_type: metric_calc
+label: .Prelim Revenue
+expression: '0 /*BLANK() TODO: Update with valid MDX expression*/'
+format: '""#,0.00;(""#,0.00);""#,0.00'
+is_hidden: true

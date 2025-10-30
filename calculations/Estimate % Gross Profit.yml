@@ -1,0 +1,8 @@
+unique_name: Estimate % Gross Profit
+object_type: metric_calc
+label: Estimate % Gross Profit
+expression: >-
+  0 /*DIVIDE([Estimate Gross Profit], [Estimate Revenue]) TODO: Update with
+  valid MDX expression*/
+folder: Estimate
+format: 0.0%;-0.0%;0.0%

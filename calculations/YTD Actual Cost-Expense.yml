@@ -1,0 +1,10 @@
+unique_name: YTD Actual Cost-Expense
+object_type: metric_calc
+label: YTD Actual Cost-Expense
+expression: >-
+  0 /*if([DateFiltered],DIVIDE(TOTALYTD([.Actual
+  Cost-Expense],'Dates'[Date]),[ActualRowCount])*[ActualRowCount],CALCULATE(TOTALYTD([.Actual
+  Cost-Expense],Dates[Date]),Dates[Current Year Flag]="Y")) TODO: Update with
+  valid MDX expression*/
+folder: Actual\Year to Date-YTD
+format: '""#,0.00;(""#,0.00);""#,0.00'

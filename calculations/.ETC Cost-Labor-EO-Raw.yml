@@ -1,0 +1,9 @@
+unique_name: .ETC Cost-Labor-EO-Raw
+object_type: metric_calc
+label: .ETC Cost-Labor-EO-Raw
+expression: >-
+  0 /*if([HasOneCurrency],CALCULATE(Sum('Current'[ETC
+  Cost]),FILTER('Resources','Resources'[Labor Detail]="Raw"))) TODO: Update with
+  valid MDX expression*/
+folder: ETC\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

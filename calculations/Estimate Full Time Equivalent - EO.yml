@@ -1,0 +1,6 @@
+unique_name: Estimate Full Time Equivalent - EO
+object_type: metric_calc
+label: Estimate Full Time Equivalent - EO
+expression: ([Measures].[Estimate BM US Hours]) / (2088)
+folder: Estimate
+format: '#,0.00'

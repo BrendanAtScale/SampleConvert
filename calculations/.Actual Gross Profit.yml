@@ -1,0 +1,8 @@
+unique_name: .Actual Gross Profit
+object_type: metric_calc
+label: .Actual Gross Profit
+expression: >-
+  0 /*DIVIDE([.Actual Revenue]-[.Actual Cost], NOT([IsTaskLevelFiltered]) &&
+  NOT([IsResourceFiltered])) TODO: Update with valid MDX expression*/
+folder: Actual\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

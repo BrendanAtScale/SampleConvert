@@ -1,0 +1,10 @@
+unique_name: CDB Partnered Received Full Time Equivalent-EO
+object_type: metric_calc
+label: CDB Partnered Received Full Time Equivalent-EO
+expression: >-
+  0 /*if( NOT([IsTaskLevelFiltered]) && NOT([IsResourceFiltered]) ,
+  SUMX(FILTER(PDIPAccounts, PDIPAccounts[Account] in {"CMFE", "CAFE", "CRFE"}),
+  IF(PDIPAccounts[Global Practice] <> "CDB", PDIPAccounts[Net])) ) TODO: Update
+  with valid MDX expression*/
+folder: Actual\Incremental
+format: '#,0.00'

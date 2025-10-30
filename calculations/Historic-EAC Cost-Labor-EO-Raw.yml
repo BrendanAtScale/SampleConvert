@@ -1,0 +1,10 @@
+unique_name: Historic-EAC Cost-Labor-EO-Raw
+object_type: metric_calc
+label: Historic-EAC Cost-Labor-EO-Raw
+expression: >-
+  0 /*if(NOT([IsTaskLevelFiltered]) && NOT([IsResourceFiltered]) &&
+  [HasOneCurrency] && [DateFiltered],
+  CALCULATE(sum('Historic-PSR'[Historic-EAC-Cost-EO-Raw]),LASTNONBLANK('Dates'[Date],CALCULATE(Sum('Historic-PSR'[Historic-EAC-Cost-EO-Raw])))))
+  TODO: Update with valid MDX expression*/
+folder: Estimate at Completion (EAC)
+format: '""#,0.00;(""#,0.00);""#,0.00'

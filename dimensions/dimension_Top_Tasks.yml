@@ -1,0 +1,343 @@
+unique_name: dimension_Top_Tasks
+object_type: dimension
+label: Top Tasks
+hierarchies:
+  - unique_name: Top_Tasks_Hierarchy
+    label: Top Tasks Hierarchy
+    description: Top Tasks Hierarchy
+    levels:
+      - unique_name: TopTaskID
+        secondary_attributes:
+          - unique_name: Top Task Number
+            label: Top Task Number
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Number
+            name_column: Top Task Number
+          - unique_name: Top Task Name
+            label: Top Task Name
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Name
+            name_column: Top Task Name
+          - unique_name: Top Task Owning Company
+            label: Top Task Owning Company
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Owning Company
+            name_column: Top Task Owning Company
+          - unique_name: Top Task Owning Global Practice
+            label: Top Task Owning Global Practice
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Owning Global Practice
+            name_column: Top Task Owning Global Practice
+          - unique_name: Top Task Owning Office Location
+            label: Top Task Owning Office Location
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Owning Office Location
+            name_column: Top Task Owning Office Location
+          - unique_name: Top Task Owning Department
+            label: Top Task Owning Department
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Owning Department
+            name_column: Top Task Owning Department
+          - unique_name: Top Task Owning Organization Name
+            label: Top Task Owning Organization Name
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Owning Organization Name
+            name_column: Top Task Owning Organization Name
+          - unique_name: Top Task Project Loc Country Code
+            label: Top Task Project Loc Country Code
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Project Loc Country Code
+            name_column: Top Task Project Loc Country Code
+          - unique_name: Top Task Project Loc County
+            label: Top Task Project Loc County
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Project Loc County
+            name_column: Top Task Project Loc County
+          - unique_name: Top Task Project Loc State
+            label: Top Task Project Loc State
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Project Loc State
+            name_column: Top Task Project Loc State
+          - unique_name: Top Task Project Loc City
+            label: Top Task Project Loc City
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Project Loc City
+            name_column: Top Task Project Loc City
+          - unique_name: Top Task Project Loc Zip
+            label: Top Task Project Loc Zip
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Project Loc Zip
+            name_column: Top Task Project Loc Zip
+          - unique_name: Top Task Work Loc Country Code
+            label: Top Task Work Loc Country Code
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Work Loc Country Code
+            name_column: Top Task Work Loc Country Code
+          - unique_name: Top Task Work Loc County
+            label: Top Task Work Loc County
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Work Loc County
+            name_column: Top Task Work Loc County
+          - unique_name: Top Task Work Loc State
+            label: Top Task Work Loc State
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Work Loc State
+            name_column: Top Task Work Loc State
+          - unique_name: Top Task Work Loc City
+            label: Top Task Work Loc City
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Work Loc City
+            name_column: Top Task Work Loc City
+          - unique_name: Top Task Work Loc Zip
+            label: Top Task Work Loc Zip
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Work Loc Zip
+            name_column: Top Task Work Loc Zip
+          - unique_name: Top Task Description
+            label: Top Task Description
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Description
+            name_column: Top Task Description
+          - unique_name: Project Role
+            label: Project Role
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Project Role
+            name_column: Project Role
+          - unique_name: Asset Type Global Practice
+            label: Asset Type Global Practice
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Asset Type Global Practice
+            name_column: Asset Type Global Practice
+          - unique_name: Asset
+            label: Asset
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Asset
+            name_column: Asset
+          - unique_name: Service
+            label: Service
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Service
+            name_column: Service
+          - unique_name: Service Detail
+            label: Service Detail
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Service Detail
+            name_column: Service Detail
+          - unique_name: Contract Group
+            label: Contract Group
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Contract Group
+            name_column: Contract Group
+          - unique_name: Performance Obligation Number
+            label: Performance Obligation Number
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Performance Obligation Number
+            name_column: Performance Obligation Number
+          - unique_name: Top Task Site City
+            label: Top Task Site City
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Site City
+            name_column: Top Task Site City
+          - unique_name: Top Task Site City State Postal Country
+            label: Top Task Site City State Postal Country
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Site City State Postal Country
+            name_column: Top Task Site City State Postal Country
+          - unique_name: Top Task Site Country Code
+            label: Top Task Site Country Code
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Site Country Code
+            name_column: Top Task Site Country Code
+          - unique_name: Top Task Site Country Name
+            label: Top Task Site Country Name
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Site Country Name
+            name_column: Top Task Site Country Name
+          - unique_name: Top Task Site County
+            label: Top Task Site County
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Site County
+            name_column: Top Task Site County
+          - unique_name: Top Task Site Postal Code
+            label: Top Task Site Postal Code
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Site Postal Code
+            name_column: Top Task Site Postal Code
+          - unique_name: Top Task Site State Code
+            label: Top Task Site State Code
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Site State Code
+            name_column: Top Task Site State Code
+          - unique_name: Top Task Site State Name
+            label: Top Task Site State Name
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Site State Name
+            name_column: Top Task Site State Name
+          - unique_name: Project-Top Task
+            label: Project-Top Task
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Project-Top Task
+            name_column: Project-Top Task
+          - unique_name: Top Task Friendly Name
+            label: Top Task Friendly Name
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Friendly Name
+            name_column: Top Task Friendly Name
+          - unique_name: Top Task Type
+            label: Top Task Type
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Type
+            name_column: Top Task Type
+          - unique_name: CDB Partnered Net Income Organization Name
+            label: CDB Partnered Net Income Organization Name
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - CDB Partnered Net Income Organization Name
+            name_column: CDB Partnered Net Income Organization Name
+          - unique_name: Top Task Manager
+            label: Top Task Manager
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Manager
+            name_column: Top Task Manager
+          - unique_name: Top Task Manager Email
+            label: Top Task Manager Email
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Manager Email
+            name_column: Top Task Manager Email
+          - unique_name: Top Task Number and Name
+            label: Top Task Number and Name
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Number and Name
+            name_column: Top Task Number and Name
+          - unique_name: Top Task Owning Business Line
+            label: Top Task Owning Business Line
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Owning Business Line
+            name_column: Top Task Owning Business Line
+          - unique_name: Billing Method
+            label: Billing Method
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Billing Method
+            name_column: Billing Method
+          - unique_name: Latest Bill Rate Schedule
+            label: Latest Bill Rate Schedule
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Latest Bill Rate Schedule
+            name_column: Latest Bill Rate Schedule
+          - unique_name: Top Task Intercompany Elimination Source Operating Unit ID
+            label: Top Task Intercompany Elimination Source Operating Unit ID
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Intercompany Elimination Source Operating Unit ID
+            name_column: Top Task Intercompany Elimination Source Operating Unit ID
+          - unique_name: Top Task Intercompany Elimination Source Operating Unit
+            label: Top Task Intercompany Elimination Source Operating Unit
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Intercompany Elimination Source Operating Unit
+            name_column: Top Task Intercompany Elimination Source Operating Unit
+          - unique_name: Top Task Group ID
+            label: Top Task Group ID
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Group ID
+            name_column: Top Task Group ID
+          - unique_name: Top Task Includes Child Intercompany Task Flag
+            label: Top Task Includes Child Intercompany Task Flag
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Includes Child Intercompany Task Flag
+            name_column: Top Task Includes Child Intercompany Task Flag
+          - unique_name: Intercompany Top Task Flag
+            label: Intercompany Top Task Flag
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Intercompany Top Task Flag
+            name_column: Intercompany Top Task Flag
+          - unique_name: Top Task Business Line Global Practice
+            label: Top Task Business Line Global Practice
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Business Line Global Practice
+            name_column: Top Task Business Line Global Practice
+          - unique_name: Top Task Engineering or Construction Flag
+            label: Top Task Engineering or Construction Flag
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - Top Task Engineering or Construction Flag
+            name_column: Top Task Engineering or Construction Flag
+          - unique_name: CDB Partnered Net Income Approved Percent
+            label: CDB Partnered Net Income Approved Percent
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - CDB Partnered Net Income Approved Percent
+            name_column: CDB Partnered Net Income Approved Percent
+          - unique_name: CDB Partnered Net Income Applied Percent
+            label: CDB Partnered Net Income Applied Percent
+            dataset: dataset_Top_Tasks
+            key_columns:
+              - CDB Partnered Net Income Applied Percent
+            name_column: CDB Partnered Net Income Applied Percent
+level_attributes:
+  - unique_name: TopTaskID
+    label: TopTaskID
+    description: Top Tasks.TopTaskID Level
+    dataset: dataset_Top_Tasks
+    key_columns:
+      - TopTaskID
+    name_column: TopTaskID
+relationships:
+  - unique_name: dataset_Top_Tasks_dimension_Projects
+    from:
+      dataset: dataset_Top_Tasks
+      hierarchy: Top_Tasks_Hierarchy
+      join_columns:
+        - ProjectID
+      level: TopTaskID
+    to:
+      dimension: dimension_Projects
+      level: ProjectID
+    type: embedded
+type: standard

@@ -1,0 +1,9 @@
+unique_name: YTD Actual Under_(Over) Billed Revenue
+object_type: metric_calc
+label: YTD Actual Under/(Over) Billed Revenue
+expression: >-
+  0 /*DIVIDE(([YTD Actual Revenue] - [YTD Actual
+  Billings]),[ActualRowCount])*[ActualRowCount] TODO: Update with valid MDX
+  expression*/
+folder: Actual\Year to Date-YTD
+format: '""#,0.00;(""#,0.00);""#,0.00'

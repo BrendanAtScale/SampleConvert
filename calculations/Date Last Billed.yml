@@ -1,0 +1,9 @@
+unique_name: Date Last Billed
+object_type: metric_calc
+label: Date Last Billed
+expression: >-
+  0
+  /*CALCULATE(Max('Billings'[DateLastBilled]),FILTER(ALL('Dates'[Date]),'Dates'[Date]<=Max('Dates'[Date])))
+  TODO: Update with valid MDX expression*/
+folder: Actual\Inception to Date-ITD
+format: short date

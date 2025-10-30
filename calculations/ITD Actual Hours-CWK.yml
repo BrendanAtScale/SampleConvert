@@ -1,0 +1,8 @@
+unique_name: ITD Actual Hours-CWK
+object_type: metric_calc
+label: ITD Actual Hours-CWK
+expression: >-
+  0 /*CALCULATE([ITD Actual Hours],FILTER('Resources',Resources[Resource
+  Category]="Contract Labor")) TODO: Update with valid MDX expression*/
+folder: Actual\Inception to Date-ITD
+format: '#,0.00'

@@ -1,0 +1,11 @@
+unique_name: Projects Baselined Count
+object_type: metric_calc
+label: Projects Baselined Count
+expression: >-
+  0 /*CALCULATE(DISTINCTCOUNT(Projects[ProjectID]), FILTER(Projects,
+  NOT(ISBLANK(Projects[Current BL Cost Budget Version])) ||
+  NOT(ISBLANK(Projects[Current BL Cost Forecast Version])) ||
+  NOT(ISBLANK(Projects[Current BL Revenue Forecast Version])))) TODO: Update
+  with valid MDX expression*/
+folder: Model Statistics
+format: '#,0'

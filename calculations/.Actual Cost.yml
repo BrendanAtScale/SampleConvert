@@ -1,0 +1,8 @@
+unique_name: .Actual Cost
+object_type: metric_calc
+label: .Actual Cost
+expression: >-
+  0 /*if([HasOneCurrency],Sum('TDA Cost'[Actual Cost])) TODO: Update with valid
+  MDX expression*/
+folder: Actual\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

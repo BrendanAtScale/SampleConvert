@@ -1,0 +1,8 @@
+unique_name: Historic-ITD % Completion
+object_type: metric_calc
+label: Historic-ITD % Completion
+expression: >-
+  0 /*If(NOT([IsTaskLevelFiltered]) && NOT([IsResourceFiltered]) &&
+  [HasOneCurrency] && [DateFiltered], DIVIDE([ITD ACTUAL COST],[HISTORIC-EAC
+  COST])) TODO: Update with valid MDX expression*/
+format: 0.00%;-0.00%;0.00%

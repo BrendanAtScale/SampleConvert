@@ -1,0 +1,9 @@
+unique_name: .Actual Cost-Labor-Craft-Burden
+object_type: metric_calc
+label: .Actual Cost-Labor-Craft-Burden
+expression: >-
+  0 /*if([HasOneCurrency],CALCULATE(Sum('TDA Cost'[Actual
+  Cost]),FILTER('Resources', 'Resources'[Labor Detail]= "Burden-Craft"))) TODO:
+  Update with valid MDX expression*/
+folder: Actual\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

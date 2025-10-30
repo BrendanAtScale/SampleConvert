@@ -1,0 +1,11 @@
+unique_name: .ETC Net Income
+object_type: metric_calc
+label: .ETC Net Income
+expression: >-
+  0 /*CALCULATE([.ETC Gross Profit], FILTER(VALUES(Projects[Operating Unit]),
+  NOT(Projects[Operating Unit] in {"AZCO OU", "CONSTRUCTORS OU"}))) -
+  CALCULATE([.ETC Cost-OH], FILTER(VALUES(Projects[Operating Unit]),
+  NOT(Projects[Operating Unit] in {"AZCO OU", "CONSTRUCTORS OU"}))) TODO: Update
+  with valid MDX expression*/
+folder: ETC\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

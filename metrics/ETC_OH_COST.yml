@@ -1,0 +1,7 @@
+unique_name: ETC_OH_COST
+object_type: metric
+label: ETC_OH_COST
+calculation_method: sum
+column: ETC_OH_COST
+dataset: dataset_Current
+unrelated_dimensions_handling: repeat

@@ -1,0 +1,7 @@
+unique_name: SalesAmount
+object_type: metric
+label: SalesAmount
+calculation_method: sum
+column: SalesAmount
+dataset: dataset_Sales
+unrelated_dimensions_handling: repeat

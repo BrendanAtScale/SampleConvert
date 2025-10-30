@@ -1,0 +1,49 @@
+unique_name: dimension_ModelSettings
+object_type: dimension
+label: ModelSettings
+hierarchies:
+  - unique_name: ModelSettings_Hierarchy
+    label: ModelSettings Hierarchy
+    description: ModelSettings Hierarchy
+    levels:
+      - unique_name: CalendarID
+        secondary_attributes:
+          - unique_name: ForecastHistoryCutoffDate
+            label: ForecastHistoryCutoffDate
+            dataset: dataset_ModelSettings
+            key_columns:
+              - ForecastHistoryCutoffDate
+            name_column: ForecastHistoryCutoffDate
+          - unique_name: NetIncomeCutoffDate
+            label: NetIncomeCutoffDate
+            dataset: dataset_ModelSettings
+            key_columns:
+              - NetIncomeCutoffDate
+            name_column: NetIncomeCutoffDate
+          - unique_name: CurrentYearLM
+            label: CurrentYearLM
+            dataset: dataset_ModelSettings
+            key_columns:
+              - CurrentYearLM
+            name_column: CurrentYearLM
+          - unique_name: PFMETCStartDate
+            label: PFMETCStartDate
+            dataset: dataset_ModelSettings
+            key_columns:
+              - PFMETCStartDate
+            name_column: PFMETCStartDate
+          - unique_name: PFMCDBGLMonth
+            label: PFMCDBGLMonth
+            dataset: dataset_ModelSettings
+            key_columns:
+              - PFMCDBGLMonth
+            name_column: PFMCDBGLMonth
+level_attributes:
+  - unique_name: CalendarID
+    label: CalendarID
+    description: ModelSettings.CalendarID Level
+    dataset: dataset_ModelSettings
+    key_columns:
+      - CalendarID
+    name_column: CalendarID
+type: standard

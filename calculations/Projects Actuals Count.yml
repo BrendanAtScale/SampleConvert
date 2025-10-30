@@ -1,0 +1,6 @@
+unique_name: Projects Actuals Count
+object_type: metric_calc
+label: Projects Actuals Count
+expression: '[Measures].[ProjectID]'
+folder: Model Statistics
+format: '#,0'

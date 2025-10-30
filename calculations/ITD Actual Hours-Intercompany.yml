@@ -1,0 +1,9 @@
+unique_name: ITD Actual Hours-Intercompany
+object_type: metric_calc
+label: ITD Actual Hours-Intercompany
+expression: >-
+  0 /*DIVIDE(CALCULATE([.Actual
+  Hours-Intercompany],FILTER(ALL('Dates'[Date]),'Dates'[Date]<=Max('Dates'[Date]))),[ActualRowCount])*[ActualRowCount]
+  TODO: Update with valid MDX expression*/
+folder: Actual\Inception to Date-ITD
+format: '#,0.00'

@@ -1,0 +1,7 @@
+unique_name: Actual Billings
+object_type: metric
+label: Actual Billings
+calculation_method: sum
+column: Actual Billings
+dataset: dataset_Billings
+unrelated_dimensions_handling: repeat

@@ -1,0 +1,9 @@
+unique_name: Post-Close Hours-Intercompany
+object_type: metric_calc
+label: Post-Close Hours-Intercompany
+expression: >-
+  0 /*CALCULATE(sum('IntercompanyHours'[Intercompany
+  Hours]),FILTER(Dates,Dates[Future Month Flag]="Y")) TODO: Update with valid
+  MDX expression*/
+folder: Model Statistics
+format: '#,0.00'

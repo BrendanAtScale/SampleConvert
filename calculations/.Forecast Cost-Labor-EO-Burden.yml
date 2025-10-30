@@ -1,0 +1,8 @@
+unique_name: .Forecast Cost-Labor-EO-Burden
+object_type: metric_calc
+label: .Forecast Cost-Labor-EO-Burden
+expression: >-
+  [Measures].[.Actual Cost-Labor-EO-Burden]+[Measures].[.ETC
+  Cost-Labor-EO-Burden]
+folder: Forecast\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

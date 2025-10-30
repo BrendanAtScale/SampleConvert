@@ -1,0 +1,8 @@
+unique_name: .EAC Cost-Overruns
+object_type: metric_calc
+label: .EAC Cost-Overruns
+expression: >-
+  0 /*DIVIDE(CALCULATE([.Forecast Cost-Overruns],ALL(Dates)),[.EAC
+  Display])*[.EAC Display] TODO: Update with valid MDX expression*/
+folder: Forecast\At Completion
+format: '""#,0.00;(""#,0.00);""#,0.00'

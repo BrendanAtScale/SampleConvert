@@ -1,0 +1,6 @@
+unique_name: .Actual Hours
+object_type: metric_calc
+label: .Actual Hours
+expression: '[Measures].[Actual Hours]'
+folder: Actual\Incremental
+format: '#,0.00'

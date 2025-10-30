@@ -1,0 +1,10 @@
+unique_name: Historic-EAC Cost-Overruns Labor
+object_type: metric_calc
+label: Historic-EAC Cost-Overruns Labor
+expression: >-
+  0 /*if(NOT([IsTaskLevelFiltered]) && NOT([IsResourceFiltered]) &&
+  [HasOneCurrency] && [DateFiltered],
+  CALCULATE(sum('Historic-PSR'[LABOR_OVERRUN]),LASTNONBLANK('Dates'[Date],CALCULATE(Sum('Historic-PSR'[LABOR_OVERRUN])))))
+  TODO: Update with valid MDX expression*/
+folder: Estimate at Completion (EAC)
+format: '""#,0.00;(""#,0.00);""#,0.00'

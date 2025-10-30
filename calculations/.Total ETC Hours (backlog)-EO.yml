@@ -1,0 +1,9 @@
+unique_name: .Total ETC Hours (backlog)-EO
+object_type: metric_calc
+label: .Total ETC Hours (backlog)-EO
+expression: >-
+  0 /*CALCULATE([.Total ETC Hours
+  (backlog)],FILTER('Resources',Resources[Resource Name]="People")) TODO: Update
+  with valid MDX expression*/
+folder: ETC\Total Non Time Phased
+format: '#,0.00'

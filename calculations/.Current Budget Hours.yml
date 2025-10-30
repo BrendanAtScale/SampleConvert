@@ -1,0 +1,6 @@
+unique_name: .Current Budget Hours
+object_type: metric_calc
+label: .Current Budget Hours
+expression: '[Measures].[Budget Hours]'
+folder: Budget\Incremental\Current
+format: '#,0.00'

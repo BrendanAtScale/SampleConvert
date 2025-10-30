@@ -1,0 +1,6 @@
+unique_name: Historic-ETC Cost-Contingency
+object_type: metric_calc
+label: Historic-ETC Cost-Contingency
+expression: '[Measures].[Historic-EAC Cost-Contingency]'
+folder: Estimate to Complete (ETC)
+format: '""#,0.00;(""#,0.00);""#,0.00'

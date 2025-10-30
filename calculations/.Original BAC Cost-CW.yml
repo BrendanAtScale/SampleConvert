@@ -1,0 +1,9 @@
+unique_name: .Original BAC Cost-CW
+object_type: metric_calc
+label: .Original BAC Cost-CW
+expression: >-
+  0 /*if([HasOneCurrency],CALCULATE(Sum('Budget-Orig'[Original BAC
+  Cost]),FILTER('Resources',Resources[Reserve Type]="BMcD"))) TODO: Update with
+  valid MDX expression*/
+folder: Budget\At Completion\Original
+format: '""#,0.00;(""#,0.00);""#,0.00'

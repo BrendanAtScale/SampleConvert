@@ -1,0 +1,9 @@
+unique_name: PSR Project Count
+object_type: metric_calc
+label: PSR Project Count
+expression: >-
+  0
+  /*CALCULATE(DISTINCTCOUNT('Historic-PSR'[PROJECT_ID]),NOT(ISBLANK('Historic-PSR'[ABS
+  Value]))) TODO: Update with valid MDX expression*/
+folder: Model Statistics
+format: '#,0'

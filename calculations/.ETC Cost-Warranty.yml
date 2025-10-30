@@ -1,0 +1,9 @@
+unique_name: .ETC Cost-Warranty
+object_type: metric_calc
+label: .ETC Cost-Warranty
+expression: >-
+  0 /*if([HasOneCurrency],CALCULATE(Sum('Current'[ETC
+  Cost]),'Resources'[Resource Category]="WARRANTY")) TODO: Update with valid MDX
+  expression*/
+folder: ETC\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

@@ -1,0 +1,8 @@
+unique_name: .Current BAC Gross Profit
+object_type: metric_calc
+label: .Current BAC Gross Profit
+expression: >-
+  0 /*DIVIDE(([.Current BAC Revenue] - [.Current BAC Cost]),[.Current BAC
+  Display])*[.Current BAC Display] TODO: Update with valid MDX expression*/
+folder: Budget\At Completion\Current
+format: '""#,0.00;(""#,0.00);""#,0.00'

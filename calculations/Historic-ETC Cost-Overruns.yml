@@ -1,0 +1,6 @@
+unique_name: Historic-ETC Cost-Overruns
+object_type: metric_calc
+label: Historic-ETC Cost-Overruns
+expression: '[Measures].[Historic-EAC Cost-Overruns]'
+folder: Estimate to Complete (ETC)
+format: '""#,0.00;(""#,0.00);""#,0.00'

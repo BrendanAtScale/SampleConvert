@@ -1,0 +1,55 @@
+unique_name: dataset_Billings
+object_type: dataset
+label: Billings
+columns:
+  - name: ProjectID
+    data_type: long
+  - name: TaskID
+    data_type: string
+  - name: Actual Billings
+    data_type: double
+  - name: DateLastBilled
+    data_type: datetime
+  - name: Billings GL Date
+    data_type: datetime
+  - name: countrows1
+    data_type: int
+    sql: '1'
+connection_id: SQL42
+sql: >-
+  SELECT Billings.PROJECT_ID ProjectID, (CASE WHEN ProjectList.[Project Billing
+  Level] = 'TOP_TASK' THEN Billings.TASK_ID ELSE Billings.PROJECT_ID * - 1 END)
+  AS TaskID, (CASE WHEN YEAR(Billings.GL_DATE) < 2000 THEN DATEFROMPARTS(2000,
+  1, 1) ELSE DATEFROMPARTS(YEAR(Billings.GL_DATE), MONTH(Billings.GL_DATE), 1)
+  END) AS [Billings GL Date], round(sum(Billings.FUNCTIONAL_BILLED_AMOUNT), 4)
+  AS [Actual Billings], Billings.DATE_LAST_BILLED DateLastBilled FROM
+  AnalyticsSource.dbo.Billings INNER JOIN /* direct projects with to-date
+  actuals costs or non-converted approved cost budgets, primary cost forecasts,
+  or primary revenue forecasts with baselined dates on or after 7/1/2013 */
+  (SELECT DISTINCT FinancialPlanVersions.PROJECT_ID, Projects.[Project Billing
+  Level] FROM AnalyticsSource.dbo.FinancialPlanVersions INNER JOIN
+  Model_Common.dbo.Projects_West Projects ON FinancialPlanVersions.PROJECT_ID =
+  Projects.ProjectID AND Projects.[Project Direct Flag] = 'Y' AND
+  (Projects.PROJECTID <> 1427177) WHERE (FinancialPlanVersions.FIN_PLAN_TYPE_ID
+  IN (10040, 10060, 10062)) /* Approved Cost Budget, Primary Cost Forecast,
+  Primary Revenue Forecast */ AND (FinancialPlanVersions.VERSION_NAME <>
+  'CONVERTED VERSION') AND (FinancialPlanVersions.BASELINED_DATE >=
+  try_convert(date, '2013-07-01')) OR (FinancialPlanVersions.FIN_PLAN_TYPE_ID =
+  156596) /* To-Date Actuals Cost */ union all SELECT DISTINCT
+  FinancialPlanVersions.PROJECT_ID, Projects.[Project Billing Level] FROM
+  AnalyticsSource.east.FinancialPlanVersions INNER JOIN
+  Model_Common.dbo.Projects_East Projects ON FinancialPlanVersions.PROJECT_ID =
+  Projects.ProjectID AND Projects.[Project Direct Flag] = 'Y' AND
+  (Projects.PROJECTID <> 1427177) WHERE (FinancialPlanVersions.FIN_PLAN_TYPE_ID
+  IN (10040, 10060, 10062)) /* Approved Cost Budget, Primary Cost Forecast,
+  Primary Revenue Forecast */ AND (FinancialPlanVersions.VERSION_NAME <>
+  'CONVERTED VERSION') AND (FinancialPlanVersions.BASELINED_DATE >=
+  try_convert(date, '2013-07-01')) OR (FinancialPlanVersions.FIN_PLAN_TYPE_ID =
+  156596) /* To-Date Actuals Cost */ ) AS ProjectList ON Billings.PROJECT_ID =
+  ProjectList.PROJECT_ID WHERE (Billings.FUNCTIONAL_BILLED_AMOUNT <> 0) GROUP BY
+  Billings.PROJECT_ID , (CASE WHEN ProjectList.[Project Billing Level] =
+  'TOP_TASK' THEN Billings.TASK_ID ELSE Billings.PROJECT_ID * - 1 END) /* TaskID
+  */ , (CASE WHEN YEAR(Billings.GL_DATE) < 2000 THEN DATEFROMPARTS(2000, 1, 1)
+  ELSE DATEFROMPARTS(YEAR(Billings.GL_DATE), MONTH(Billings.GL_DATE), 1) END) /*
+  [Billings GL Date] */ , Billings.DATE_LAST_BILLED HAVING
+  (round(SUM(Billings.FUNCTIONAL_BILLED_AMOUNT), 4) <> 0)

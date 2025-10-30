@@ -1,0 +1,7 @@
+unique_name: CWKLaborCost
+object_type: metric
+label: CWKLaborCost
+calculation_method: sum
+column: CWKLaborCost
+dataset: dataset_Estimates
+unrelated_dimensions_handling: repeat

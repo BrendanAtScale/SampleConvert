@@ -1,0 +1,9 @@
+unique_name: .ETC Burdened Labor Cost Rate
+object_type: metric_calc
+label: .ETC Burdened Labor Cost Rate
+expression: >-
+  0 /*if(NOT([IsLaborDetailFiltered]),DIVIDE([.ETC
+  Cost-Labor-Total-Burdened],[.ETC Hours (backlog)])) TODO: Update with valid
+  MDX expression*/
+folder: ETC\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

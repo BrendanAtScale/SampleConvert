@@ -1,0 +1,8 @@
+unique_name: .EAC ELM
+object_type: metric_calc
+label: .EAC ELM
+expression: >-
+  ([Measures].[.EAC Gross Profit]+[Measures].[.EAC Cost-Labor-EO-Burdened]) /
+  ([Measures].[.EAC Cost-Labor-EO-Raw])
+folder: Forecast\At Completion
+format: '#,0.00'

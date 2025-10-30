@@ -1,0 +1,8 @@
+unique_name: ETCStartDate
+object_type: metric
+label: ETCStartDate
+calculation_method: maximum
+column: ETCStartDate
+dataset: dataset_Dates
+format: yyyy-MM-dd
+unrelated_dimensions_handling: repeat

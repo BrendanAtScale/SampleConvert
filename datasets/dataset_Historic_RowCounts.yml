@@ -1,0 +1,29 @@
+unique_name: dataset_Historic_RowCounts
+object_type: dataset
+label: Historic RowCounts
+columns:
+  - name: PROJECT_ID
+    data_type: long
+  - name: PSR_START_DATE
+    data_type: datetime
+  - name: RowCount
+    data_type: long
+  - name: countrows1
+    data_type: int
+    sql: '1'
+connection_id: SQL42
+sql: >-
+  SELECT PSR.PROJECT_ID, PSR.PSR_START_DATE, COUNT(PSR.GL_PERIOD) AS [RowCount]
+  FROM AnalyticsSource.dbo.Historic_Psr_Data_Dump AS PSR INNER JOIN
+  SISOT.dbo.PSMSettings ON PSR.PSR_START_DATE >= DATEADD(MONTH, - 36,
+  PSMSettings.ForecastHistoryCutoffDate) AND PSR.PSR_START_DATE <=
+  PSMSettings.ForecastHistoryCutoffDate INNER JOIN
+  EnterpriseDataStore.dbo.Projects ON Projects.Project_ID = PSR.PROJECT_ID GROUP
+  BY PSR.PROJECT_ID, PSR.PSR_START_DATE UNION ALL SELECT PSR.PROJECT_ID,
+  PSR.PSR_START_DATE, COUNT(PSR.GL_PERIOD) AS [RowCount] FROM
+  AnalyticsSource.east.Historic_Psr_Data_Dump AS PSR INNER JOIN
+  SISOT.dbo.PSMSettings ON PSR.PSR_START_DATE >= DATEADD(MONTH, - 36,
+  PSMSettings.ForecastHistoryCutoffDate) AND PSR.PSR_START_DATE <=
+  PSMSettings.ForecastHistoryCutoffDate INNER JOIN
+  EnterpriseDataStore.east.Projects ON Projects.Project_ID = PSR.PROJECT_ID
+  GROUP BY PSR.PROJECT_ID, PSR.PSR_START_DATE

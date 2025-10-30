@@ -1,0 +1,9 @@
+unique_name: .ETC Cost-Contingency
+object_type: metric_calc
+label: .ETC Cost-Contingency
+expression: >-
+  0 /*if([HasOneCurrency],CALCULATE(Sum('Current'[ETC
+  Cost]),'Resources'[Resource Category]="INTERNAL CONTINGENCY")) TODO: Update
+  with valid MDX expression*/
+folder: ETC\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

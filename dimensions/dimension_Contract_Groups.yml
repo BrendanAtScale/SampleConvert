@@ -1,0 +1,49 @@
+unique_name: dimension_Contract_Groups
+object_type: dimension
+label: Contract Groups
+hierarchies:
+  - unique_name: Contract_Groups_Hierarchy
+    label: Contract Groups Hierarchy
+    description: Contract Groups Hierarchy
+    levels:
+      - unique_name: Contract Group
+        secondary_attributes:
+          - unique_name: Participant 2
+            label: Participant 2
+            dataset: dataset_Contract_Groups
+            key_columns:
+              - Participant 2
+            name_column: Participant 2
+          - unique_name: Top Contract Flag
+            label: Top Contract Flag
+            dataset: dataset_Contract_Groups
+            key_columns:
+              - Top Contract Flag
+            name_column: Top Contract Flag
+          - unique_name: Performance Obligation Flag
+            label: Performance Obligation Flag
+            dataset: dataset_Contract_Groups
+            key_columns:
+              - Performance Obligation Flag
+            name_column: Performance Obligation Flag
+          - unique_name: Contract Group Lead Eng GP
+            label: Contract Group Lead Eng GP
+            dataset: dataset_Contract_Groups
+            key_columns:
+              - Contract Group Lead Eng GP
+            name_column: Contract Group Lead Eng GP
+          - unique_name: Participant 1
+            label: Participant 1
+            dataset: dataset_Contract_Groups
+            key_columns:
+              - Participant 1
+            name_column: Participant 1
+level_attributes:
+  - unique_name: Contract Group
+    label: Contract Group
+    description: Contract Groups.Contract Group Level
+    dataset: dataset_Contract_Groups
+    key_columns:
+      - Contract Group
+    name_column: Contract Group
+type: standard

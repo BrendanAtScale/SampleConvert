@@ -1,0 +1,6 @@
+unique_name: Historic-EAC Full Time Equivalent - CWK
+object_type: metric_calc
+label: Historic-EAC Full Time Equivalent - CWK
+expression: ([Measures].[Historic-EAC Hours-CWK]) / (2088)
+folder: PDIP
+format: '#,0.00'

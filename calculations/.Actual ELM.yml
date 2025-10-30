@@ -1,0 +1,10 @@
+unique_name: .Actual ELM
+object_type: metric_calc
+label: .Actual ELM
+expression: >-
+  0 /*DIVIDE(DIVIDE(([.Actual Gross Profit]+[.Actual
+  Cost-Labor-EO-Burdened]),[.Actual Cost-Labor-EO-Raw]),
+  NOT([IsTaskLevelFiltered]) && NOT([IsResourceFiltered])) TODO: Update with
+  valid MDX expression*/
+folder: Actual\Incremental
+format: '#,0.00'

@@ -1,0 +1,7 @@
+unique_name: CWK Lug
+object_type: metric
+label: CWK Lug
+calculation_method: sum
+column: CWK Lug
+dataset: dataset_Estimates
+unrelated_dimensions_handling: repeat

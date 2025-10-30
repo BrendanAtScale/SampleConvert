@@ -1,0 +1,7 @@
+unique_name: TopTaskID
+object_type: metric
+label: TopTaskID
+calculation_method: count distinct
+column: TopTaskID
+dataset: dataset_Top_Tasks
+unrelated_dimensions_handling: repeat

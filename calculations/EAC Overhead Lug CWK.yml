@@ -1,0 +1,10 @@
+unique_name: EAC Overhead Lug CWK
+object_type: metric_calc
+label: EAC Overhead Lug CWK
+expression: >-
+  0 /*DIVIDE(CALCULATE([Actual Overhead Lug CWK] + [ETC Overhead Lug CWK],
+  ALL(Dates)), [.EAC Display]) * [.EAC Display] TODO: Update with valid MDX
+  expression*/
+folder: PDIP
+format: '""#,0.00;(""#,0.00);""#,0.00'
+is_hidden: true

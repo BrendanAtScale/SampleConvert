@@ -1,0 +1,8 @@
+unique_name: Cumul. Forecast % Margin-Best Case
+object_type: metric_calc
+label: Cumul. Forecast % Margin-Best Case
+expression: >-
+  ([Measures].[Cumul. Forecast Gross Profit-Best Case]) / ([Measures].[Cumul.
+  Forecast Revenue])
+folder: Forecast\Cumulative
+format: 0.0%;-0.0%;0.0%

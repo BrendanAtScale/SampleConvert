@@ -1,0 +1,7 @@
+unique_name: TDARowCount
+object_type: metric
+label: TDARowCount
+calculation_method: sum
+column: TDARowCount
+dataset: dataset_Dates
+unrelated_dimensions_handling: repeat

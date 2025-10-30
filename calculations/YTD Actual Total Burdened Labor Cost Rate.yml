@@ -1,0 +1,10 @@
+unique_name: YTD Actual Total Burdened Labor Cost Rate
+object_type: metric_calc
+label: YTD Actual Total Burdened Labor Cost Rate
+expression: >-
+  0 /*if(NOT([IsLaborDetailFiltered]),DIVIDE([YTD Actual
+  Cost-Labor-Total-Burdened],[YTD Actual Hours])) TODO: Update with valid MDX
+  expression*/
+folder: Actual\Year to Date-YTD
+format: '""#,0.00;(""#,0.00);""#,0.00'
+is_hidden: true

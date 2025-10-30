@@ -1,0 +1,19 @@
+unique_name: dimension_Users
+object_type: dimension
+label: Users
+hierarchies:
+  - unique_name: Users_Hierarchy
+    label: Users Hierarchy
+    description: Users Hierarchy
+    levels:
+      - unique_name: Username
+level_attributes:
+  - unique_name: Username
+    label: Username
+    description: Users.Username Level
+    dataset: dataset_Users
+    is_hidden: true
+    key_columns:
+      - Username
+    name_column: Username
+type: standard

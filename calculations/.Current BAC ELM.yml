@@ -1,0 +1,9 @@
+unique_name: .Current BAC ELM
+object_type: metric_calc
+label: .Current BAC ELM
+expression: >-
+  0 /*DIVIDE(DIVIDE(([.Current BAC Gross Profit]+[.Current BAC
+  Cost-Labor-EO-Burdened]),[.Current BAC Cost-Labor-EO-Raw]),[.Current BAC
+  Display])*[.Current BAC Display] TODO: Update with valid MDX expression*/
+folder: Budget\At Completion\Current
+format: '""#,0.00;(""#,0.00);""#,0.00'

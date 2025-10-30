@@ -1,0 +1,9 @@
+unique_name: .Total ETC Hours (backlog)-CWK
+object_type: metric_calc
+label: .Total ETC Hours (backlog)-CWK
+expression: >-
+  0 /*CALCULATE([.Total ETC Hours (backlog)],FILTER('Resources',
+  Resources[Resource Category]="Contract Labor")) TODO: Update with valid MDX
+  expression*/
+folder: ETC\Total Non Time Phased
+format: '#,0.00'

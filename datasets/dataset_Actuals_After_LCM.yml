@@ -1,0 +1,21 @@
+unique_name: dataset_Actuals_After_LCM
+object_type: dataset
+label: Actuals After LCM
+columns:
+  - name: ProjectID
+    data_type: long
+  - name: TaskID
+    data_type: string
+  - name: ResourceID
+    data_type: long
+  - name: Post-Close Actual Hours
+    data_type: double
+  - name: Post-Close Actual Cost
+    data_type: double
+  - name: Last Close Date
+    data_type: datetime
+  - name: countrows1
+    data_type: int
+    sql: '1'
+connection_id: SQL42
+table: Actuals After LCM

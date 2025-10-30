@@ -1,0 +1,8 @@
+unique_name: YE Business Plan BEM
+object_type: metric_calc
+label: YE Business Plan BEM
+expression: >-
+  0 /*if(HASONEVALUE('Top Tasks'[TTGPLoc]),CALCULATE(Average('Top
+  Tasks'[YTDPlanKeyBEM]))) TODO: Update with valid MDX expression*/
+folder: Model Statistics
+format: '""#,0.00;(""#,0.00);""#,0.00'

@@ -1,0 +1,7 @@
+unique_name: TPFProcessDate
+object_type: metric
+label: TPFProcessDate
+calculation_method: maximum
+column: TPFProcessDate
+dataset: dataset_Dates
+unrelated_dimensions_handling: repeat

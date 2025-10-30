@@ -1,0 +1,8 @@
+unique_name: ITD Actual Value Contribution
+object_type: metric_calc
+label: ITD Actual Value Contribution
+expression: >-
+  [Measures].[ITD Actual Net Income]-[Measures].[ITD Actual Under_(Over) Billed
+  Revenue]
+folder: Actual\Inception to Date-ITD
+format: '""#,0.00;(""#,0.00);""#,0.00'

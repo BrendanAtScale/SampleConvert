@@ -1,0 +1,8 @@
+unique_name: .ETC Hours (backlog)-CWK
+object_type: metric_calc
+label: .ETC Hours (backlog)-CWK
+expression: >-
+  0 /*CALCULATE([.ETC Hours (backlog)], FILTER('Resources', Resources[Resource
+  Category]="Contract Labor")) TODO: Update with valid MDX expression*/
+folder: ETC\Incremental
+format: '#,0.00'

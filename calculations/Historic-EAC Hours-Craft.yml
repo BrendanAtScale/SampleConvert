@@ -1,0 +1,10 @@
+unique_name: Historic-EAC Hours-Craft
+object_type: metric_calc
+label: Historic-EAC Hours-Craft
+expression: >-
+  0 /*if(NOT([IsTaskLevelFiltered]) && NOT([IsResourceFiltered]) &&
+  [DateFiltered],
+  CALCULATE(sum('Historic-PSR'[Historic-EAC-Hours-Craft]),LASTNONBLANK('Dates'[Date],CALCULATE(Sum('Historic-PSR'[Historic-EAC-Hours-Craft])))))
+  TODO: Update with valid MDX expression*/
+folder: Estimate at Completion (EAC)
+format: '#,0.00'

@@ -1,0 +1,7 @@
+unique_name: Post-Close Actual Hours
+object_type: metric
+label: Post-Close Actual Hours
+calculation_method: sum
+column: Post-Close Actual Hours
+dataset: dataset_Actuals_After_LCM
+unrelated_dimensions_handling: repeat

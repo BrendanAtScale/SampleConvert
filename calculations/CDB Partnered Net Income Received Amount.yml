@@ -1,0 +1,10 @@
+unique_name: CDB Partnered Net Income Received Amount
+object_type: metric_calc
+label: CDB Partnered Net Income Received Amount
+expression: >-
+  0 /*if( NOT([IsTaskLevelFiltered]) && NOT([IsResourceFiltered]) &&
+  [HasOneCurrency] , SUMX('CDB Recirc', IF('CDB Recirc'[CDB Recirculated Net
+  Income Global Practice] <> "CDB", 'CDB Recirc'[net])) ) TODO: Update with
+  valid MDX expression*/
+folder: Actual\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

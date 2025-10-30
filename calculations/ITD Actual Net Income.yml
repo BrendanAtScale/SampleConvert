@@ -1,0 +1,9 @@
+unique_name: ITD Actual Net Income
+object_type: metric_calc
+label: ITD Actual Net Income
+expression: >-
+  0 /*DIVIDE(CALCULATE([.Annualized Net
+  Income],FILTER(ALL('Dates'[Date]),'Dates'[Date]<=Max('Dates'[Date]))),[ActualRowCount])*[ActualRowCount]
+  TODO: Update with valid MDX expression*/
+folder: Actual\Inception to Date-ITD
+format: '""#,0.00;(""#,0.00);""#,0.00'

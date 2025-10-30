@@ -1,0 +1,9 @@
+unique_name: FutureBudgetRecordCount
+object_type: metric_calc
+label: FutureBudgetRecordCount
+expression: >-
+  0
+  /*CALCULATE(COUNTROWS(Budget),FILTER(ALL('Dates'[Date]),'Dates'[Date]>=MIN('Dates'[Date])))+[ActualRowCount]
+  TODO: Update with valid MDX expression*/
+folder: Display
+is_hidden: true

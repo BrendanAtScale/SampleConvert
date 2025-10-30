@@ -1,0 +1,10 @@
+unique_name: Historic-ETC Cost-Labor-Total
+object_type: metric_calc
+label: Historic-ETC Cost-Labor-Total
+expression: >-
+  0 /*[Historic-ETC Cost-Labor-EO-Raw]+[Historic-ETC
+  Cost-Labor-EO-Burden]+[Historic-ETC Cost-Labor-CWK]+[Historic-ETC
+  Cost-Labor-Craft-Raw]+[Historic-ETC Cost-Labor-Craft-Burden] TODO: Update with
+  valid MDX expression*/
+folder: Estimate to Complete (ETC)
+format: '""#,0.00;(""#,0.00);""#,0.00'

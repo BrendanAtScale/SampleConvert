@@ -1,0 +1,7 @@
+unique_name: EstimateContingency
+object_type: metric
+label: EstimateContingency
+calculation_method: sum
+column: EstimateContingency
+dataset: dataset_Estimates
+unrelated_dimensions_handling: repeat

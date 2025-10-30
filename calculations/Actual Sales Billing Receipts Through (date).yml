@@ -1,0 +1,6 @@
+unique_name: Actual Sales Billing Receipts Through (date)
+object_type: metric_calc
+label: Actual Sales Billing Receipts Through (date)
+expression: '[Measures].[PFM Processed On (date time)]-1'
+folder: Model Statistics
+format: short date

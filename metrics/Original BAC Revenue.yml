@@ -1,0 +1,7 @@
+unique_name: Original BAC Revenue
+object_type: metric
+label: Original BAC Revenue
+calculation_method: sum
+column: Original BAC Revenue
+dataset: dataset_Budget-Orig
+unrelated_dimensions_handling: repeat

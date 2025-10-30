@@ -1,0 +1,6 @@
+unique_name: .Forecast Cost
+object_type: metric_calc
+label: .Forecast Cost
+expression: '[Measures].[.Actual Cost]+[Measures].[.ETC Cost]'
+folder: Forecast\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

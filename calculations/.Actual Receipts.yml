@@ -1,0 +1,9 @@
+unique_name: .Actual Receipts
+object_type: metric_calc
+label: .Actual Receipts
+expression: >-
+  0 /*DIVIDE(Sum('Receipts'[Received]), NOT([IsTaskLevelFiltered]) &&
+  NOT([IsResourceFiltered]) && [HasOneCurrency]) TODO: Update with valid MDX
+  expression*/
+folder: Actual\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

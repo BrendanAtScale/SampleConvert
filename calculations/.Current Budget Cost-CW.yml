@@ -1,0 +1,7 @@
+unique_name: .Current Budget Cost-CW
+object_type: metric_calc
+label: .Current Budget Cost-CW
+expression: >-
+  0 /*if([HasOneCurrency],CALCULATE(Sum(Budget[Budget Cost]),'Resources'[Reserve
+  Type]="BMcD")) TODO: Update with valid MDX expression*/
+is_hidden: true

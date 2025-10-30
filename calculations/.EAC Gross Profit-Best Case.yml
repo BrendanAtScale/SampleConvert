@@ -1,0 +1,6 @@
+unique_name: .EAC Gross Profit-Best Case
+object_type: metric_calc
+label: .EAC Gross Profit-Best Case
+expression: '[Measures].[.EAC Revenue]-[Measures].[.EAC Cost]+[Measures].[.EAC Cost-CW]'
+folder: Forecast\At Completion
+format: '""#,0.00;(""#,0.00);""#,0.00'

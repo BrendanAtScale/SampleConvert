@@ -1,0 +1,6 @@
+unique_name: .Forecast Cost-Warranty
+object_type: metric_calc
+label: .Forecast Cost-Warranty
+expression: '[Measures].[.ETC Cost-Warranty]'
+folder: Forecast\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

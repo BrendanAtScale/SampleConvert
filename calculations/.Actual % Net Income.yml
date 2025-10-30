@@ -1,0 +1,6 @@
+unique_name: .Actual % Net Income
+object_type: metric_calc
+label: .Actual % Net Income
+expression: ([Measures].[.Actual Net Income]) / ([Measures].[.Actual Revenue])
+folder: Actual\Incremental
+format: 0.0%;-0.0%;0.0%

@@ -1,0 +1,9 @@
+unique_name: .Actual Net Income-Final
+object_type: metric_calc
+label: .Actual Net Income-Final
+expression: >-
+  0 /*DIVIDE(CALCULATE(Sum('Net Income'[ANP]),'Net Income'[Net Income Period
+  Type]="PTD"), NOT([IsTaskLevelFiltered]) && NOT([IsResourceFiltered]) &&
+  [HasOneCurrency]) TODO: Update with valid MDX expression*/
+folder: Actual\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

@@ -1,0 +1,8 @@
+unique_name: Actual Final Net Income Through (date)
+object_type: metric_calc
+label: Actual Final Net Income Through (date)
+expression: >-
+  0 /*CALCULATE(Max(ModelSettings[NetIncomeCutoffDate])) TODO: Update with valid
+  MDX expression*/
+folder: Model Statistics
+format: short date

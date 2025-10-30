@@ -1,0 +1,9 @@
+unique_name: Cumul. Forecast Cost
+object_type: metric_calc
+label: Cumul. Forecast Cost
+expression: >-
+  0 /*Divide(CALCULATE([.Forecast
+  Cost],FILTER(ALL('Dates'[Date]),'Dates'[Date]<=Max('Dates'[Date]))),[FutureForecastRecordCount])*[FutureForecastRecordCount]
+  TODO: Update with valid MDX expression*/
+folder: Forecast\Cumulative
+format: '""#,0.00;(""#,0.00);""#,0.00'

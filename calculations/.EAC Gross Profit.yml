@@ -1,0 +1,6 @@
+unique_name: .EAC Gross Profit
+object_type: metric_calc
+label: .EAC Gross Profit
+expression: '[Measures].[.EAC Revenue]-[Measures].[.EAC Cost]'
+folder: Forecast\At Completion
+format: '""#,0.00;(""#,0.00);""#,0.00'

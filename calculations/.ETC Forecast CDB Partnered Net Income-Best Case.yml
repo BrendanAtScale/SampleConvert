@@ -1,0 +1,13 @@
+unique_name: .ETC Forecast CDB Partnered Net Income-Best Case
+object_type: metric_calc
+label: .ETC Forecast CDB Partnered Net Income-Best Case
+expression: >-
+  0 /*SUMX(filter('Top Tasks', 'Top Tasks'[Top Task Type] = "CDB RECIRC/ PDIP"),
+  var pid = 'Top Tasks'[ProjectID] var cdbincome = CALCULATE([.ETC Net
+  Income-Best Case], filter(ALL('Top Tasks'), 'Top Tasks'[Top Task Owning Global
+  Practice] = "CDB" && ISBLANK('Top Tasks'[CDB Partnered Net Income Applied
+  Percent]) && 'Top Tasks'[ProjectID] = pid) ) return cdbincome * 'Top
+  Tasks'[CDB Partnered Net Income Applied Percent] ) TODO: Update with valid MDX
+  expression*/
+folder: ETC\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

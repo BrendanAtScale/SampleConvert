@@ -1,0 +1,8 @@
+unique_name: .Forecast Cost-Labor-EO-Burdened
+object_type: metric_calc
+label: .Forecast Cost-Labor-EO-Burdened
+expression: >-
+  0 /*[.Actual Cost-Labor-EO-Burdened]+[.ETC Cost-Labor-EO-Burdened] TODO:
+  Update with valid MDX expression*/
+folder: Forecast\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

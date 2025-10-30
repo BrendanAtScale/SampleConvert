@@ -1,0 +1,7 @@
+unique_name: TotalHours
+object_type: metric
+label: TotalHours
+calculation_method: sum
+column: TotalHours
+dataset: dataset_Estimates
+unrelated_dimensions_handling: repeat

@@ -1,0 +1,9 @@
+unique_name: Cumul. Forecast Hours
+object_type: metric_calc
+label: Cumul. Forecast Hours
+expression: >-
+  0 /*DIVIDE(CALCULATE([.Forecast
+  Hours],FILTER(ALL('Dates'[Date]),'Dates'[Date]<=Max('Dates'[Date]))),[FutureForecastRecordCount])*[FutureForecastRecordCount]
+  TODO: Update with valid MDX expression*/
+folder: Forecast\Cumulative
+format: '#,0.00'

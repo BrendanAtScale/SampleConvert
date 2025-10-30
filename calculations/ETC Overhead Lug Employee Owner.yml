@@ -1,0 +1,10 @@
+unique_name: ETC Overhead Lug Employee Owner
+object_type: metric_calc
+label: ETC Overhead Lug Employee Owner
+expression: >-
+  0 /*DIVIDE( SUMX(FILTER('Current', RELATED(Resources[Resource Category]) =
+  "Employee Labor") , 'Current'[ETC Hours (backlog)] * 'Current'[Overhead Lug
+  Rate]) , 2088 * [HasOneCurrency]) TODO: Update with valid MDX expression*/
+folder: PDIP
+format: '""#,0.00;(""#,0.00);""#,0.00'
+is_hidden: true

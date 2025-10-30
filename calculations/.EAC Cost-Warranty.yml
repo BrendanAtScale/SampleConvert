@@ -1,0 +1,8 @@
+unique_name: .EAC Cost-Warranty
+object_type: metric_calc
+label: .EAC Cost-Warranty
+expression: >-
+  0 /*Divide(CALCULATE([.Forecast Cost-Warranty],ALL(Dates)),[.EAC
+  Display])*[.EAC Display] TODO: Update with valid MDX expression*/
+folder: Forecast\At Completion
+format: '""#,0.00;(""#,0.00);""#,0.00'

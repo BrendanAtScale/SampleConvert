@@ -1,0 +1,9 @@
+unique_name: .Forecast Gross Profit
+object_type: metric_calc
+label: .Forecast Gross Profit
+expression: >-
+  0 /*DIVIDE([.Actual Gross Profit]+[.ETC Gross Profit],
+  NOT([IsTaskLevelFiltered]) && NOT([IsResourceFiltered])) TODO: Update with
+  valid MDX expression*/
+folder: Forecast\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

@@ -1,0 +1,6 @@
+unique_name: .Total ETC Cost-CW
+object_type: metric_calc
+label: .Total ETC Cost-CW
+expression: '[Measures].[.EAC Cost-CW]'
+folder: ETC\Total Non Time Phased
+format: '""#,0.00;(""#,0.00);""#,0.00'

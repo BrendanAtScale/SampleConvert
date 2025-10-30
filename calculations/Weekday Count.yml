@@ -1,0 +1,5 @@
+unique_name: Weekday Count
+object_type: metric_calc
+label: Weekday Count
+expression: '[Measures].[Weekdays This Month Count]'
+format: '#,0'

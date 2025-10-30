@@ -1,0 +1,8 @@
+unique_name: .Current BAC Revenue
+object_type: metric_calc
+label: .Current BAC Revenue
+expression: >-
+  0 /*DIVIDE(CALCULATE([.Forecast Revenue],ALL(Dates)),[.Current BAC
+  Display])*[.Current BAC Display] TODO: Update with valid MDX expression*/
+folder: Budget\At Completion\Current
+format: '""#,0.00;(""#,0.00);""#,0.00'

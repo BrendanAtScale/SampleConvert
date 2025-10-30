@@ -1,0 +1,105 @@
+unique_name: dataset_PDIPAccounts
+object_type: dataset
+label: PDIPAccounts
+columns:
+  - name: ProjectID
+    data_type: long
+  - name: TaskID
+    data_type: string
+  - name: Company
+    data_type: string
+  - name: Global Practice
+    data_type: string
+  - name: Office Location
+    data_type: string
+  - name: Account
+    data_type: string
+  - name: Debit
+    data_type: double
+  - name: Credit
+    data_type: double
+  - name: PeriodDate
+    data_type: datetime
+  - name: Net
+    data_type: double
+    sql: >-
+      null /*PDIPAccounts[Debit] - PDIPAccounts[Credit] TODO: Replace with valid
+      SQL*/
+  - name: Department
+    data_type: string
+  - name: countrows1
+    data_type: int
+    sql: '1'
+connection_id: SQL42
+sql: >-
+  SELECT coalesce(nullif(PDIP_CMFE_Equity_JE.Project_ID, '') , '1' +
+  PDIP_CMFE_Equity_JE.SEGMENT1 + PDIP_CMFE_Equity_JE.SEGMENT2 +
+  PDIP_CMFE_Equity_JE.SEGMENT3 + PDIP_CMFE_Equity_JE.SEGMENT4) AS ProjectID ,
+  case when nullif(PDIP_CMFE_Equity_JE.Project_ID, '') is not null then '-' +
+  convert(varchar(10), PDIP_CMFE_Equity_JE.Project_ID) + '.' +
+  PDIP_CMFE_Equity_JE.segment1 + PDIP_CMFE_Equity_JE.segment2 +
+  PDIP_CMFE_Equity_JE.segment3 + PDIP_CMFE_Equity_JE.segment4 else '1' +
+  PDIP_CMFE_Equity_JE.segment1 + PDIP_CMFE_Equity_JE.segment2 +
+  PDIP_CMFE_Equity_JE.segment3 + PDIP_CMFE_Equity_JE.segment4 end TaskID ,
+  CMP.Company , DIV.[Global Practice] , LOC.[Office Location] , DEPT.Department
+  , PDIP_CMFE_Equity_JE.SEGMENT5 as Account ,
+  coalesce(PDIP_CMFE_Equity_JE.Debit, 0.0) AS [Debit] ,
+  coalesce(PDIP_CMFE_Equity_JE.Credit, 0.0) AS [Credit] , try_convert(date,
+  '01-' + PDIP_CMFE_Equity_JE.period_name) PeriodDate FROM
+  AnalyticsSource.dbo.PDIP_CMFE_Equity_JE left join (select project_id from
+  EnterpriseDataStore.dbo.Projects where directflag = 'N' union all select
+  project_id from EnterpriseDataStore.east.Projects where directflag = 'N')
+  IndirectProjects on IndirectProjects.project_id =
+  PDIP_CMFE_Equity_JE.project_id LEFT OUTER JOIN (SELECT
+  UPPER(LEFT(GB_SegCmp.COMPANY,3)) AS Company, GB_SegCmp.SEGMENT1 FROM
+  PSRStage.dbo.GB_SegCmp WHERE GB_SegCmp.SEGMENT1 NOT LIKE '9%') CMP ON
+  PDIP_CMFE_Equity_JE.SEGMENT1 = CMP.SEGMENT1 LEFT OUTER JOIN (SELECT
+  UPPER(LEFT(GB_SegDiv.DIVISION,3)) AS [Global Practice], GB_SegDiv.SEGMENT2
+  FROM PSRStage.dbo.GB_SegDiv WHERE GB_SegDiv.SEGMENT2 NOT LIKE '9%') DIV ON
+  PDIP_CMFE_Equity_JE.SEGMENT2 = DIV.SEGMENT2 LEFT OUTER JOIN (SELECT
+  UPPER(LEFT(GB_SegLoc.LOCATION,3)) AS [Office Location], GB_SegLoc.SEGMENT3
+  FROM PSRStage.dbo.GB_SegLoc WHERE GB_SegLoc.SEGMENT3 NOT LIKE '9%' OR
+  GB_SegLoc.SEGMENT3 = '999') LOC ON PDIP_CMFE_Equity_JE.SEGMENT3 = LOC.SEGMENT3
+  LEFT OUTER JOIN (SELECT GB_SegDept.Department, GB_SegDept.SEGMENT4 FROM
+  PSRStage.dbo.GB_SegDept) DEPT ON PDIP_CMFE_Equity_JE.SEGMENT4 = DEPT.SEGMENT4
+  WHERE coalesce(nullif(PDIP_CMFE_Equity_JE.Debit, 0.0),
+  nullif(PDIP_CMFE_Equity_JE.Credit, 0.0)) is not null and
+  IndirectProjects.project_id is null and ( -- Equity Charge
+  (PDIP_CMFE_Equity_JE.SEGMENT5 = 'EQCH' --and not(PDIP_CMFE_Equity_JE.SEGMENT1
+  IN ('013','044','047','022')) -- UKO, CAN, AZC, CSR and
+  not(PDIP_CMFE_Equity_JE.SEGMENT1 IN ('044','047')) -- AZC, CSR and
+  NOT(PDIP_CMFE_Equity_JE.SEGMENT2 IN ('101')) -- M&S --and
+  NOT(PDIP_CMFE_Equity_JE.SEGMENT3 IN ('731')) -- UKO and
+  not((PDIP_CMFE_Equity_JE.segment1 = 022 or PDIP_CMFE_Equity_JE.segment3 = 731)
+  and PDIP_CMFE_Equity_JE.ledger_id <> 3075) -- keep one ledger for UKO ) or --
+  CDB Recirc Provided/Received FTE - EO PDIP_CMFE_Equity_JE.segment5 in ('CMFE',
+  'CAFE', 'CRFE') ) union all SELECT distinct
+  coalesce(nullif(PDIPAccountingJournalEntries.Project_ID, '') , '1' +
+  PDIPAccountingJournalEntries.SEGMENT1 + PDIPAccountingJournalEntries.SEGMENT2
+  + PDIPAccountingJournalEntries.SEGMENT3 +
+  PDIPAccountingJournalEntries.SEGMENT4) AS ProjectID , case when
+  nullif(PDIPAccountingJournalEntries.Project_ID, '') is not null then '-' +
+  convert(varchar(10), PDIPAccountingJournalEntries.Project_ID) + '.' +
+  PDIPAccountingJournalEntries.segment1 + PDIPAccountingJournalEntries.segment2
+  + PDIPAccountingJournalEntries.segment3 +
+  PDIPAccountingJournalEntries.SEGMENT4 else '1' +
+  PDIPAccountingJournalEntries.segment1 + PDIPAccountingJournalEntries.segment2
+  + PDIPAccountingJournalEntries.segment3 +
+  PDIPAccountingJournalEntries.SEGMENT4 end TaskID ,
+  PDIPAccountingJournalEntries.seg1_description Company ,
+  PDIPAccountingJournalEntries.seg2_description [Global Practice] ,
+  PDIPAccountingJournalEntries.seg3_description [Office Location] ,
+  PDIPAccountingJournalEntries.seg4_description Department ,
+  PDIPAccountingJournalEntries.SEGMENT5 as Account ,
+  coalesce(PDIPAccountingJournalEntries.Debit, 0.0) AS [Debit] ,
+  coalesce(PDIPAccountingJournalEntries.Credit, 0.0) AS [Credit] ,
+  try_convert(date, '01-' + PDIPAccountingJournalEntries.period_name) PeriodDate
+  FROM AnalyticsSource.dbo.PDIPAccountingJournalEntries left join (select
+  project_id from EnterpriseDataStore.dbo.Projects where directflag = 'N' union
+  all select project_id from EnterpriseDataStore.east.Projects where directflag
+  = 'N') IndirectProjects on IndirectProjects.project_id =
+  PDIPAccountingJournalEntries.project_id WHERE
+  coalesce(nullif(PDIPAccountingJournalEntries.Debit, 0.0),
+  nullif(PDIPAccountingJournalEntries.Credit, 0.0)) is not null and
+  IndirectProjects.project_id is null and -- CDB Recirc Provided/Received FTE -
+  CWK SEGMENT5 = 'CWFE'

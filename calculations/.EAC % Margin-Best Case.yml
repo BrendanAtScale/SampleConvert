@@ -1,0 +1,8 @@
+unique_name: .EAC % Margin-Best Case
+object_type: metric_calc
+label: .EAC % Margin-Best Case
+expression: >-
+  0 /*DIVIDE([.EAC Gross Profit-Best Case],[.EAC Revenue]) TODO: Update with
+  valid MDX expression*/
+folder: Forecast\At Completion
+format: 0.0%;-0.0%;0.0%

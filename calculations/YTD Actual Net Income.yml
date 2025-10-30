@@ -1,0 +1,10 @@
+unique_name: YTD Actual Net Income
+object_type: metric_calc
+label: YTD Actual Net Income
+expression: >-
+  0 /*if([DateFiltered],DIVIDE(TOTALYTD([.Annualized Net
+  Income],'Dates'[Date]),[ActualRowCount])*[ActualRowCount],CALCULATE(TOTALYTD([.Annualized
+  Net Income],Dates[Date]),Dates[Current Year Flag]="Y")) TODO: Update with
+  valid MDX expression*/
+folder: Actual\Year to Date-YTD
+format: '""#,0.00;(""#,0.00);""#,0.00'

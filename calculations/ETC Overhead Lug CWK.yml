@@ -1,0 +1,10 @@
+unique_name: ETC Overhead Lug CWK
+object_type: metric_calc
+label: ETC Overhead Lug CWK
+expression: >-
+  0 /*DIVIDE( SUMX(FILTER('Current', RELATED(Resources[Resource Category]) =
+  "Contract Labor") , 'Current'[ETC Hours (backlog)] * 'Current'[Overhead Lug
+  Rate]) , 2088 * [HasOneCurrency]) TODO: Update with valid MDX expression*/
+folder: PDIP
+format: '""#,0.00;(""#,0.00);""#,0.00'
+is_hidden: true

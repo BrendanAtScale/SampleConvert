@@ -1,0 +1,6 @@
+unique_name: YTD Actual Net Income_Hour
+object_type: metric_calc
+label: YTD Actual Net Income/Hour
+expression: ([Measures].[YTD Actual Net Income]) / ([Measures].[YTD Actual Hours])
+folder: Actual\Year to Date-YTD
+format: '""#,0.00;(""#,0.00);""#,0.00'

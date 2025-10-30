@@ -1,0 +1,8 @@
+unique_name: .Actual Net Income-Prelim
+object_type: metric_calc
+label: .Actual Net Income-Prelim
+expression: >-
+  0 /*[.Prelim Revenue]-[.Prelim Cost]-[.Prelim OH Costs] TODO: Update with
+  valid MDX expression*/
+folder: Actual\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

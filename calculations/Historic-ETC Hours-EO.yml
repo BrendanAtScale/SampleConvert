@@ -1,0 +1,10 @@
+unique_name: Historic-ETC Hours-EO
+object_type: metric_calc
+label: Historic-ETC Hours-EO
+expression: >-
+  0 /*if(NOT([IsTaskLevelFiltered]) && NOT([IsResourceFiltered]) &&
+  [DateFiltered],
+  CALCULATE(sum('Historic-PSR'[Historic-ETC-Hours-EO]),LASTNONBLANK('Dates'[Date],CALCULATE(Sum('Historic-PSR'[Historic-ETC-Hours-EO])))))
+  TODO: Update with valid MDX expression*/
+folder: Estimate to Complete (ETC)
+format: '#,0.00'

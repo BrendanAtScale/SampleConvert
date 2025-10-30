@@ -1,0 +1,8 @@
+unique_name: .ETC Cost-Overruns
+object_type: metric_calc
+label: .ETC Cost-Overruns
+expression: >-
+  0 /*if([HasOneCurrency],CALCULATE(Sum('Current'[ETC
+  Cost]),Resources[OverrunFlag]="Yes")) TODO: Update with valid MDX expression*/
+folder: ETC\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

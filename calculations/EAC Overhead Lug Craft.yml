@@ -1,0 +1,10 @@
+unique_name: EAC Overhead Lug Craft
+object_type: metric_calc
+label: EAC Overhead Lug Craft
+expression: >-
+  0 /*DIVIDE(CALCULATE([Actual Overhead Lug Craft] + [ETC Overhead Lug Craft],
+  ALL(Dates)), [.EAC Display]) * [.EAC Display] TODO: Update with valid MDX
+  expression*/
+folder: PDIP
+format: '""#,0.00;(""#,0.00);""#,0.00'
+is_hidden: true

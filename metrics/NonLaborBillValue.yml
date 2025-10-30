@@ -1,0 +1,7 @@
+unique_name: NonLaborBillValue
+object_type: metric
+label: NonLaborBillValue
+calculation_method: sum
+column: NonLaborBillValue
+dataset: dataset_Estimates
+unrelated_dimensions_handling: repeat

@@ -1,0 +1,8 @@
+unique_name: Cumul. Forecast Hours-EO
+object_type: metric_calc
+label: Cumul. Forecast Hours-EO
+expression: >-
+  0 /*CALCULATE([Cumul. Forecast Hours],FILTER('Resources',Resources[Resource
+  Name]="People")) TODO: Update with valid MDX expression*/
+folder: Forecast\Cumulative
+format: '#,0.00'

@@ -1,0 +1,9 @@
+unique_name: .ETC Revenue (backlog)
+object_type: metric_calc
+label: .ETC Revenue (backlog)
+expression: >-
+  0 /*DIVIDE(Sum('Current'[ETC Revenue (backlog)]), NOT([IsTaskLevelFiltered])
+  && NOT([IsResourceFiltered]) && [HasOneCurrency]) TODO: Update with valid MDX
+  expression*/
+folder: ETC\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

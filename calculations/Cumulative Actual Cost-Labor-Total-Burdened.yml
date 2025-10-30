@@ -1,0 +1,9 @@
+unique_name: Cumulative Actual Cost-Labor-Total-Burdened
+object_type: metric_calc
+label: Cumulative Actual Cost-Labor-Total-Burdened
+expression: >-
+  0 /*DIVIDE(CALCULATE([Actual
+  Cost-Labor-Total-Burdened],FILTER(ALL('Dates'[Date]),'Dates'[Date]<=Max('Dates'[Date]))),[ActualRowCount])*[ActualRowCount]
+  TODO: Update with valid MDX expression*/
+format: '""#,0.00;(""#,0.00);""#,0.00'
+is_hidden: true

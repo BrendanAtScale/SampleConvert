@@ -1,0 +1,8 @@
+unique_name: Historic-EAC Cost-CW
+object_type: metric_calc
+label: Historic-EAC Cost-CW
+expression: >-
+  [Measures].[Historic-EAC Cost-Contingency]+[Measures].[Historic-EAC
+  Cost-Warranty]
+folder: Estimate at Completion (EAC)
+format: '""#,0.00;(""#,0.00);""#,0.00'

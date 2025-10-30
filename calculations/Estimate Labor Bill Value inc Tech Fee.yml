@@ -1,0 +1,8 @@
+unique_name: Estimate Labor Bill Value inc Tech Fee
+object_type: metric_calc
+label: Estimate Labor Bill Value inc Tech Fee
+expression: >-
+  0 /*DIVIDE(SUM(Estimates[LaborBillValueIncTechFee]), [HasOneCurrency] && [.EAC
+  Display Estimate]) TODO: Update with valid MDX expression*/
+folder: Estimate
+format: '""#,0.00;(""#,0.00);""#,0.00'

@@ -1,0 +1,6 @@
+unique_name: Historic-ETC Gross Profit
+object_type: metric_calc
+label: Historic-ETC Gross Profit
+expression: '[Measures].[Historic-ETC Revenue]-[Measures].[Historic-ETC Cost]'
+folder: Estimate to Complete (ETC)
+format: '""#,0.00;(""#,0.00);""#,0.00'

@@ -1,0 +1,5 @@
+unique_name: .Current BAC Display
+object_type: metric_calc
+label: .Current BAC Display
+expression: '0 /*ABS([Cumul. Current Budget Cost]) TODO: Update with valid MDX expression*/'
+is_hidden: true

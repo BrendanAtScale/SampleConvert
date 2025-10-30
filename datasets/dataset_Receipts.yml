@@ -1,0 +1,90 @@
+unique_name: dataset_Receipts
+object_type: dataset
+label: Receipts
+columns:
+  - name: Received
+    data_type: double
+  - name: ProjectID
+    data_type: long
+  - name: TaskID
+    data_type: string
+  - name: Receipts GL Date
+    data_type: datetime
+  - name: DateLastPaid
+    data_type: datetime
+  - name: Receipt Type
+    data_type: string
+  - name: countrows1
+    data_type: int
+    sql: '1'
+connection_id: SQL42
+sql: >-
+  SELECT ReceiptsAll.* FROM -- Receipts ( --Base SELECT PROJECT_ID ProjectID,
+  TaskID, [Receipts GL Date], DateLastPaid, [Receipt Type], SUM(Received) AS
+  Received FROM ( SELECT Receipts.PROJECT_ID, (CASE WHEN Projects.[Project
+  Billing Level] = 'TOP_TASK' THEN Receipts.TASK_ID ELSE Receipts.PROJECT_ID * -
+  1 END) AS TaskID, (CASE WHEN YEAR(Receipts.GL_DATE) < 2000 THEN
+  DATEFROMPARTS(2000, 1, 1) ELSE DATEFROMPARTS(YEAR(Receipts.GL_DATE),
+  MONTH(Receipts.GL_DATE), 1) END) AS [Receipts GL Date], 'Base' AS [Receipt
+  Type], Receipts.FUNC_RECEIVED_INVOICE AS Received, Receipts.DATE_LAST_PAID
+  DateLastPaid FROM AnalyticsSource.dbo.Receipts INNER JOIN
+  Model_Common.dbo.Projects_lite Projects ON Receipts.PROJECT_ID =
+  Projects.ProjectID WHERE (Receipts.FUNC_RECEIVED_INVOICE <> 0) AND
+  (Projects.[Project Status] <> N'PERMANENTLY CLOSED') ) AS BaseReceipts GROUP
+  BY BaseReceipts.PROJECT_ID, BaseReceipts.TaskID, BaseReceipts.[Receipts GL
+  Date], BaseReceipts.DateLastPaid, BaseReceipts.[Receipt Type] HAVING
+  (SUM(BaseReceipts.Received) <> 0) UNION ALL --Retention SELECT PROJECT_ID
+  ProjectID, TaskID, [Receipts GL Date], DateLastPaid, [Receipt Type],
+  SUM(Received) AS Received FROM ( SELECT Receipts.PROJECT_ID, (CASE WHEN
+  Projects.[Project Billing Level] = 'TOP_TASK' THEN Receipts.TASK_ID ELSE
+  Receipts.PROJECT_ID * - 1 END) AS TaskID, (CASE WHEN YEAR(Receipts.GL_DATE) <
+  2000 THEN DATEFROMPARTS(2000, 1, 1) ELSE DATEFROMPARTS(YEAR(Receipts.GL_DATE),
+  MONTH(Receipts.GL_DATE), 1) END) AS [Receipts GL Date], 'Retention' AS
+  [Receipt Type], Receipts.FUNC_RECEIVED_RETAINAGE AS Received,
+  Receipts.DATE_LAST_PAID DateLastPaid FROM AnalyticsSource.dbo.Receipts INNER
+  JOIN Model_Common.dbo.Projects_lite Projects ON Receipts.PROJECT_ID =
+  Projects.ProjectID WHERE (Receipts.FUNC_RECEIVED_RETAINAGE <> 0) AND
+  (Projects.[Project Status] <> N'PERMANENTLY CLOSED') ) AS RetentionReceipts
+  GROUP BY RetentionReceipts.PROJECT_ID, RetentionReceipts.TaskID,
+  RetentionReceipts.[Receipts GL Date], RetentionReceipts.DateLastPaid,
+  RetentionReceipts.[Receipt Type] HAVING (SUM(RetentionReceipts.Received) <> 0)
+  UNION ALL --Permanently Closed Projects - Set Received equal to Billed because
+  materialized view for top task received EXCLUDES PERM CLOSED projects SELECT
+  PROJECT_ID ProjectID, TaskID, [Receipts GL Date], DateLastPaid, [Receipt
+  Type], SUM(Invoiced) AS Received FROM ( SELECT Billings.PROJECT_ID, (CASE WHEN
+  Projects.[Project Billing Level] = 'TOP_TASK' THEN Billings.TASK_ID ELSE
+  Billings.PROJECT_ID * - 1 END) AS TaskID, DATEADD(MONTH, 2, (CASE WHEN
+  Billings.GL_DATE < try_convert(date, '2000-01-01') THEN DATEFROMPARTS(1999,
+  12, 1) ELSE DATEFROMPARTS(YEAR(Billings.GL_DATE), MONTH(Billings.GL_DATE), 1)
+  END)) AS [Receipts GL Date], 'Billed shifted two months' AS [Receipt Type],
+  Billings.FUNCTIONAL_BILLED_AMOUNT AS Invoiced, DATEADD(MONTH, 2, (CASE WHEN
+  Billings.GL_DATE < try_convert(date, '2000-01-01') THEN DATEFROMPARTS(1999,
+  12, 1) ELSE DATEFROMPARTS(YEAR(Billings.GL_DATE), MONTH(Billings.GL_DATE), 1)
+  END)) AS DateLastPaid FROM AnalyticsSource.dbo.Billings INNER JOIN
+  Model_Common.dbo.Projects ON Billings.PROJECT_ID = Projects.ProjectID WHERE
+  (Billings.FUNCTIONAL_BILLED_AMOUNT <> 0) AND (Projects.[Project Status] =
+  N'PERMANENTLY CLOSED') ) AS ShiftedReceipts GROUP BY
+  ShiftedReceipts.PROJECT_ID, ShiftedReceipts.TaskID, ShiftedReceipts.[Receipts
+  GL Date], ShiftedReceipts.DateLastPaid, ShiftedReceipts.[Receipt Type] HAVING
+  (SUM(Invoiced) <> 0) ) AS ReceiptsAll join /* direct projects with to-date
+  actuals costs or non-converted approved cost budgets, primary cost forecasts,
+  or primary revenue forecasts with baselined dates on or after 7/1/2013 */ (
+  SELECT DISTINCT FinancialPlanVersions.PROJECT_ID FROM
+  AnalyticsSource.dbo.FinancialPlanVersions INNER JOIN
+  EnterpriseDataStore.dbo.Projects ON FinancialPlanVersions.PROJECT_ID =
+  Projects.Project_ID AND Projects.DirectFlag = 'Y' WHERE
+  (FinancialPlanVersions.FIN_PLAN_TYPE_ID IN (10040, 10060, 10062)) /* Approved
+  Cost Budget, Primary Cost Forecast, Primary Revenue Forecast */ AND
+  (FinancialPlanVersions.VERSION_NAME <> 'CONVERTED VERSION') AND
+  (FinancialPlanVersions.BASELINED_DATE >= try_convert(date, '2013-07-01')) OR
+  (FinancialPlanVersions.FIN_PLAN_TYPE_ID = 156596) /* To-Date Actuals Cost */
+  union all SELECT DISTINCT FinancialPlanVersions.PROJECT_ID FROM
+  AnalyticsSource.east.FinancialPlanVersions INNER JOIN
+  EnterpriseDataStore.east.Projects ON FinancialPlanVersions.PROJECT_ID =
+  Projects.Project_ID AND Projects.DirectFlag = 'Y' WHERE
+  (FinancialPlanVersions.FIN_PLAN_TYPE_ID IN (10040, 10060, 10062)) /* Approved
+  Cost Budget, Primary Cost Forecast, Primary Revenue Forecast */ AND
+  (FinancialPlanVersions.VERSION_NAME <> 'CONVERTED VERSION') AND
+  (FinancialPlanVersions.BASELINED_DATE >= try_convert(date, '2013-07-01')) OR
+  (FinancialPlanVersions.FIN_PLAN_TYPE_ID = 156596) /* To-Date Actuals Cost */ )
+  ProjectList on ReceiptsAll.ProjectID = ProjectList.PROJECT_ID

@@ -1,0 +1,8 @@
+unique_name: Estimate Cost-Labor-EO-Burdened
+object_type: metric_calc
+label: Estimate Cost-Labor-EO-Burdened
+expression: >-
+  0 /*DIVIDE(SUM(Estimates[BMUSLaborCost]), [HasOneCurrency] && [.EAC Display
+  Estimate]) TODO: Update with valid MDX expression*/
+folder: Estimate
+format: '""#,0.00;(""#,0.00);""#,0.00'

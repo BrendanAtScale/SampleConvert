@@ -1,0 +1,8 @@
+unique_name: .Forecast Total Burdened Labor Cost Rate
+object_type: metric_calc
+label: .Forecast Total Burdened Labor Cost Rate
+expression: >-
+  0 /*if(NOT([IsLaborDetailFiltered]),DIVIDE([.Forecast
+  Cost-Labor-Total-Burdened],[.Forecast Hours])) TODO: Update with valid MDX
+  expression*/
+is_hidden: true

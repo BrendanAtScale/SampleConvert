@@ -1,0 +1,7 @@
+unique_name: ConditionalContingency
+object_type: metric
+label: ConditionalContingency
+calculation_method: sum
+column: ConditionalContingency
+dataset: dataset_Estimates
+unrelated_dimensions_handling: repeat

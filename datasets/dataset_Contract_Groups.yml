@@ -1,0 +1,33 @@
+unique_name: dataset_Contract_Groups
+object_type: dataset
+label: Contract Groups
+columns:
+  - name: Contract Group
+    data_type: string
+  - name: Participant 2
+    data_type: string
+    sql: Participant 1
+  - name: Top Contract Flag
+    data_type: string
+  - name: Performance Obligation Flag
+    data_type: string
+  - name: Contract Group Lead Eng GP
+    data_type: string
+    sql: >-
+      null /* VAR MaxFunding = CALCULATE(Max(EngGPFunding[.Forecast Hours]))
+      ,VAR EngGPMostFcstHours = CALCULATE(MAX(EngGPFunding[Top Task Owning
+      Global Practice]),EngGPFunding[.Forecast Hours]=MaxFunding),VAR MaxRevenue
+      = CALCULATE(Max(EngGPFunding[.Forecast Revenue])) ,VAR
+      EngGPMostFcstRevenue = CALCULATE(MAX(EngGPFunding[Top Task Owning Global
+      Practice]),EngGPFunding[.Forecast
+      Revenue]=MaxRevenue),,Return,SWITCH(TRUE(),,
+      not(ISBLANK(EngGPMostFcstHours)), EngGPMostFcstHours,,
+      not(ISBLANK(EngGPMostFcstRevenue)), EngGPMostFcstRevenue,, "No EngGP")
+      TODO: Replace with valid SQL*/
+  - name: Participant 1
+    data_type: string
+  - name: countrows1
+    data_type: int
+    sql: '1'
+connection_id: SQL42
+table: Contract Groups

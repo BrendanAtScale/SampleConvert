@@ -1,0 +1,9 @@
+unique_name: .Actual Cost-Labor-CWK
+object_type: metric_calc
+label: .Actual Cost-Labor-CWK
+expression: >-
+  0 /*if([HasOneCurrency],CALCULATE(Sum('TDA Cost'[Actual Cost]),
+  FILTER('Resources', Resources[Resource Category]="Contract Labor"))) TODO:
+  Update with valid MDX expression*/
+folder: Actual\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

@@ -1,0 +1,9 @@
+unique_name: Actual Cost-Labor-Total-Burdened
+object_type: metric_calc
+label: Actual Cost-Labor-Total-Burdened
+expression: >-
+  0 /*if([HasOneCurrency],CALCULATE(Sum('TDA Cost'[Actual
+  Cost]),'Resources'[Labor-NonLabor Flag] = "Labor")) TODO: Update with valid
+  MDX expression*/
+format: '""#,0.00;(""#,0.00);""#,0.00'
+is_hidden: true

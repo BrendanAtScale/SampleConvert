@@ -1,0 +1,9 @@
+unique_name: ITD Actual Burdened Labor Cost Rate
+object_type: metric_calc
+label: ITD Actual Burdened Labor Cost Rate
+expression: >-
+  0 /*if(NOT([IsLaborDetailFiltered]),DIVIDE([Cumulative Actual
+  Cost-Labor-Total-Burdened],[ITD Actual Hours])) TODO: Update with valid MDX
+  expression*/
+folder: Actual\Inception to Date-ITD
+format: '""#,0.00;(""#,0.00);""#,0.00'

@@ -1,0 +1,9 @@
+unique_name: Estimate CWK Lug
+object_type: metric_calc
+label: Estimate CWK Lug
+expression: >-
+  0 /*DIVIDE(SUM(Estimates[CWK Lug]), [HasOneCurrency] && [.EAC Display
+  Estimate]) TODO: Update with valid MDX expression*/
+folder: Estimate
+format: '""#,0.00;(""#,0.00);""#,0.00'
+is_hidden: true

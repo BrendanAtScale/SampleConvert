@@ -1,0 +1,10 @@
+unique_name: EAC Overhead Lug Employee Owner
+object_type: metric_calc
+label: EAC Overhead Lug Employee Owner
+expression: >-
+  0 /*DIVIDE(CALCULATE([Actual Overhead Lug Employee Owner] + [ETC Overhead Lug
+  Employee Owner], ALL(Dates)), [.EAC Display]) * [.EAC Display] TODO: Update
+  with valid MDX expression*/
+folder: PDIP
+format: '""#,0.00;(""#,0.00);""#,0.00'
+is_hidden: true

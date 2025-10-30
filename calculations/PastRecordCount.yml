@@ -1,0 +1,10 @@
+unique_name: PastRecordCount
+object_type: metric_calc
+label: PastRecordCount
+expression: >-
+  0
+  /*CALCULATE(COUNTROWS('Current'),FILTER(ALL('Dates'[Date]),'Dates'[Date]<=MAX('Dates'[Date])))+CALCULATE(COUNTROWS('TDA
+  Cost'),FILTER(ALL('Dates'[Date]),'Dates'[Date]<=MAX('Dates'[Date]))) TODO:
+  Update with valid MDX expression*/
+folder: Display
+is_hidden: true

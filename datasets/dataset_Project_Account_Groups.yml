@@ -1,0 +1,15 @@
+unique_name: dataset_Project_Account_Groups
+object_type: dataset
+label: Project Account Groups
+columns:
+  - name: ProjectID
+    data_type: long
+  - name: Account Group Name
+    data_type: string
+  - name: Account Group Lead
+    data_type: string
+  - name: countrows1
+    data_type: int
+    sql: '1'
+connection_id: Project Account Groups
+table: Project Account Groups

@@ -1,0 +1,153 @@
+unique_name: dataset_Estimates
+object_type: dataset
+label: Estimates
+columns:
+  - name: TopTaskID
+    data_type: string
+  - name: ProjectNumber
+    data_type: long
+  - name: ProjectID
+    data_type: long
+  - name: EstimateParticipatingCompany
+    data_type: string
+  - name: EstimateParticipatingGlobalPractice
+    data_type: string
+  - name: EstimateParticipatingOfficeLocation
+    data_type: string
+  - name: EstimateCurrencyCode
+    data_type: string
+  - name: BMUSHours
+    data_type: double
+  - name: BMIHours
+    data_type: double
+  - name: CWKHours
+    data_type: double
+  - name: TotalHours
+    data_type: double
+  - name: AvgBillRateIncTechFee
+    data_type: double
+  - name: LaborBillValueIncTechFee
+    data_type: double
+  - name: NonLaborBillValue
+    data_type: double
+  - name: EstimateContingency
+    data_type: double
+  - name: ConditionalContingency
+    data_type: double
+  - name: Fee
+    data_type: double
+  - name: DiscountOvermax
+    data_type: double
+  - name: TotalContractValue
+    data_type: double
+  - name: BMUSLaborCost
+    data_type: double
+  - name: BMILaborCost
+    data_type: double
+  - name: CWKLaborCost
+    data_type: double
+  - name: RawBMLaborCost
+    data_type: double
+  - name: LaborCost
+    data_type: double
+  - name: NonLaborCost
+    data_type: double
+  - name: USTechChargeCost
+    data_type: double
+  - name: TravelProcSubsCWCosts
+    data_type: double
+  - name: ComputerUsageCost
+    data_type: double
+  - name: TotalCost
+    data_type: double
+  - name: GrossProfit
+    data_type: double
+  - name: GrossProfitPercentage
+    data_type: double
+  - name: ELM
+    data_type: double
+  - name: BEM
+    data_type: double
+  - name: NetIncome
+    data_type: double
+  - name: NetIncomePercentage
+    data_type: double
+  - name: PDIP
+    data_type: double
+  - name: PDIPEO
+    data_type: double
+  - name: PDIPCWK
+    data_type: double
+  - name: EstimateID
+    data_type: string
+  - name: BMUS FTE
+    data_type: double
+  - name: BMUS Lug
+    data_type: double
+  - name: CWK Lug
+    data_type: double
+  - name: countrows1
+    data_type: int
+    sql: '1'
+connection_id: SQL42
+sql: >-
+  SELECT '-' + convert(varchar(10), Projects.Project_ID) + '.' + (select
+  distinct SEGMENT1 from PSRStage.dbo.GB_SegCmp where left(Company,5) =
+  EstimateSummary.[EstimateParticipatingCompany] + ' -') + (select distinct
+  SEGMENT2 from PSRStage.dbo.GB_SegDiv where left(division,5) =
+  EstimateSummary.[EstimateParticipatingGlobalPractice] + ' -') + (select
+  distinct SEGMENT3 from PSRStage.dbo.GB_SegLoc where left(Location,5) =
+  EstimateSummary.[EstimateParticipatingOfficeLocation] + ' -') + '999'
+  TopTaskID , EstimateProjects.[ProjectNumber] , Projects.project_id ProjectID ,
+  EstimateSummary.[EstimateParticipatingCompany] ,
+  EstimateSummary.[EstimateParticipatingGlobalPractice] ,
+  EstimateSummary.[EstimateParticipatingOfficeLocation] ,
+  EstimateSummary.[EstimateID] , EstimateSummary.[EstimateCurrencyCode] ,
+  nullif(EstimateSummary.[BMUSHours], 0) [BMUSHours] ,
+  nullif(EstimateSummary.[BMIHours], 0) [BMIHours] ,
+  nullif(EstimateSummary.[CWKHours], 0) [CWKHours] ,
+  nullif(EstimateSummary.[TotalHours], 0) [TotalHours] ,
+  nullif(EstimateSummary.[AvgBillRateIncTechFee], 0) [AvgBillRateIncTechFee] ,
+  nullif(EstimateSummary.[LaborBillValueIncTechFee], 0)
+  [LaborBillValueIncTechFee] , nullif(EstimateSummary.[NonLaborBillValue], 0)
+  [NonLaborBillValue] , nullif(EstimateSummary.[EstimateContingency], 0)
+  [EstimateContingency] , nullif(EstimateSummary.[ConditionalContingency], 0)
+  [ConditionalContingency] , nullif(EstimateSummary.[Fee], 0) [Fee] ,
+  nullif(EstimateSummary.[DiscountOvermax], 0) [DiscountOvermax] ,
+  nullif(EstimateSummary.[TotalContractValue], 0) [TotalContractValue] ,
+  nullif(EstimateSummary.[BMUSLaborCost], 0) [BMUSLaborCost] ,
+  nullif(EstimateSummary.[BMILaborCost], 0) [BMILaborCost] ,
+  nullif(EstimateSummary.[CWKLaborCost], 0) [CWKLaborCost] ,
+  nullif(EstimateSummary.[RawBMLaborCost], 0) [RawBMLaborCost] ,
+  nullif(EstimateSummary.[LaborCost], 0) [LaborCost] ,
+  nullif(EstimateSummary.[NonLaborCost], 0) [NonLaborCost] ,
+  nullif(EstimateSummary.[USTechChargeCost], 0) [USTechChargeCost] ,
+  nullif(EstimateSummary.[TravelProcSubsCWCosts], 0) [TravelProcSubsCWCosts] ,
+  nullif(EstimateSummary.[ComputerUsageCost], 0) [ComputerUsageCost] ,
+  nullif(EstimateSummary.[TotalCost], 0) [TotalCost] ,
+  nullif(EstimateSummary.[GrossProfit], 0) [GrossProfit] ,
+  nullif(EstimateSummary.[GrossProfitPercentage], 0) [GrossProfitPercentage] ,
+  nullif(EstimateSummary.[ELM], 0) [ELM] , nullif(EstimateSummary.[BEM], 0)
+  [BEM] , nullif(EstimateSummary.[NetIncome], 0) [NetIncome] ,
+  nullif(EstimateSummary.[NetIncomePercentage], 0) [NetIncomePercentage] ,
+  nullif(EstimateSummary.[PDIP], 0) [PDIP] , nullif(EstimateSummary.[PDIPEO], 0)
+  [PDIPEO] , nullif(EstimateSummary.[PDIPCWK], 0) [PDIPCWK] ,
+  nullif(EstimateSummary.[BMUSHours], 0)/2088.0 [BMUS FTE] ,
+  (nullif(EstimateSummary.[BMUSHours], 0) * (select PDIP_Lug from
+  SISOT.dbo.Overhead_Lug where [OPERATING_UNIT] = 'BMCD US' and RESOURCE =
+  'EO'))/2088.0 [BMUS Lug] , (nullif(EstimateSummary.[CWKHours], 0) * (select
+  PDIP_Lug from SISOT.dbo.Overhead_Lug where [OPERATING_UNIT] = 'BMCD US' and
+  RESOURCE = 'CWK'))/2088.0 [CWK Lug] FROM [Ecosys].[EcoSys].[EstimateSummary]
+  join Ecosys.EcoSys.EstimateProjects on EstimateSummary.EstimateInternalID =
+  EstimateProjects.EstimateInternalID join (select project_id, project_no from
+  EnterpriseDataStore.dbo.Projects where directflag = 'Y' union all select
+  project_id, project_no from EnterpriseDataStore.east.Projects where directflag
+  = 'Y') Projects on Projects.project_no = EstimateProjects.ProjectNumber where
+  -- ID used for tasks and top tasks (select distinct SEGMENT1 from
+  PSRStage.dbo.GB_SegCmp where left(Company,5) =
+  EstimateSummary.[EstimateParticipatingCompany] + ' -') + (select distinct
+  SEGMENT2 from PSRStage.dbo.GB_SegDiv where left(division,5) =
+  EstimateSummary.[EstimateParticipatingGlobalPractice] + ' -') + (select
+  distinct SEGMENT3 from PSRStage.dbo.GB_SegLoc where left(Location,5) =
+  EstimateSummary.[EstimateParticipatingOfficeLocation] + ' -') + '999' is not
+  null

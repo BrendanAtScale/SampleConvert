@@ -1,0 +1,7 @@
+unique_name: SalesRowCount
+object_type: metric
+label: SalesRowCount
+calculation_method: sum
+column: SalesRowCount
+dataset: dataset_Dates
+unrelated_dimensions_handling: repeat

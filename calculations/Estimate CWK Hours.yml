@@ -1,0 +1,6 @@
+unique_name: Estimate CWK Hours
+object_type: metric_calc
+label: Estimate CWK Hours
+expression: ([Measures].[CWKHours]) / ([Measures].[.EAC Display Estimate])
+folder: Estimate
+format: '#,0.00'

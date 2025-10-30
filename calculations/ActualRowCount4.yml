@@ -1,0 +1,7 @@
+unique_name: ActualRowCount4
+object_type: metric_calc
+label: ActualRowCount4
+expression: >-
+  0 /*if([DateFiltered],CALCULATE(SUM('Historic RowCounts'[RowCount]))) TODO:
+  Update with valid MDX expression*/
+is_hidden: true

@@ -1,0 +1,6 @@
+unique_name: ITD Actual % Margin
+object_type: metric_calc
+label: ITD Actual % Margin
+expression: ([Measures].[ITD Actual Gross Profit]) / ([Measures].[ITD Actual Revenue])
+folder: Actual\Inception to Date-ITD
+format: 0.0%;-0.0%;0.0%

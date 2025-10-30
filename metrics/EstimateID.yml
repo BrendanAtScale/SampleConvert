@@ -1,0 +1,7 @@
+unique_name: EstimateID
+object_type: metric
+label: EstimateID
+calculation_method: count distinct
+column: EstimateID
+dataset: dataset_Estimates
+unrelated_dimensions_handling: repeat

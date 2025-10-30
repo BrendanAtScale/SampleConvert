@@ -1,0 +1,7 @@
+unique_name: Weekdays This Month Count
+object_type: metric
+label: Weekdays This Month Count
+calculation_method: sum
+column: Weekdays This Month Count
+dataset: dataset_Dates
+unrelated_dimensions_handling: repeat

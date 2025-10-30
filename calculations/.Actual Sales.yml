@@ -1,0 +1,9 @@
+unique_name: .Actual Sales
+object_type: metric_calc
+label: .Actual Sales
+expression: >-
+  0 /*DIVIDE(Sum('Sales'[SalesAmount]), NOT([IsTaskLevelFiltered]) &&
+  NOT([IsResourceFiltered]) && [HasOneCurrency]) TODO: Update with valid MDX
+  expression*/
+folder: Actual\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

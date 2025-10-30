@@ -1,0 +1,17 @@
+unique_name: dataset_ProjectWhitelist
+object_type: dataset
+label: ProjectWhitelist
+columns:
+  - name: AllowedProjectID
+    data_type: long
+  - name: Username
+    data_type: string
+  - name: PrincipalName
+    data_type: string
+  - name: countrows1
+    data_type: int
+    sql: '1'
+connection_id: SQL42
+sql: >-
+  SELECT Username, AllowedProjectID, PrincipalName FROM
+  Model_Common.dbo.Project_Whitelist

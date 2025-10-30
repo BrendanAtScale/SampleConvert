@@ -1,0 +1,8 @@
+unique_name: YTD Actual Hours-Craft-Labor
+object_type: metric_calc
+label: YTD Actual Hours-Craft-Labor
+expression: >-
+  0 /*CALCULATE([YTD Actual Hours],FILTER('Resources',Resources[Resource
+  Name]="Craft Labor")) TODO: Update with valid MDX expression*/
+folder: Actual\Year to Date-YTD
+format: '#,0.00'

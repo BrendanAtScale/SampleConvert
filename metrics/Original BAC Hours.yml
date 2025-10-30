@@ -1,0 +1,7 @@
+unique_name: Original BAC Hours
+object_type: metric
+label: Original BAC Hours
+calculation_method: sum
+column: Original BAC Hours
+dataset: dataset_Budget-Orig
+unrelated_dimensions_handling: repeat

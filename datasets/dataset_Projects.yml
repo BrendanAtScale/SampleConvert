@@ -1,0 +1,714 @@
+unique_name: dataset_Projects
+object_type: dataset
+label: Projects
+columns:
+  - name: ProjectID
+    data_type: long
+  - name: ProjectIsOpen
+    data_type: boolean
+  - name: Project Number
+    data_type: long
+  - name: Project Name
+    data_type: string
+  - name: Project Description
+    data_type: string
+  - name: Project Owning Company
+    data_type: string
+  - name: Project Owning Global Practice
+    data_type: string
+  - name: Project Owning Office Location
+    data_type: string
+  - name: Project Owning Department
+    data_type: string
+  - name: Project Owning Organization
+    data_type: string
+  - name: Project Status
+    data_type: string
+  - name: Project Type
+    data_type: string
+  - name: Project Start Date
+    data_type: datetime
+  - name: Project End Date
+    data_type: datetime
+  - name: Project Close Date
+    data_type: datetime
+  - name: Project Create Date
+    data_type: datetime
+  - name: ClientNumber
+    data_type: long
+  - name: Client
+    data_type: string
+  - name: Client Abbreviation
+    data_type: string
+  - name: Project Manager
+    data_type: string
+  - name: Project Manager Email
+    data_type: string
+  - name: Billable Project Flag
+    data_type: string
+  - name: Project Manager Organization
+    data_type: string
+  - name: Project Manager Company
+    data_type: string
+  - name: Project Manager Global Practice
+    data_type: string
+  - name: Project Manager Office Location
+    data_type: string
+  - name: Project Manager Department
+    data_type: string
+  - name: Project Location Country (short)
+    data_type: string
+  - name: Project Location Country
+    data_type: string
+  - name: Project Location County
+    data_type: string
+  - name: Project Location City
+    data_type: string
+  - name: Project Location State (short)
+    data_type: string
+  - name: Project Location State2
+    data_type: string
+  - name: Project Location Zip
+    data_type: string
+  - name: EndClientNumber
+    data_type: string
+  - name: Project Work Location Country (short)
+    data_type: string
+  - name: Project Work Location Country
+    data_type: string
+  - name: Project Work Location County
+    data_type: string
+  - name: Project Work Location City
+    data_type: string
+  - name: Project Work Location State (short)
+    data_type: string
+  - name: Project Work Location State
+    data_type: string
+  - name: Project Work Location Zip
+    data_type: string
+  - name: z2pn
+    data_type: string
+    sql: >-
+      null /*FORMAT(Projects[Project Number], "#") TODO: Replace with valid
+      SQL*/
+  - name: Project Delivery Method
+    data_type: string
+  - name: COVID-19 Response Flag
+    data_type: string
+  - name: Billing Group Number
+    data_type: string
+  - name: Intercompany Group Number
+    data_type: long
+  - name: Intercompany Group Name
+    data_type: string
+  - name: Intercompany Group Primary Flag
+    data_type: string
+  - name: Intercompany Group Flag
+    data_type: string
+  - name: Operating Unit
+    data_type: string
+  - name: Project Open Flag
+    data_type: string
+  - name: Project Friendly Name
+    data_type: string
+  - name: Project Friendly Name (long)
+    data_type: string
+  - name: Project Start Month Year
+    data_type: string
+  - name: ProjectStartMonthYearSort
+    data_type: long
+  - name: Project Start Year
+    data_type: long
+  - name: Project Start Years Ago
+    data_type: long
+  - name: Project End Month Year
+    data_type: string
+  - name: ProjectEndMonthYearSort
+    data_type: long
+  - name: Project End Year
+    data_type: long
+  - name: Project End Years Ago
+    data_type: long
+  - name: Project Close Year
+    data_type: long
+  - name: Project Close Year Month
+    data_type: long
+  - name: Project Create Year
+    data_type: long
+  - name: Project Create Year Month
+    data_type: long
+  - name: Project Elapsed Time (days)
+    data_type: long
+  - name: Project Elapsed Time (months)
+    data_type: double
+  - name: Project Elapsed Time (weeks)
+    data_type: double
+  - name: Project Elapsed Time (years)
+    data_type: double
+  - name: Project Remaining Time (days)
+    data_type: long
+  - name: Project Remaining Time (months)
+    data_type: double
+  - name: Project Remaining Time (weeks)
+    data_type: long
+  - name: Project Remaining Time (years)
+    data_type: double
+  - name: Project Location State
+    data_type: string
+  - name: Project Location City State Zip Country
+    data_type: string
+  - name: End Client
+    data_type: string
+  - name: End Client Abbreviation
+    data_type: string
+  - name: End Client Type
+    data_type: string
+  - name: Administration Flag
+    data_type: string
+  - name: Bid & Proposal Flag
+    data_type: string
+  - name: Leave Flag
+    data_type: string
+  - name: Marketing Flag
+    data_type: string
+  - name: Project Category
+    data_type: string
+  - name: Client Type
+    data_type: string
+  - name: DurationDays
+    data_type: double
+  - name: DurationWeeks
+    data_type: double
+  - name: Legacy Project Flag
+    data_type: string
+  - name: Project Number and Name
+    data_type: string
+  - name: Billing Level
+    data_type: string
+  - name: Current BL Cost Budget Version
+    data_type: long
+  - name: Current BL Cost Forecast BL Date
+    data_type: datetime
+  - name: Current BL Cost Forecast ETC Start Date
+    data_type: datetime
+  - name: Current BL Cost Forecast Version
+    data_type: long
+  - name: Current BL Revenue Forecast ETC Start Date
+    data_type: datetime
+  - name: Current BL Revenue Forecast Version
+    data_type: long
+  - name: Project Role Category
+    data_type: string
+  - name: Contract Group Number
+    data_type: string
+  - name: Customer Group
+    data_type: string
+  - name: Customer Group Cascaded
+    data_type: string
+  - name: Project Billing Clerk
+    data_type: string
+  - name: Intercompany Group Project Number Participants
+    data_type: string
+  - name: Intercompany Group Operating Unit Participants
+    data_type: string
+  - name: Project Owning Business Line
+    data_type: string
+  - name: Client Number
+    data_type: long
+  - name: Owner Number
+    data_type: long
+  - name: EstimateID
+    data_type: string
+  - name: Estimate Name
+    data_type: string
+  - name: Estimate Description
+    data_type: string
+  - name: Estimate Owning Organization
+    data_type: string
+  - name: Estimate Manager Name
+    data_type: string
+  - name: Estimate Status
+    data_type: string
+  - name: Intercompany Group Project Name
+    data_type: string
+  - name: Project Pending Close Month Year
+    data_type: string
+  - name: ProjectPendingCloseMonthYearSort
+    data_type: long
+  - name: Project Owning Organization ID
+    data_type: long
+  - name: CDB Partnered Net Income Workflow Status
+    data_type: string
+  - name: MAXETCDate
+    data_type: datetime
+    sql: >-
+      null /*switch(BLANK(),,CALCULATE(MAX('Current'[Plan Start Date]),
+      FILTER('Current', 'Current'[ProjectID] = Projects[ProjectID])),
+      Projects[Project End Date], ,CALCULATE(MAX('Current'[Plan Start Date]),
+      FILTER('Current', 'Current'[ProjectID] = Projects[ProjectID])),) TODO:
+      Replace with valid SQL*/
+  - name: Affiliate Client Flag
+    data_type: string
+  - name: Project Manager Person ID
+    data_type: long
+  - name: Project and Intercompany Group Participating Organizations
+    data_type: string
+  - name: Executive In Charge Name
+    data_type: string
+  - name: Project Close Month Year
+    data_type: string
+  - name: Project Close Month Year Sort
+    data_type: long
+  - name: countrows1
+    data_type: int
+    sql: '1'
+connection_id: SQL42
+sql: >-
+  SELECT distinct Projects.ProjectID AS ProjectID , Projects.ProjectIsOpenFlag
+  AS ProjectIsOpen , case when Projects.ProjectIsOpenFlag = 1 then 'Y' else 'N'
+  end AS [Project Open Flag] , Projects.[Project Number] , Projects.[Project
+  Name] , Projects.[Project Number and Name] --+ case when Projects.[Legacy
+  Project Flag] = 'Y' then ' (*)' else '' end [Project Friendly Name] --,
+  Projects.[Project Number and Name] , NULL AS [Project Friendly Name (long)] ,
+  Projects.[Project Number and Name] , Projects.[Project Description] ,
+  Projects.[Project Owning Company] , Projects.[Project Owning Global Practice]
+  , Projects.[Project Owning Office Location] , Projects.[Project Owning
+  Department] , Projects.[Project Owning Organization] , Projects.OrganizationID
+  AS [Project Owning Organization ID] , Projects.[Project Owning Business Line]
+  , Projects.[Project Status] , Projects.[Project Type] , Projects.[Project
+  Start Date] , Projects.[Project Start Month Year] , Projects.[Project Start
+  Month Year Sort] [ProjectStartMonthYearSort] , Projects.[Project Start Year] ,
+  YEAR(getdate()) - Projects.[Project Start Year] AS [Project Start Years Ago] ,
+  Projects.[Project End Date] , Projects.[Project End Month Year] ,
+  Projects.[Project End Month Year Sort] [ProjectEndMonthYearSort] ,
+  Projects.[Project End Year] , YEAR(getdate()) - Projects.[Project End Year] AS
+  [Project End Years Ago] , Projects.[Project Close Date] , Projects.[Project
+  Close Year] , Projects.[Project Close Month Year] , Projects.[Project Close
+  Month Year Sort] , format(Projects.[Project Close Date], 'yyyyMM') AS [Project
+  Close Year Month] , Projects.[Project Created Date] AS [Project Create Date] ,
+  Projects.[Project Created Year] AS [Project Create Year] ,
+  format(Projects.[Project Created Date], 'yyyyMM') AS [Project Create Year
+  Month] , case when Projects.ProjectIsOpenFlag = 1 then DATEDIFF(day,
+  Projects.[Project Start Date], GETDATE()) end AS [Project Elapsed Time (days)]
+  , case when Projects.ProjectIsOpenFlag = 1 then DATEDIFF(day,
+  Projects.[Project Start Date], GETDATE())/30.0 end AS [Project Elapsed Time
+  (months)] , Projects.[Project Elapsed Weeks] [Project Elapsed Time (weeks)] ,
+  case when Projects.ProjectIsOpenFlag = 1 then DATEDIFF(day, Projects.[Project
+  Start Date], GETDATE())/365.0 end AS [Project Elapsed Time (years)] , case
+  when Projects.ProjectIsOpenFlag = 1 then DATEDIFF(day, GETDATE(),
+  Projects.[Project End Date]) end AS [Project Remaining Time (days)] , case
+  when Projects.ProjectIsOpenFlag = 1 then DATEDIFF(day, GETDATE(),
+  Projects.[Project End Date]) end/30.0 AS [Project Remaining Time (months)] ,
+  Projects.[Project Remaining Weeks] AS [Project Remaining Time (weeks)] , case
+  when Projects.ProjectIsOpenFlag = 1 then DATEDIFF(day, GETDATE(),
+  Projects.[Project End Date]) end/365.0 AS [Project Remaining Time (years)] ,
+  Projects.[Client Number] AS ClientNumber , Projects.[Client Number] ,
+  Projects.[Client Name] AS [Client] , Projects.[Client Abbreviation] ,
+  Projects.[Project Manager Name] [Project Manager] , Projects.[Project Manager
+  Email] , Projects.[Project Manager Person ID] , Projects.[Project Direct Flag]
+  AS [Billable Project Flag] , projects.[Project Manager Organization] ,
+  projects.[Project Manager Company] , projects.[Project Manager Global
+  Practice] , projects.[Project Manager Office Location] , projects.[Project
+  Manager Department] --, null AS [Service Provided] --, null AS Market --, null
+  AS Submarket --, null [Market Submarket] , Projects.[Project Site Country
+  Code] AS [Project Location Country (short)] , Projects.[Project Site Country
+  Name] AS [Project Location Country] , Projects.[Project Site County] AS
+  [Project Location County] , Projects.[Project Site City] AS [Project Location
+  City] , Projects.[Project Site State Code] AS [Project Location State (short)]
+  , Projects.[Project Site State Name] AS [Project Location State2] ,
+  Projects.[Project Site State Name] AS [Project Location State] -- no obsolete
+  project location , Projects.[Project Site Postal Code] AS [Project Location
+  Zip] , Projects.[Project Site City State Postal Country] AS [Project Location
+  City State Zip Country] , Projects.[Owner Name] [End Client] , Projects.[Owner
+  Abbreviation] AS [End Client Abbreviation] , Projects.[Owner Type] AS [End
+  Client Type] , Projects.[Owner Number] EndClientNumber , Projects.[Owner
+  Number] , Projects.[Project Work Location Country Code] AS [Project Work
+  Location Country (short)] , Projects.[Project Work Location Country Name] AS
+  [Project Work Location Country] , Projects.[Project Work Location County] AS
+  [Project Work Location County] , Projects.[Project Work Location City] AS
+  [Project Work Location City] , Projects.[Project Work Location State Code] AS
+  [Project Work Location State (short)] , Projects.[Project Work Location State
+  Name] AS [Project Work Location State] , Projects.[Project Work Location
+  Postal Code] AS [Project Work Location Zip] , Projects.[Client Project
+  Delivery Method] AS [Project Delivery Method] , Projects.[Project Driver]
+  [COVID-19 Response Flag] , Projects.[Project Billing Group Number] [Billing
+  Group Number] , Projects.[Intercompany Group Number] , Projects.[Intercompany
+  Group Number and Description] [Intercompany Group Name] ,
+  Projects.[Intercompany Group Primary Flag] [Intercompany Group Primary Flag] ,
+  Projects.[Intercompany Project Flag] [Intercompany Group Flag] ,
+  Projects.[Operating Unit] , --Projects.[Project Administration Flag] NULL
+  [Administration Flag] , --case when Projects.[Project Type] like '%B&P%' and
+  Projects.[Project Marketing and Sales Flag] = 'Y' then 'Y' else 'N' end NULL
+  [Bid & Proposal Flag] , --Projects.[Project Leave Flag] NULL [Leave Flag] ,
+  --Projects.[Project Marketing and Sales Flag] NULL [Marketing Flag] , /*trim(
+  case when Projects.[Project Direct Flag] = 'Y' then 'Direct' else '' end +
+  case when Projects.[Project Marketing and Sales Flag] = 'Y' then 'Marketing &
+  Sales' else '' end + case when Projects.[Project Leave Flag] = 'Y' then
+  'Leave' else '' end + case when Projects.[Project Administration Flag] = 'Y'
+  then 'Administration' else '' end )*/ NULL [Project Category] --, case
+  Projects.[Operating Unit] when 'BMCD US' then 'BMUS-USD' when 'BMCD Canada'
+  then 'BMCanada-CAD' else Projects.[Operating Unit] end [Business Unit] ,
+  Projects.[Client Type] , DATEDIFF(day, Projects.[Project Start Date],
+  Projects.[Project End Date]) [DurationDays] , DATEDIFF(day, Projects.[Project
+  Start Date], Projects.[Project End Date])/7.0 [DurationWeeks] ,
+  Projects.[Legacy Project Flag] /* moved from BillingLevel table */ ,
+  Projects.[Project Billing Level] [Billing Level] /* moved from FP Versions
+  table */ , FinancialPlanVersions40.VERSION_NUMBER AS [Current BL Cost Budget
+  Version] , FinancialPlanVersions60.BASELINED_DATE AS [Current BL Cost Forecast
+  BL Date] , FinancialPlanVersions60.ETC_START_DATE AS [Current BL Cost Forecast
+  ETC Start Date] , FinancialPlanVersions60.VERSION_NUMBER AS [Current BL Cost
+  Forecast Version] , FinancialPlanVersions62.ETC_START_DATE AS [Current BL
+  Revenue Forecast ETC Start Date] , FinancialPlanVersions62.VERSION_NUMBER AS
+  [Current BL Revenue Forecast Version] /* moved from ProjectRoleCounts table */
+  , Projects.[Project Role Category] /* moved from CGMapping table */ ,
+  Projects.[Contract Group Number] /* moved from CustomerGroups table */ ,
+  CustomerGroups.CustomerGroup [Customer Group] ,
+  coalesce(CustomerGroups.CustomerGroup, Projects.[Owner Name]) [Customer Group
+  Cascaded] /* moved from CDBRecircWorkflowStatus table */ ,
+  CDBRecircWorkflowStatus.meaning AS [CDB Partnered Net Income Workflow Status]
+  , Projects.[Project Billing Clerk] , Projects.[Intercompany Group Project
+  Number Participants] , Projects.[Intercompany Group Operating Unit
+  Participants] , Prime.[Project Name] [Intercompany Group Project Name] ,
+  Projects.[Project and Intercompany Group Participating Organizations] ,
+  Estimate.EstimateID , Estimate.[Estimate Name] , Estimate.[Estimate
+  Description] , Estimate.[Estimate Owning Organization] , Estimate.[Estimate
+  Manager Name] , Estimate.[Estimate Status] ,
+  Projects.[ProjectPendingCloseMonthYearSort] , Projects.[Project Pending Close
+  Month Year] , case when coalesce(AffiliateClient.ClientID,
+  AffiliateOwner.ClientID) is not null then 'Y' else 'N' end as [Affiliate
+  Client Flag] , Projects.[Executive In Charge Name] FROM
+  Model_Common.dbo.Projects /* moved from FP Versions table */ /* current
+  Approved Cost Budget */ left join ( select project_id, VERSION_NUMBER from
+  AnalyticsSource.dbo.FinancialPlanVersions where
+  FinancialPlanVersions.FIN_PLAN_TYPE_ID= 10040 AND
+  FinancialPlanVersions.BUDGET_STATUS_CODE = 'B' AND
+  FinancialPlanVersions.CURRENT_FLAG = 'Y' union all select project_id,
+  VERSION_NUMBER from AnalyticsSource.east.FinancialPlanVersions where
+  FinancialPlanVersions.FIN_PLAN_TYPE_ID= 10040 AND
+  FinancialPlanVersions.BUDGET_STATUS_CODE = 'B' AND
+  FinancialPlanVersions.CURRENT_FLAG = 'Y') FinancialPlanVersions40 on
+  FinancialPlanVersions40.PROJECT_ID = Projects.ProjectID /* current Primary
+  Cost Forecast */ left join ( select project_id, BASELINED_DATE,
+  ETC_START_DATE, VERSION_NUMBER from AnalyticsSource.dbo.FinancialPlanVersions
+  where FinancialPlanVersions.FIN_PLAN_TYPE_ID= 10060 AND
+  FinancialPlanVersions.BUDGET_STATUS_CODE = 'B' AND
+  FinancialPlanVersions.CURRENT_FLAG = 'Y' union all select project_id,
+  BASELINED_DATE, ETC_START_DATE, VERSION_NUMBER from
+  AnalyticsSource.east.FinancialPlanVersions where
+  FinancialPlanVersions.FIN_PLAN_TYPE_ID= 10060 AND
+  FinancialPlanVersions.BUDGET_STATUS_CODE = 'B' AND
+  FinancialPlanVersions.CURRENT_FLAG = 'Y') FinancialPlanVersions60 on
+  FinancialPlanVersions60.PROJECT_ID = Projects.ProjectID /* current Primary
+  Revenue Forecast */ left join ( select project_id, ETC_START_DATE,
+  VERSION_NUMBER from AnalyticsSource.dbo.FinancialPlanVersions where
+  FinancialPlanVersions.FIN_PLAN_TYPE_ID= 10062 AND
+  FinancialPlanVersions.BUDGET_STATUS_CODE = 'B' AND
+  FinancialPlanVersions.CURRENT_FLAG = 'Y' union all select project_id,
+  ETC_START_DATE, VERSION_NUMBER from AnalyticsSource.east.FinancialPlanVersions
+  where FinancialPlanVersions.FIN_PLAN_TYPE_ID= 10062 AND
+  FinancialPlanVersions.BUDGET_STATUS_CODE = 'B' AND
+  FinancialPlanVersions.CURRENT_FLAG = 'Y') FinancialPlanVersions62 on
+  FinancialPlanVersions62.PROJECT_ID = Projects.ProjectID /* moved from
+  CustomerGroups table */ left join SISOT.dbo.tblCustomerGroups CustomerGroups
+  on CustomerGroups.CustomerNumber = Projects.[Owner Number] /* moved from
+  CDBRecircWorkflowStatus table */ left join
+  AnalyticsSource.dbo.CDBRecircWorkflowStatus on
+  CDBRecircWorkflowStatus.Project_ID = Projects.ProjectID left join ( select
+  distinct [Intercompany Group Number], [Project Name], RANK() over (partition
+  by [Intercompany Group Number] order by projectid) n from
+  Model_Common.dbo.Projects where [Intercompany Group Primary Flag] = 'Y' )
+  Prime on Projects.[Intercompany Group Number] = Prime.[Intercompany Group
+  Number] and Prime.n = 1 left join (SELECT distinct Projects.Project_ID ,
+  EstimateProjects.ProjectNumber [Estimate Project Number] ,
+  EstimateProjects.ProjectLastUpdateDate [Estimate Project Last Updated Date] ,
+  EstimateProjects.EstimateID, EstimateProjects.EstimateInternalID ,
+  EstimateDetails.EstimateName [Estimate Name] ,
+  EstimateDetails.EstimateDescription [Estimate Description] ,
+  EstimateDetails.EstimateOwningOrganization [Estimate Owning Organization] ,
+  EstimateDetails.EstimateManager [Estimate Manager Name] ,
+  nullif(EstimateDetails.EstimateManagerExternalKey, 0) [Estimate Manager
+  Employee Number] , EstimateDetails.EstimateStatus [Estimate Status] ,
+  EstimateDetails.LastUpdateDate [Estimate Last Updated Date] FROM
+  [Ecosys].[EcoSys].[EstimateSummary] join Ecosys.EcoSys.EstimateProjects on
+  EstimateSummary.EstimateInternalID = EstimateProjects.EstimateInternalID join
+  (select project_id, project_no from EnterpriseDataStore.dbo.Projects where
+  directflag = 'Y' union all select project_id, project_no from
+  EnterpriseDataStore.east.Projects where directflag = 'Y') Projects on
+  Projects.project_no = EstimateProjects.ProjectNumber left join
+  Ecosys.EcoSys.EstimateDetails on EstimateDetails.EstimateInternalID =
+  EstimateProjects.EstimateInternalID where EstimateProjects.EstimateID <> '' )
+  Estimate on Estimate.Project_ID = Projects.ProjectID left join
+  SISOT.dbo.Affiliate_Companies AffiliateClient on AffiliateClient.ClientID =
+  Projects.ClientID left join SISOT.dbo.Affiliate_Companies AffiliateOwner on
+  AffiliateOwner.ClientID = Projects.OwnerID where Projects.[Project Direct
+  Flag] = 'Y' drop table #psr_projects UNION ALL select distinct '1' +
+  AdditionalProjects.segment1 + AdditionalProjects.segment2 +
+  AdditionalProjects.segment3 + AdditionalProjects.segment4 ProjectID , 1 AS
+  ProjectIsOpen , 'Y' AS [Project Open Flag] , '1' + AdditionalProjects.segment1
+  + AdditionalProjects.segment2 + AdditionalProjects.segment3 +
+  AdditionalProjects.segment4 [Project Number] , CMP.Company + '.' + DIV.[Global
+  Practice] + '.' + LOC.[Office Location] + '.' + coalesce(Orgs.Department,
+  DEPT.Department) [Project Name] , convert(varchar(20), '1' +
+  AdditionalProjects.segment1 + AdditionalProjects.segment2 +
+  AdditionalProjects.segment3 + AdditionalProjects.segment4) + ' ' + CMP.Company
+  + '.' + DIV.[Global Practice] + '.' + LOC.[Office Location] + '.' +
+  coalesce(Orgs.Department, DEPT.Department) [Project Friendly Name] ,
+  /*convert(varchar(20), '1' + AdditionalProjects.segment1 +
+  AdditionalProjects.segment2 + AdditionalProjects.segment3 +
+  AdditionalProjects.segment4) + ' ' + CMP.Company + '.' + DIV.[Global Practice]
+  + '.' + LOC.[Office Location] + '.' + coalesce(Orgs.Department,
+  DEPT.Department)*/ NULL AS [Project Friendly Name (long)] ,
+  convert(varchar(20), '1' + AdditionalProjects.segment1 +
+  AdditionalProjects.segment2 + AdditionalProjects.segment3 +
+  AdditionalProjects.segment4) + ' ' + CMP.Company + '.' + DIV.[Global Practice]
+  + '.' + LOC.[Office Location] + '.' + coalesce(Orgs.Department,
+  DEPT.Department) AS [Project Number and Name] , NULL AS [Project Description]
+  , CMP.Company [Project Owning Company] , DIV.[Global Practice] [Project Owning
+  Global Practice] , LOC.[Office Location] [Project Owning Office Location] ,
+  coalesce(Orgs.Department, DEPT.Department) AS [Project Owning Department] ,
+  case when orgs.OrganizationID is null then 'Invalid Costing Organization' else
+  Orgs.OrganizationName end AS [Project Owning Organization] ,
+  Orgs.OrganizationID AS [Project Owning Organization ID] , CASE WHEN
+  Orgs.BusinessLineCount <> 1 or Orgs.BusinessLineCount is null THEN DIV.[Global
+  Practice] + '.' + coalesce(Orgs.Department, DEPT.Department) ELSE
+  Orgs.BusinessLine END AS [Project Owning Business Line] , 'APPROVED' AS
+  [Project Status] , 'CDB RECIRC/ PDIP' [Project Type] , min(ProjectStartDate)
+  over (partition by AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4) [Project Start Date]
+  , FORMAT(min(ProjectStartDate) over (partition by AdditionalProjects.segment1,
+  AdditionalProjects.segment2, AdditionalProjects.segment3,
+  AdditionalProjects.segment4), 'MMM yyyy') [Project Start Month Year] ,
+  FORMAT(min(ProjectStartDate) over (partition by AdditionalProjects.segment1,
+  AdditionalProjects.segment2, AdditionalProjects.segment3,
+  AdditionalProjects.segment4), 'yyyyMM') [ProjectStartMonthYearSort] ,
+  YEAR(min(ProjectStartDate) over (partition by AdditionalProjects.segment1,
+  AdditionalProjects.segment2, AdditionalProjects.segment3,
+  AdditionalProjects.segment4)) [Project Start Year] , YEAR(getdate()) -
+  YEAR(min(ProjectStartDate) over (partition by AdditionalProjects.segment1,
+  AdditionalProjects.segment2, AdditionalProjects.segment3,
+  AdditionalProjects.segment4)) AS [Project Start Years Ago] ,
+  max(ProjectEndDate) over (partition by AdditionalProjects.segment1,
+  AdditionalProjects.segment2, AdditionalProjects.segment3,
+  AdditionalProjects.segment4) [Project End Date] , FORMAT(max(ProjectEndDate)
+  over (partition by AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4) , 'MMM yyyy')
+  [Project End Month Year] , FORMAT(max(ProjectEndDate) over (partition by
+  AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4) , 'yyyyMM')
+  [ProjectEndMonthYearSort] , YEAR(max(ProjectEndDate) over (partition by
+  AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4)) [Project End Year]
+  , YEAR(getdate()) - YEAR(max(ProjectEndDate) over (partition by
+  AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4)) AS [Project End
+  Years Ago] , NULL AS [Project Close Date] , null [Project Close Month Year] ,
+  null [Project Close Month Year Sort] , NULL AS [Project Close Year] , NULL AS
+  [Project Close Year Month] , min(ProjectCreationDate) over (partition by
+  AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4) [Project Create
+  Date] , YEAR(min(ProjectCreationDate) over (partition by
+  AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4)) AS [Project Create
+  Year] , format(min(ProjectCreationDate) over (partition by
+  AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4), 'yyyyMM') AS
+  [Project Create Year Month] , case when max(ProjectEndDate) over (partition by
+  AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4) > getdate() then
+  DATEDIFF(day, min(ProjectStartDate) over (partition by
+  AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4), GETDATE()) end AS
+  [Project Elapsed Time (days)] , case when max(ProjectEndDate) over (partition
+  by AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4) > getdate() then
+  DATEDIFF(day, min(ProjectStartDate) over (partition by
+  AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4), GETDATE())/30.0 end
+  AS [Project Elapsed Time (months)] , case when max(ProjectEndDate) over
+  (partition by AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4) > getdate() then
+  DATEDIFF(day, min(ProjectStartDate) over (partition by
+  AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4), GETDATE())/7.0 end
+  AS [Project Elapsed Time (weeks)] , case when max(ProjectEndDate) over
+  (partition by AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4) > getdate() then
+  DATEDIFF(day, min(ProjectStartDate) over (partition by
+  AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4), GETDATE())/365.0
+  end AS [Project Elapsed Time (years)] , case when max(ProjectEndDate) over
+  (partition by AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4) > getdate() then
+  DATEDIFF(day, GETDATE(), max(ProjectEndDate) over (partition by
+  AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4)) end AS [Project
+  Remaining Time (days)] , case when max(ProjectEndDate) over (partition by
+  AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4) > getdate() then
+  DATEDIFF(day, GETDATE(), max(ProjectEndDate) over (partition by
+  AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4))/30.0 end AS
+  [Project Remaining Time (months)] , case when max(ProjectEndDate) over
+  (partition by AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4) > getdate() then
+  DATEDIFF(day, GETDATE(), max(ProjectEndDate) over (partition by
+  AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4))/7.0 end AS [Project
+  Remaining Time (weeks)] , case when max(ProjectEndDate) over (partition by
+  AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4) > getdate() then
+  DATEDIFF(day, GETDATE(), max(ProjectEndDate) over (partition by
+  AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4))/365.0 end AS
+  [Project Remaining Time (years)] , NULL AS ClientNumber , NULL AS [Client
+  Number] , NULL AS [Client] , NULL [Client Abbreviation] , NULL AS [Project
+  Manager] , NULL AS [Project Manager Email] , NULL AS [Project Manager Person
+  ID] , 'N' AS [Billable Project Flag] , NULL AS [Project Manager Organization]
+  , NULL AS [Project Manager Company] , NULL AS [Project Manager Global
+  Practice] , NULL AS [Project Manager Office Location] , NULL AS [Project
+  Manager Department] --, NULL AS [Service Provided] --, NULL AS Market --, NULL
+  AS Submarket --, NULL AS [Market Submarket] , NULL AS [Project Location
+  Country (short)] , NULL AS [Project Location Country] , NULL AS [Project
+  Location County] , NULL AS [Project Location City] , NULL AS [Project Location
+  State (short)] , NULL AS [Project Location State2] , NULL AS [Project Location
+  State] , NULL AS [Project Location Zip] , NULL AS [Project Location City State
+  Zip Country] , NULL [End Client] , NULL [End Client Abbreviation] , NULL [End
+  Client Type] , NULL AS EndClientNumber , NULL AS [Owner Number] , NULL AS
+  [Project Work Location Country (short)] , NULL AS [Project Work Location
+  Country] , NULL AS [Project Work Location County] , NULL AS [Project Work
+  Location City] , NULL AS [Project Work Location State (short)] , NULL AS
+  [Project Work Location State] , NULL AS [Project Work Location Zip] , NULL AS
+  [Project Delivery Method] , 'N' AS [COVID-19 Response Flag] , null [Billing
+  Group Number] , null [Intercompany Group Number] , null [Intercompany Group
+  Name] , null [Intercompany Group Primary Flag] , 'N' [Intercompany Group Flag]
+  , coalesce(OperatingUnits.NAME, 'BMCD US') [Operating Unit] , NULL AS
+  [Administration Flag] , NULL AS [Bid & Proposal Flag] , NULL AS [Leave Flag] ,
+  NULL AS [Marketing Flag] , NULL AS [Project Category] --, case
+  OperatingUnits.NAME when 'BMCD US' then 'BMUS-USD' when 'BMCD Canada' then
+  'BMCanada-CAD' else coalesce(OperatingUnits.NAME, 'BMUS-USD') end [Business
+  Unit] , NULL AS [Client Type] , DATEDIFF(day, min(ProjectStartDate) over
+  (partition by AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4) ,
+  max(ProjectEndDate) over (partition by AdditionalProjects.segment1,
+  AdditionalProjects.segment2, AdditionalProjects.segment3,
+  AdditionalProjects.segment4)) [DurationDays] , DATEDIFF(day,
+  min(ProjectStartDate) over (partition by AdditionalProjects.segment1,
+  AdditionalProjects.segment2, AdditionalProjects.segment3,
+  AdditionalProjects.segment4) , max(ProjectEndDate) over (partition by
+  AdditionalProjects.segment1, AdditionalProjects.segment2,
+  AdditionalProjects.segment3, AdditionalProjects.segment4))/7.0 [DurationWeeks]
+  , 'N' AS [Legacy Project Flag] , NULL AS [Billing Level] , NULL AS [Current BL
+  Cost Budget Version] , NULL AS [Current BL Cost Forecast BL Date] , NULL AS
+  [Current BL Cost Forecast ETC Start Date] , NULL AS [Current BL Cost Forecast
+  Version] , NULL AS [Current BL Revenue Forecast ETC Start Date] , NULL AS
+  [Current BL Revenue Forecast Version] , 'Unknown' AS [Project Role Category] ,
+  'ADD-1' + AdditionalProjects.segment2 + AdditionalProjects.segment3 [Contract
+  Group Number] , NULL [Customer Group] , NULL [Customer Group Cascaded] , NULL
+  [Project Billing Clerk] , NULL [CDB Partnered Net Income Workflow Status] ,
+  NULL [Intercompany Group Project Number Participants] , NULL [Intercompany
+  Group Operating Unit Participants] , NULL [Intercompany Group Project Name] ,
+  NULL [Project and Intercompany Group Participating Organizations] , NULL
+  EstimateID , NULL [Estimate Name] , NULL [Estimate Description] , NULL
+  [Estimate Owning Organization] , NULL [Estimate Manager Name] , NULL [Estimate
+  Status] , NULL [ProjectPendingCloseMonthYearSort] , NULL [Project Pending
+  Close Month Year] , NULL as [Affiliate Client Flag] , NULL [Executive In
+  Charge Name] from ( SELECT distinct CDBRecircAccounts.segment1 ,
+  CDBRecircAccounts.segment2 , CDBRecircAccounts.segment3 ,
+  CDBRecircAccounts.segment4 , min(try_convert(date, '01-' +
+  CDBRecircAccounts.period_name)) over (partition by CDBRecircAccounts.segment1,
+  CDBRecircAccounts.segment2, CDBRecircAccounts.segment3,
+  CDBRecircAccounts.segment4) AS ProjectStartDate , max(try_convert(date, '01-'
+  + CDBRecircAccounts.period_name)) over (partition by
+  CDBRecircAccounts.segment1, CDBRecircAccounts.segment2,
+  CDBRecircAccounts.segment3, CDBRecircAccounts.segment4) AS ProjectEndDate ,
+  min(try_convert(date, '01-' + CDBRecircAccounts.period_name)) over (partition
+  by CDBRecircAccounts.segment1, CDBRecircAccounts.segment2,
+  CDBRecircAccounts.segment3, CDBRecircAccounts.segment4) AS ProjectCreationDate
+  FROM AnalyticsSource.dbo.CDBRecircAccounts where
+  nullif(CDBRecircAccounts.PROJECT_ID, '') is null union SELECT distinct
+  CDBRecircAccountsHistory.segment1 , CDBRecircAccountsHistory.segment2 ,
+  CDBRecircAccountsHistory.segment3 , '999' AS segment4 , min(try_convert(date,
+  '01-' + CDBRecircAccountsHistory.period_name)) over (partition by
+  CDBRecircAccountsHistory.segment1, CDBRecircAccountsHistory.segment2,
+  CDBRecircAccountsHistory.segment3) AS ProjectStartDate , max(try_convert(date,
+  '01-' + CDBRecircAccountsHistory.period_name)) over (partition by
+  CDBRecircAccountsHistory.segment1, CDBRecircAccountsHistory.segment2,
+  CDBRecircAccountsHistory.segment3) AS ProjectEndDate , min(try_convert(date,
+  '01-' + CDBRecircAccountsHistory.period_name)) over (partition by
+  CDBRecircAccountsHistory.segment1, CDBRecircAccountsHistory.segment2,
+  CDBRecircAccountsHistory.segment3) AS ProjectCreationDate FROM
+  AnalyticsSource.dbo.CDBRecircAccountsHistory where
+  nullif(CDBRecircAccountsHistory.PROJECT_ID, '') is null union SELECT distinct
+  PDIP_CMFE_Equity_JE.segment1 , PDIP_CMFE_Equity_JE.segment2 ,
+  PDIP_CMFE_Equity_JE.segment3 , PDIP_CMFE_Equity_JE.segment4 ,
+  min(try_convert(date, '01-' + PDIP_CMFE_Equity_JE.period_name)) over
+  (partition by PDIP_CMFE_Equity_JE.segment1, PDIP_CMFE_Equity_JE.segment2,
+  PDIP_CMFE_Equity_JE.segment3, PDIP_CMFE_Equity_JE.segment4) AS
+  ProjectStartDate , max(try_convert(date, '01-' +
+  PDIP_CMFE_Equity_JE.period_name)) over (partition by
+  PDIP_CMFE_Equity_JE.segment1, PDIP_CMFE_Equity_JE.segment2,
+  PDIP_CMFE_Equity_JE.segment3, PDIP_CMFE_Equity_JE.segment4) AS ProjectEndDate
+  , min(try_convert(date, '01-' + PDIP_CMFE_Equity_JE.period_name)) over
+  (partition by PDIP_CMFE_Equity_JE.segment1, PDIP_CMFE_Equity_JE.segment2,
+  PDIP_CMFE_Equity_JE.segment3, PDIP_CMFE_Equity_JE.segment4) AS
+  ProjectCreationDate FROM AnalyticsSource.dbo.PDIP_CMFE_Equity_JE WHERE
+  nullif(PDIP_CMFE_Equity_JE.Project_ID, '') is null AND ( -- Equity Charge
+  (PDIP_CMFE_Equity_JE.SEGMENT5 = 'EQCH' --and not(PDIP_CMFE_Equity_JE.SEGMENT1
+  IN ('013','044','047','022')) -- UKO, CAN, AZC, CSR and
+  not(PDIP_CMFE_Equity_JE.SEGMENT1 IN ('044','047')) -- AZC, CSR and
+  NOT(PDIP_CMFE_Equity_JE.SEGMENT2 IN ('101')) -- M&S --and
+  NOT(PDIP_CMFE_Equity_JE.SEGMENT3 IN ('731')) -- UKO and
+  not((PDIP_CMFE_Equity_JE.segment1 = 022 or PDIP_CMFE_Equity_JE.segment3 = 731)
+  and PDIP_CMFE_Equity_JE.ledger_id <> 3075) -- keep one ledger for UKO ) or --
+  CDB Recirc Provided/Received FTE PDIP_CMFE_Equity_JE.SEGMENT5 in ('CMFE',
+  'CAFE', 'CRFE') ) union SELECT distinct PDIPAccountingJournalEntries.segment1
+  , PDIPAccountingJournalEntries.segment2 ,
+  PDIPAccountingJournalEntries.segment3 , PDIPAccountingJournalEntries.segment4
+  , min(try_convert(date, '01-' + PDIPAccountingJournalEntries.period_name))
+  over (partition by PDIPAccountingJournalEntries.segment1,
+  PDIPAccountingJournalEntries.segment2, PDIPAccountingJournalEntries.segment3,
+  PDIPAccountingJournalEntries.segment4) AS ProjectStartDate ,
+  max(try_convert(date, '01-' + PDIPAccountingJournalEntries.period_name)) over
+  (partition by PDIPAccountingJournalEntries.segment1,
+  PDIPAccountingJournalEntries.segment2, PDIPAccountingJournalEntries.segment3,
+  PDIPAccountingJournalEntries.segment4) AS ProjectEndDate ,
+  min(try_convert(date, '01-' + PDIPAccountingJournalEntries.period_name)) over
+  (partition by PDIPAccountingJournalEntries.segment1,
+  PDIPAccountingJournalEntries.segment2, PDIPAccountingJournalEntries.segment3,
+  PDIPAccountingJournalEntries.segment4) AS ProjectCreationDate FROM
+  AnalyticsSource.dbo.PDIPAccountingJournalEntries WHERE
+  nullif(PDIPAccountingJournalEntries.Project_ID, '') is null AND -- CDB Recirc
+  Provided/Received FTE PDIPAccountingJournalEntries.SEGMENT5 = 'CWFE' )
+  AdditionalProjects LEFT OUTER JOIN (SELECT UPPER(LEFT(GB_SegCmp.COMPANY,3)) AS
+  Company, GB_SegCmp.SEGMENT1 FROM PSRStage.dbo.GB_SegCmp WHERE
+  GB_SegCmp.SEGMENT1 NOT LIKE '9%') CMP ON AdditionalProjects.SEGMENT1 =
+  CMP.SEGMENT1 LEFT OUTER JOIN (SELECT UPPER(LEFT(GB_SegDiv.DIVISION,3)) AS
+  [Global Practice], GB_SegDiv.SEGMENT2 FROM PSRStage.dbo.GB_SegDiv WHERE
+  GB_SegDiv.SEGMENT2 NOT LIKE '9%') DIV ON AdditionalProjects.SEGMENT2 =
+  DIV.SEGMENT2 LEFT OUTER JOIN (SELECT UPPER(LEFT(GB_SegLoc.LOCATION,3)) AS
+  [Office Location], GB_SegLoc.SEGMENT3 FROM PSRStage.dbo.GB_SegLoc WHERE
+  GB_SegLoc.SEGMENT3 NOT LIKE '9%' OR GB_SegLoc.SEGMENT3 = '999') LOC ON
+  AdditionalProjects.SEGMENT3 = LOC.SEGMENT3 LEFT OUTER JOIN (SELECT
+  GB_SegDept.Department, GB_SegDept.SEGMENT4 FROM PSRStage.dbo.GB_SegDept) DEPT
+  ON AdditionalProjects.SEGMENT4 = DEPT.SEGMENT4 left join
+  AnalyticsSource.dbo.OperatingUnitCompany on OperatingUnitCompany.SEGMENT1 =
+  AdditionalProjects.segment1 left join AnalyticsSource.dbo.OperatingUnits on
+  OperatingUnits.ORGANIZATION_ID =
+  OperatingUnitCompany.Operating_Unit_Organization_ID left join (SELECT distinct
+  Organizations.OrganizationID , Organizations.OrganizationName ,
+  HR_Org_Segment_Mapping.Segment1, HR_Org_Segment_Mapping.Segment2,
+  HR_Org_Segment_Mapping.Segment3, HR_Org_Segment_Mapping.Segment4 ,
+  Organizations.Department , COUNT(CRMBusinessLine.BusinessLine) OVER (PARTITION
+  BY Organizations.OrganizationID) AS BusinessLineCount ,
+  CRMBusinessLine.BusinessLine from (select * from
+  EnterpriseDataStore.dbo.Organizations where EndDate is null union all select *
+  from EnterpriseDataStore.east.Organizations where EndDate is null)
+  Organizations left join AnalyticsSource.dbo.HR_Org_Segment_Mapping on
+  Organizations.OrganizationID = HR_Org_Segment_Mapping.Organization_ID LEFT
+  OUTER JOIN (select distinct organization_id, businessline from
+  AnalyticsSource.dbo.CRMBusinessLine) CRMBusinessLine ON
+  Organizations.OrganizationID = CRMBusinessLine.Organization_ID where
+  Organizations.OrganizationID not in (8905 /*H&C.TRN.KCM.Bridges*/, 14366
+  /*H&C.TRN.KCM.Design*/) ) Orgs on Orgs.Segment1 = AdditionalProjects.segment1
+  and Orgs.Segment2 = AdditionalProjects.segment2 and Orgs.Segment3 =
+  AdditionalProjects.segment3 and Orgs.Segment4 = AdditionalProjects.segment4

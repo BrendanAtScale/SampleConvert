@@ -1,0 +1,9 @@
+unique_name: .Actual Hours-Intercompany
+object_type: metric_calc
+label: .Actual Hours-Intercompany
+expression: >-
+  0 /*CALCULATE(sum('IntercompanyHours'[Intercompany
+  Hours]),FILTER(Dates,Dates[Future Month Flag]="N")) TODO: Update with valid
+  MDX expression*/
+folder: Actual\Incremental
+format: '#,0.00'

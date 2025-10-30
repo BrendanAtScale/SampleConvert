@@ -1,0 +1,9 @@
+unique_name: .EAC CW % of Total EAC Cost
+object_type: metric_calc
+label: .EAC CW % of Total EAC Cost
+expression: >-
+  0 /*DIVIDE(DIVIDE([.EAC Cost-CW],[.EAC Cost]), NOT([IsTaskLevelFiltered]) &&
+  NOT([IsResourceFiltered]) && [HasOneCurrency]) TODO: Update with valid MDX
+  expression*/
+folder: Forecast\At Completion
+format: 0.0%;-0.0%;0.0%

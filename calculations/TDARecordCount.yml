@@ -1,0 +1,4 @@
+unique_name: TDARecordCount
+object_type: metric_calc
+label: TDARecordCount
+expression: '[Measures].[TDARowCount]'

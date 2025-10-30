@@ -1,0 +1,8 @@
+unique_name: .Actual Hours-CWK
+object_type: metric_calc
+label: .Actual Hours-CWK
+expression: >-
+  0 /*CALCULATE([.Actual Hours], FILTER('Resources', Resources[Resource
+  Category]="Contract Labor")) TODO: Update with valid MDX expression*/
+folder: Actual\Incremental
+format: '#,0.00'

@@ -1,0 +1,7 @@
+unique_name: DiscountOvermax
+object_type: metric
+label: DiscountOvermax
+calculation_method: sum
+column: DiscountOvermax
+dataset: dataset_Estimates
+unrelated_dimensions_handling: repeat

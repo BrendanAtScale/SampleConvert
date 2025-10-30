@@ -1,0 +1,9 @@
+unique_name: Historic-Monthly Change-EAC Gross Profit-Best Case
+object_type: metric_calc
+label: Historic-Monthly Change-EAC Gross Profit-Best Case
+expression: >-
+  0 /*DIVIDE(([Historic-EAC Gross Profit-Best Case]-[Historic-PM-EAC Gross
+  Profit-Best Case]),[ActualRowCount4])*[ActualRowCount4] TODO: Update with
+  valid MDX expression*/
+folder: Estimate at Completion (EAC)\Monthly Changes
+format: '""#,0.00;(""#,0.00);""#,0.00'

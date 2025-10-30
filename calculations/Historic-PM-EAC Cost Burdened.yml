@@ -1,0 +1,7 @@
+unique_name: Historic-PM-EAC Cost Burdened
+object_type: metric_calc
+label: Historic-PM-EAC Cost Burdened
+expression: >-
+  0 /*CALCULATE([Historic-EAC Cost],PREVIOUSMONTH(Dates[Date])) TODO: Update
+  with valid MDX expression*/
+is_hidden: true

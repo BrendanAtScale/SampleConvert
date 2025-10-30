@@ -1,0 +1,8 @@
+unique_name: FutureForecastRecordCount
+object_type: metric_calc
+label: FutureForecastRecordCount
+expression: >-
+  0 /*[ActualRowCount]+[FutureETCRecordCount] TODO: Update with valid MDX
+  expression*/
+folder: Display
+is_hidden: true

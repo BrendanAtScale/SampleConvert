@@ -1,0 +1,8 @@
+unique_name: Previous Months Weekday Count
+object_type: metric_calc
+label: Previous Months Weekday Count
+expression: >-
+  0 /*CALCULATE([Weekday Count], FILTER(Dates, Dates[Future Month Flag] = "N"))
+  TODO: Update with valid MDX expression*/
+format: '#,0'
+is_hidden: true

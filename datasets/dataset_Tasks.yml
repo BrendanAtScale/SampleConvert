@@ -1,0 +1,153 @@
+unique_name: dataset_Tasks
+object_type: dataset
+label: Tasks
+columns:
+  - name: TaskID
+    data_type: string
+  - name: ProjectID
+    data_type: long
+  - name: ProjectNumber
+    data_type: long
+  - name: Task Number
+    data_type: string
+  - name: Task Name
+    data_type: string
+  - name: TopTaskID
+    data_type: string
+  - name: Task Description
+    data_type: string
+  - name: LCM YTD OHM
+    data_type: double
+    sql: 'null /*RELATED(''Top Tasks''[LCM YTD OHM]) TODO: Replace with valid SQL*/'
+  - name: Task Allowed Transaction Type
+    data_type: string
+  - name: Task Default Costing Flag
+    data_type: string
+  - name: Client Invoice Structure Number
+    data_type: string
+  - name: Client Invoice Structure Name
+    data_type: string
+  - name: Chargeable Task Flag
+    data_type: string
+  - name: Task Friendly Name
+    data_type: string
+  - name: Task Friendly Name (long)
+    data_type: string
+  - name: Task Number and Name
+    data_type: string
+  - name: Intercompany Task Flag
+    data_type: string
+  - name: Task Intercompany Elimination Source Operating Unit ID
+    data_type: string
+  - name: Task Intercompany Elimination Source Operating Unit
+    data_type: string
+  - name: TaskOperatingUnit
+    data_type: string
+  - name: ProjectMaxETC
+    data_type: datetime
+    sql: 'null /*RELATED(Projects[MAXETCDate]) TODO: Replace with valid SQL*/'
+  - name: countrows1
+    data_type: int
+    sql: '1'
+connection_id: SQL42
+sql: >-
+  SELECT distinct Tasks.[Task ID] AS TaskID , Tasks.ProjectID ,
+  Projects.[Project Number] AS ProjectNumber , Tasks.[Task Chargeable Flag]
+  [Chargeable Task Flag] , Tasks.[Task Number] AS [Task Number] , Tasks.[Task
+  Name] AS [Task Name] , Tasks.[Task Number and Name] [Task Friendly Name] ,
+  null [Task Friendly Name (long)] , Tasks.[Task Number and Name] /* roll
+  measure values up to project level if Project Billing Level = PROJECT */ ,
+  case when Projects.[Project Billing Level] = 'PROJECT' then -1 *
+  Tasks.ProjectID else Tasks.TopTaskID end TopTaskID , case when Tasks.[Task ID]
+  < 0 then null else Tasks.[Task Description] end [Task Description] ,
+  Tasks.[Task Allowed Transaction Type] , Tasks.[Task Default Costing Flag] ,
+  Tasks.[Client Invoice Structure Number] , Tasks.[Client Invoice Structure
+  Name] , projects.[Operating Unit] TaskOperatingUnit , case when
+  IC_IntercompanySourceTask.task_id is not null then 'Y' else 'N' end
+  [Intercompany Task Flag] , IC_IntercompanySourceTask.ELIM_OU_ID [Task
+  Intercompany Elimination Source Operating Unit ID] , OperatingUnits.NAME [Task
+  Intercompany Elimination Source Operating Unit] FROM Model_Common.dbo.Tasks
+  INNER JOIN Model_Common.dbo.Projects ON Tasks.ProjectID = Projects.ProjectID
+  and Projects.[Project Direct Flag] = 'Y' left join
+  AnalyticsSource.dbo.IC_IntercompanySourceTask on
+  IC_IntercompanySourceTask.task_id = Tasks.[Task ID] left join
+  AnalyticsSource.dbo.OperatingUnits on OperatingUnits.ORGANIZATION_ID =
+  IC_IntercompanySourceTask.ELIM_OU_ID UNION ALL select distinct case when
+  projects.ProjectID is not null then '-' + convert(varchar(20),
+  Projects.ProjectID) + '.' + AdditionalTasks.segment1 +
+  AdditionalTasks.segment2 + AdditionalTasks.segment3 + AdditionalTasks.segment4
+  else '1' + AdditionalTasks.segment1 + AdditionalTasks.segment2 +
+  AdditionalTasks.segment3 + AdditionalTasks.segment4 end TaskID ,
+  coalesce(convert(varchar(20), Projects.ProjectID), '1' +
+  AdditionalTasks.segment1 + AdditionalTasks.segment2 + AdditionalTasks.segment3
+  + AdditionalTasks.segment4) AS ProjectID , coalesce(convert(varchar(20),
+  Projects.[Project Number]), '1' + AdditionalTasks.segment1 +
+  AdditionalTasks.segment2 + AdditionalTasks.segment3 +
+  AdditionalTasks.segment4) AS ProjectNumber , null [Chargeable Task Flag] , '0'
+  AS [Task Number], 'Unspecified Task' AS [Task Name] , '0 - Unspecified Task'
+  [Task Friendly Name] , null [Task Friendly Name (long)] , '0 - Unspecified
+  Task' [Task Number and Name] , case when projects.ProjectID is not null then
+  '-' + convert(varchar(20), Projects.ProjectID) + '.' +
+  AdditionalTasks.segment1 + AdditionalTasks.segment2 + AdditionalTasks.segment3
+  + AdditionalTasks.segment4 else '1' + AdditionalTasks.segment1 +
+  AdditionalTasks.segment2 + AdditionalTasks.segment3 + AdditionalTasks.segment4
+  end TopTaskID , NULL AS [Task Description] , NULL AS [Task Allowed Transaction
+  Type] , NULL AS [Task Default Costing Flag] , NULL AS [Client Invoice
+  Structure Number] , NULL AS [Client Invoice Structure Name] ,
+  coalesce(Projects.[Operating Unit] , OperatingUnits.NAME , 'BMCD US' )
+  TaskOperatingUnit , null [Intercompany Task Flag] , null [Task Intercompany
+  Elimination Source Operating Unit ID] , null [Task Intercompany Elimination
+  Source Operating Unit] from ( -- CDB Recirc SELECT distinct
+  CDBRecircAccounts.Project_ID , CDBRecircAccounts.segment1 ,
+  CDBRecircAccounts.segment2 , CDBRecircAccounts.segment3 ,
+  CDBRecircAccounts.segment4 FROM AnalyticsSource.dbo.CDBRecircAccounts union
+  SELECT distinct nullif(CDBRecircAccountsHistory.Project_ID, '') Project_ID ,
+  CDBRecircAccountsHistory.segment1 , CDBRecircAccountsHistory.segment2 ,
+  CDBRecircAccountsHistory.segment3 , '999' segment4 FROM
+  AnalyticsSource.dbo.CDBRecircAccountsHistory union -- Ecosys Estimates
+  (Dealsheets) SELECT distinct Projects.Project_ID , CMP.SEGMENT1 , DIV.SEGMENT2
+  , LOC.SEGMENT3 , '999' segment4 FROM [Ecosys].[EcoSys].[EstimateSummary] join
+  Ecosys.EcoSys.EstimateProjects on EstimateSummary.EstimateInternalID =
+  EstimateProjects.EstimateInternalID join (select project_id, project_no from
+  EnterpriseDataStore.dbo.Projects where directflag = 'Y' union all select
+  project_id, project_no from EnterpriseDataStore.east.Projects where directflag
+  = 'Y') Projects on Projects.project_no = EstimateProjects.ProjectNumber LEFT
+  OUTER JOIN (SELECT UPPER(LEFT(GB_SegCmp.COMPANY,5)) AS Company,
+  GB_SegCmp.SEGMENT1 FROM PSRStage.dbo.GB_SegCmp WHERE GB_SegCmp.SEGMENT1 NOT
+  LIKE '9%') CMP ON EstimateSummary.[EstimateParticipatingCompany] + ' -' =
+  CMP.Company LEFT OUTER JOIN (SELECT UPPER(LEFT(GB_SegDiv.DIVISION,5)) AS
+  [Global Practice], GB_SegDiv.SEGMENT2 FROM PSRStage.dbo.GB_SegDiv WHERE
+  GB_SegDiv.SEGMENT2 NOT LIKE '9%') DIV ON
+  EstimateSummary.[EstimateParticipatingGlobalPractice] + ' -' = DIV.[Global
+  Practice] LEFT OUTER JOIN (SELECT UPPER(LEFT(GB_SegLoc.LOCATION,5)) AS [Office
+  Location], GB_SegLoc.SEGMENT3 FROM PSRStage.dbo.GB_SegLoc WHERE
+  GB_SegLoc.SEGMENT3 NOT LIKE '9%' OR GB_SegLoc.SEGMENT3 = '999') LOC ON
+  EstimateSummary.[EstimateParticipatingOfficeLocation] + ' -' = LOC.[Office
+  Location] union -- PDIP values SELECT distinct
+  nullif(PDIP_CMFE_Equity_JE.Project_ID, '') Project_ID ,
+  PDIP_CMFE_Equity_JE.segment1 , PDIP_CMFE_Equity_JE.segment2 ,
+  PDIP_CMFE_Equity_JE.segment3 , PDIP_CMFE_Equity_JE.segment4 FROM
+  AnalyticsSource.dbo.PDIP_CMFE_Equity_JE WHERE -- Equity Charge
+  (PDIP_CMFE_Equity_JE.SEGMENT5 = 'EQCH' --and not(PDIP_CMFE_Equity_JE.SEGMENT1
+  IN ('013','044','047','022')) -- UKO, CAN, AZC, CSR and
+  not(PDIP_CMFE_Equity_JE.SEGMENT1 IN ('044','047')) -- AZC, CSR and
+  NOT(PDIP_CMFE_Equity_JE.SEGMENT2 IN ('101')) -- M&S --and
+  NOT(PDIP_CMFE_Equity_JE.SEGMENT3 IN ('731')) -- UKO and
+  not((PDIP_CMFE_Equity_JE.segment1 = 022 or PDIP_CMFE_Equity_JE.segment3 = 731)
+  and PDIP_CMFE_Equity_JE.ledger_id <> 3075) -- keep one ledger for UKO ) or --
+  CDB Recirc Provided/Received FTE SEGMENT5 in ('CMFE', 'CAFE', 'CRFE') union
+  SELECT distinct nullif(PDIPAccountingJournalEntries.Project_ID, '') Project_ID
+  -- blanks are coming from static manual data ,
+  PDIPAccountingJournalEntries.segment1 , PDIPAccountingJournalEntries.segment2
+  , PDIPAccountingJournalEntries.segment3 ,
+  PDIPAccountingJournalEntries.segment4 FROM
+  AnalyticsSource.dbo.PDIPAccountingJournalEntries WHERE -- CDB Recirc
+  Provided/Received FTE PDIPAccountingJournalEntries.SEGMENT5 = 'CWFE' )
+  AdditionalTasks left join AnalyticsSource.dbo.OperatingUnitCompany on
+  OperatingUnitCompany.SEGMENT1 = AdditionalTasks.segment1 left join
+  AnalyticsSource.dbo.OperatingUnits on OperatingUnits.ORGANIZATION_ID =
+  OperatingUnitCompany.Operating_Unit_Organization_ID LEFT JOIN
+  Model_Common.dbo.Projects on AdditionalTasks.PROJECT_ID = Projects.ProjectID
+  WHERE (Projects.[Project Direct Flag] = 'Y' or Projects.ProjectID is null) and
+  AdditionalTasks.segment1 + AdditionalTasks.segment2 + AdditionalTasks.segment3
+  + AdditionalTasks.segment4 is not null

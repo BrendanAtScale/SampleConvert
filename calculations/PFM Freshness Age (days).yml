@@ -1,0 +1,6 @@
+unique_name: PFM Freshness Age (days)
+object_type: metric_calc
+label: PFM Freshness Age (days)
+expression: ([Measures].[PFM Freshness Age (hours)]) / (24)
+folder: Model Statistics
+format: '#,0'

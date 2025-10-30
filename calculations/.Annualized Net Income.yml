@@ -1,0 +1,8 @@
+unique_name: .Annualized Net Income
+object_type: metric_calc
+label: .Annualized Net Income
+expression: >-
+  0 /*[.Annualized Final Net Income]+[.Actual Net Income-Prelim] TODO: Update
+  with valid MDX expression*/
+folder: Actual\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

@@ -1,0 +1,10 @@
+unique_name: Actual Overhead Lug Craft
+object_type: metric_calc
+label: Actual Overhead Lug Craft
+expression: >-
+  0 /*DIVIDE( SUMX(FILTER('TDA Cost', RELATED(Resources[Resource Category]) =
+  "Craft Labor") , 'TDA Cost'[Actual Hours] * 'TDA Cost'[Overhead Lug Rate]) ,
+  2088 * [HasOneCurrency]) TODO: Update with valid MDX expression*/
+folder: PDIP
+format: '""#,0.00;(""#,0.00);""#,0.00'
+is_hidden: true

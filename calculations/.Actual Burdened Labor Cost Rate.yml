@@ -1,0 +1,9 @@
+unique_name: .Actual Burdened Labor Cost Rate
+object_type: metric_calc
+label: .Actual Burdened Labor Cost Rate
+expression: >-
+  0 /*if(NOT([IsLaborDetailFiltered]),DIVIDE([Actual
+  Cost-Labor-Total-Burdened],[.Actual Hours])) TODO: Update with valid MDX
+  expression*/
+folder: Actual\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

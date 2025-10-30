@@ -1,0 +1,7 @@
+unique_name: ProjectID
+object_type: metric
+label: ProjectID
+calculation_method: count distinct
+column: ProjectID
+dataset: dataset_TDA_Cost
+unrelated_dimensions_handling: repeat

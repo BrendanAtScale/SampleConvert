@@ -1,0 +1,8 @@
+unique_name: .Original BAC Cost
+object_type: metric_calc
+label: .Original BAC Cost
+expression: >-
+  0 /*if([HasOneCurrency],Sum('Budget-Orig'[Original BAC Cost])) TODO: Update
+  with valid MDX expression*/
+folder: Budget\At Completion\Original
+format: '""#,0.00;(""#,0.00);""#,0.00'

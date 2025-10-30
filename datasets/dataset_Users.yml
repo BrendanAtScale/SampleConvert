@@ -1,0 +1,11 @@
+unique_name: dataset_Users
+object_type: dataset
+label: Users
+columns:
+  - name: Username
+    data_type: string
+  - name: countrows1
+    data_type: int
+    sql: '1'
+connection_id: SQL42
+sql: SELECT distinct Username FROM Model_Common.dbo.Users

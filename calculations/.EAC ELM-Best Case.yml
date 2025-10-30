@@ -1,0 +1,8 @@
+unique_name: .EAC ELM-Best Case
+object_type: metric_calc
+label: .EAC ELM-Best Case
+expression: >-
+  ([Measures].[.EAC Gross Profit]+[Measures].[.EAC Cost-CW]+[Measures].[.EAC
+  Cost-Labor-EO-Burdened]) / ([Measures].[.EAC Cost-Labor-EO-Raw])
+folder: Forecast\At Completion
+format: '#,0.00'

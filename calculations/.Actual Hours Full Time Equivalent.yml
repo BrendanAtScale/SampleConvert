@@ -1,0 +1,8 @@
+unique_name: .Actual Hours Full Time Equivalent
+object_type: metric_calc
+label: .Actual Hours Full Time Equivalent
+expression: >-
+  0 /*IF([FTEDateFilterCheck], DIVIDE([.Actual Hours],([Previous Months Weekday
+  Count]*8)), BLANK()) TODO: Update with valid MDX expression*/
+folder: Actual\Incremental
+format: '#,0.00'

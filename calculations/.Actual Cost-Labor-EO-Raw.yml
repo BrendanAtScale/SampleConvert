@@ -1,0 +1,9 @@
+unique_name: .Actual Cost-Labor-EO-Raw
+object_type: metric_calc
+label: .Actual Cost-Labor-EO-Raw
+expression: >-
+  0 /*DIVIDE(CALCULATE(Sum('TDA Cost'[Actual Cost]),FILTER('Resources',
+  'Resources'[Labor Detail]= "Raw")), [HasOneCurrency]) TODO: Update with valid
+  MDX expression*/
+folder: Actual\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

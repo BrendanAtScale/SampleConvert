@@ -1,0 +1,8 @@
+unique_name: .EAC Display
+object_type: metric_calc
+label: .EAC Display
+expression: >-
+  0 /*[FutureETCRecordCount]*[PastRecordCount] TODO: Update with valid MDX
+  expression*/
+folder: Display
+is_hidden: true

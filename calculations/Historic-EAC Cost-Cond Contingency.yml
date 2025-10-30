@@ -1,0 +1,10 @@
+unique_name: Historic-EAC Cost-Cond Contingency
+object_type: metric_calc
+label: Historic-EAC Cost-Cond Contingency
+expression: >-
+  0 /*if(NOT([IsTaskLevelFiltered]) && NOT([IsResourceFiltered]) &&
+  [HasOneCurrency] && [DateFiltered],
+  CALCULATE(sum('Historic-PSR'[FORECAST_COND_CONTINGENCY]),LASTNONBLANK('Dates'[Date],CALCULATE(Sum('Historic-PSR'[FORECAST_COND_CONTINGENCY])))))
+  TODO: Update with valid MDX expression*/
+folder: Estimate at Completion (EAC)
+format: '""#,0.00;(""#,0.00);""#,0.00'

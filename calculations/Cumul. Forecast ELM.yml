@@ -1,0 +1,10 @@
+unique_name: Cumul. Forecast ELM
+object_type: metric_calc
+label: Cumul. Forecast ELM
+expression: >-
+  0 /*DIVIDE(DIVIDE(([Cumul. Forecast Gross Profit]+[Cumul. Forecast
+  Cost-Labor-EO-Burdened]),[Cumul. Forecast Cost-Labor-EO-Raw]),
+  NOT([IsTaskLevelFiltered]) && NOT([IsResourceFiltered])) TODO: Update with
+  valid MDX expression*/
+folder: Forecast\Cumulative
+format: '#,0.00'

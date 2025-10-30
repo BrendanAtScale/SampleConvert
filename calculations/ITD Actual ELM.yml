@@ -1,0 +1,10 @@
+unique_name: ITD Actual ELM
+object_type: metric_calc
+label: ITD Actual ELM
+expression: >-
+  0 /*DIVIDE(DIVIDE(([ITD Actual Gross Profit]+[ITD Actual
+  Cost-Labor-EO-Burdened]),[ITD Actual Cost-Labor-EO-Raw]),
+  NOT([IsTaskLevelFiltered]) && NOT([IsResourceFiltered])) TODO: Update with
+  valid MDX expression*/
+folder: Actual\Inception to Date-ITD
+format: '#,0.00'

@@ -1,0 +1,7 @@
+unique_name: FutureTDARecords
+object_type: metric_calc
+label: FutureTDARecords
+expression: >-
+  0 /*CALCULATE([TDARecordCount],FILTER(ALL(Dates),Dates[Date] >=
+  Min(Dates[Date]))) TODO: Update with valid MDX expression*/
+is_hidden: true

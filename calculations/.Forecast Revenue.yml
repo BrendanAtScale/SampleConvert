@@ -1,0 +1,6 @@
+unique_name: .Forecast Revenue
+object_type: metric_calc
+label: .Forecast Revenue
+expression: '[Measures].[.Actual Revenue]+[Measures].[.ETC Revenue (backlog)]'
+folder: Forecast\Incremental
+format: '""#,0.00;(""#,0.00);""#,0.00'

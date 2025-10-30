@@ -1,0 +1,7 @@
+unique_name: BMIHours
+object_type: metric
+label: BMIHours
+calculation_method: sum
+column: BMIHours
+dataset: dataset_Estimates
+unrelated_dimensions_handling: repeat

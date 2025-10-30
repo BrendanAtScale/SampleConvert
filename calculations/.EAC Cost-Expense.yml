@@ -1,0 +1,9 @@
+unique_name: .EAC Cost-Expense
+object_type: metric_calc
+label: .EAC Cost-Expense
+expression: >-
+  0 /*if([HasOneCurrency],DIVIDE(CALCULATE([.Actual Cost-Expense]+[.ETC
+  Cost-Expense],All(Dates)),[.EAC Display])*[.EAC Display]) TODO: Update with
+  valid MDX expression*/
+folder: Forecast\At Completion
+format: '""#,0.00;(""#,0.00);""#,0.00'

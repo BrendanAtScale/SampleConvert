@@ -1,0 +1,10 @@
+unique_name: FutureETCRecordCount
+object_type: metric_calc
+label: FutureETCRecordCount
+expression: >-
+  0 /*DIVIDE(1, CALCULATE(COUNT('Tasks'[TaskID]) ,
+  FILTER(VALUES(Projects[Project Start Date]), Projects[Project Start Date] <=
+  MAX(Dates[Date])) , FILTER(VALUES(Projects[MAXETCDate]), Projects[MAXETCDate]
+  >= MIN(Dates[Date])) ) > 0 ) TODO: Update with valid MDX expression*/
+folder: Display
+is_hidden: true

@@ -1,0 +1,7 @@
+unique_name: CWKHours
+object_type: metric
+label: CWKHours
+calculation_method: sum
+column: CWKHours
+dataset: dataset_Estimates
+unrelated_dimensions_handling: repeat

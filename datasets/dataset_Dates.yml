@@ -1,0 +1,73 @@
+unique_name: dataset_Dates
+object_type: dataset
+label: Dates
+columns:
+  - name: Date
+    data_type: datetime
+  - name: Year
+    data_type: long
+  - name: Month Year
+    data_type: string
+  - name: Date Number
+    data_type: long
+  - name: Month of Year
+    data_type: long
+  - name: Month
+    data_type: string
+  - name: Quarter of Year
+    data_type: long
+  - name: Quarter
+    data_type: string
+  - name: MonthYearSort
+    data_type: long
+  - name: Month (short)
+    data_type: string
+  - name: Quarter (short)
+    data_type: string
+  - name: ETCStartDate
+    data_type: datetime
+  - name: CalendarID
+    data_type: long
+  - name: 13 Month Flag
+    data_type: string
+  - name: TPFProcessDate
+    data_type: datetime
+  - name: SalesRowCount
+    data_type: double
+  - name: TDARowCount
+    data_type: double
+  - name: Weekdays This Month Count
+    data_type: long
+  - name: Current Month Flag
+    data_type: string
+  - name: Last Closed Month
+    data_type: string
+  - name: Previous Month Flag
+    data_type: string
+  - name: Future Month Flag
+    data_type: string
+  - name: Current Year Flag
+    data_type: string
+  - name: Last Year Flag
+    data_type: string
+  - name: Next Year Flag
+    data_type: string
+  - name: Net Income Finalized Flag
+    data_type: string
+  - name: Period Status
+    data_type: string
+  - name: CalcEstNetIncFlag
+    data_type: long
+  - name: Historic Forecast Finalized Flag
+    data_type: string
+  - name: Months from this Month
+    data_type: long
+  - name: Years from this Year
+    data_type: long
+  - name: ConstructionIncomeAlertDate
+    data_type: datetime
+  - name: countrows1
+    data_type: int
+    sql: '1'
+connection_id: connection_PFM
+table: Dates

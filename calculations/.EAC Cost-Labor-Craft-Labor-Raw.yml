@@ -1,0 +1,8 @@
+unique_name: .EAC Cost-Labor-Craft-Labor-Raw
+object_type: metric_calc
+label: .EAC Cost-Labor-Craft-Labor-Raw
+expression: >-
+  0 /*DIVIDE(CALCULATE([.Forecast Cost-Labor-Craft-Raw],ALL(Dates)),[.EAC
+  Display])*[.EAC Display] TODO: Update with valid MDX expression*/
+folder: Forecast\At Completion
+format: '""#,0.00;(""#,0.00);""#,0.00'

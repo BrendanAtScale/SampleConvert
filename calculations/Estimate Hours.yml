@@ -1,0 +1,6 @@
+unique_name: Estimate Hours
+object_type: metric_calc
+label: Estimate Hours
+expression: ([Measures].[TotalHours]) / ([Measures].[.EAC Display Estimate])
+folder: Estimate
+format: '#,0.00'

@@ -1,0 +1,8 @@
+unique_name: YTD Actual % Intercompany Hours
+object_type: metric_calc
+label: YTD Actual % Intercompany Hours
+expression: >-
+  0 /*DIVIDE([YTD Actual Hours-Intercompany],[YTD Actual+Intercompany Hours])
+  TODO: Update with valid MDX expression*/
+folder: Actual\Year to Date-YTD
+format: 0.0%;-0.0%;0.0%
