@@ -1,6 +1,0 @@
-unique_name: .Forecast % Margin
-object_type: metric_calc
-label: .Forecast % Margin
-expression: ([Measures].[.Forecast Gross Profit]) / ([Measures].[.Forecast Revenue])
-folder: Forecast\Incremental
-format: 0.0%;-0.0%;0.0%

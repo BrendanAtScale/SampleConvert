@@ -1,7 +1,0 @@
-unique_name: Historic-PM-EAC Revenue
-object_type: metric_calc
-label: Historic-PM-EAC Revenue
-expression: >-
-  0 /*CALCULATE([Historic-EAC Revenue],PREVIOUSMONTH(Dates[Date])) TODO: Update
-  with valid MDX expression*/
-is_hidden: true

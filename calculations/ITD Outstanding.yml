@@ -1,6 +1,0 @@
-unique_name: ITD Outstanding
-object_type: metric_calc
-label: ITD Outstanding
-expression: '[Measures].[ITD Actual Billings]-[Measures].[ITD Actual Receipts]'
-folder: Actual\Inception to Date-ITD
-format: '""#,0.00;(""#,0.00);""#,0.00'

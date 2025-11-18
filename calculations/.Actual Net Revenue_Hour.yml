@@ -1,4 +1,0 @@
-unique_name: .Actual Net Revenue_Hour
-object_type: metric_calc
-label: .Actual Net Revenue/Hour
-expression: ([Measures].[.Actual Net Revenue]) / ([Measures].[.Actual Hours])

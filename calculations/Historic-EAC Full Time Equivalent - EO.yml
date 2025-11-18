@@ -1,8 +1,0 @@
-unique_name: Historic-EAC Full Time Equivalent - EO
-object_type: metric_calc
-label: Historic-EAC Full Time Equivalent - EO
-expression: >-
-  0 /*DIVIDE([Historic-EAC Hours-EO], 2088) TODO: Update with valid MDX
-  expression*/
-folder: PDIP
-format: '#,0.00'

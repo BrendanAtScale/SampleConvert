@@ -1,9 +1,0 @@
-unique_name: .Original BAC Gross Profit-Best Case
-object_type: metric_calc
-label: .Original BAC Gross Profit-Best Case
-expression: >-
-  0 /*DIVIDE([.Original BAC Revenue]-[.Original BAC Cost]+[.Original BAC
-  Cost-CW], NOT([IsTaskLevelFiltered]) && NOT([IsResourceFiltered])) TODO:
-  Update with valid MDX expression*/
-folder: Budget\At Completion\Original
-format: '""#,0.00;(""#,0.00);""#,0.00'

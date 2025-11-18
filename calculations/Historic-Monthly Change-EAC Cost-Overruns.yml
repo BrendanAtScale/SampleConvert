@@ -1,9 +1,0 @@
-unique_name: Historic-Monthly Change-EAC Cost-Overruns
-object_type: metric_calc
-label: Historic-Monthly Change-EAC Cost-Overruns
-expression: >-
-  0 /*DIVIDE(([Historic-EAC Cost-Overruns]-[Historic-PM-EAC
-  Cost-Overruns]),[ActualRowCount4])*[ActualRowCount4] TODO: Update with valid
-  MDX expression*/
-folder: Estimate at Completion (EAC)\Monthly Changes
-format: '""#,0.00;(""#,0.00);""#,0.00'

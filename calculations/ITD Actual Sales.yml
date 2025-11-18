@@ -1,9 +1,0 @@
-unique_name: ITD Actual Sales
-object_type: metric_calc
-label: ITD Actual Sales
-expression: >-
-  0 /*DIVIDE(CALCULATE([.Actual
-  Sales],FILTER(ALL('Dates'[Date]),'Dates'[Date]<=Max('Dates'[Date]))),[ActualRowCount2])*[ActualRowCount2]
-  TODO: Update with valid MDX expression*/
-folder: Actual\Inception to Date-ITD
-format: '""#,0.00;(""#,0.00);""#,0.00'

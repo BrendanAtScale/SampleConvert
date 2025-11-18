@@ -1,8 +1,0 @@
-unique_name: Estimate Non-Labor Bill Value
-object_type: metric_calc
-label: Estimate Non-Labor Bill Value
-expression: >-
-  0 /*DIVIDE(SUM(Estimates[NonLaborBillValue]), [HasOneCurrency] && [.EAC
-  Display Estimate]) TODO: Update with valid MDX expression*/
-folder: Estimate
-format: '""#,0.00;(""#,0.00);""#,0.00'

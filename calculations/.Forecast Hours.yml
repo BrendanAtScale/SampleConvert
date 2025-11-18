@@ -1,6 +1,0 @@
-unique_name: .Forecast Hours
-object_type: metric_calc
-label: .Forecast Hours
-expression: '[Measures].[.Actual Hours]+[Measures].[.ETC Hours (backlog)]'
-folder: Forecast\Incremental
-format: '#,0.00'

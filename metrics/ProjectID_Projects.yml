@@ -1,8 +1,0 @@
-unique_name: ProjectID_Projects
-object_type: metric
-label: ProjectID distinctcount on Projects
-calculation_method: count distinct
-column: ProjectID
-dataset: dataset_Projects
-format: '0'
-unrelated_dimensions_handling: repeat

@@ -1,6 +1,0 @@
-unique_name: SQL42
-object_type: connection
-label: SQL42
-as_connection: con1
-database: '<TODO: FIll THIS IN>'
-schema: '<TODO: FIll THIS IN>'

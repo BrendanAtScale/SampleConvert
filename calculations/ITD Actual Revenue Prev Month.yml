@@ -1,8 +1,0 @@
-unique_name: ITD Actual Revenue Prev Month
-object_type: metric_calc
-label: ITD Actual Revenue Prev Month
-expression: >-
-  0 /*CALCULATE([ITD Actual Revenue],PREVIOUSMONTH(Dates[Date])) TODO: Update
-  with valid MDX expression*/
-folder: Actual\Inception to Date-ITD
-format: '""#,0.00;(""#,0.00);""#,0.00'

@@ -1,7 +1,0 @@
-unique_name: Historic-PM-EAC Cost-CW
-object_type: metric_calc
-label: Historic-PM-EAC Cost-CW
-expression: >-
-  0 /*CALCULATE([Historic-EAC Cost-CW],PREVIOUSMONTH(Dates[Date])) TODO: Update
-  with valid MDX expression*/
-is_hidden: true

@@ -1,8 +1,0 @@
-unique_name: .EAC Cost-Labor-Craft-Burden
-object_type: metric_calc
-label: .EAC Cost-Labor-Craft-Burden
-expression: >-
-  0 /*Divide(CALCULATE([.Forecast Cost-Labor-Craft-Burden],ALL(Dates)),[.EAC
-  Display])*[.EAC Display] TODO: Update with valid MDX expression*/
-folder: Forecast\At Completion
-format: '""#,0.00;(""#,0.00);""#,0.00'

@@ -1,8 +1,0 @@
-unique_name: Cumul. Forecast % Margin
-object_type: metric_calc
-label: Cumul. Forecast % Margin
-expression: >-
-  ([Measures].[Cumul. Forecast Gross Profit]) / ([Measures].[Cumul. Forecast
-  Revenue])
-folder: Forecast\Cumulative
-format: 0.0%;-0.0%;0.0%

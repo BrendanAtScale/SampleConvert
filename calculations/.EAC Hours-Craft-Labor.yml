@@ -1,8 +1,0 @@
-unique_name: .EAC Hours-Craft-Labor
-object_type: metric_calc
-label: .EAC Hours-Craft-Labor
-expression: >-
-  0 /*CALCULATE([.EAC Hours],FILTER('Resources',Resources[Resource Name]="Craft
-  Labor")) TODO: Update with valid MDX expression*/
-folder: Forecast\At Completion
-format: '#,0.00'

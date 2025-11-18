@@ -1,6 +1,0 @@
-unique_name: ITD Actual % Complete-Hours
-object_type: metric_calc
-label: ITD Actual % Complete-Hours
-expression: ([Measures].[ITD Actual Hours]) / ([Measures].[.EAC Hours])
-folder: Actual\Inception to Date-ITD
-format: '#,0.0%;-#,0.0%;#,0.0%'

@@ -1,8 +1,0 @@
-unique_name: .Forecast Cost-Labor-Craft-Raw
-object_type: metric_calc
-label: .Forecast Cost-Labor-Craft-Raw
-expression: >-
-  [Measures].[.Actual Cost-Labor-Craft-Labor-Raw]+[Measures].[.ETC
-  Cost-Labor-Craft-Labor-Raw]
-folder: Forecast\Incremental
-format: '""#,0.00;(""#,0.00);""#,0.00'

@@ -1,6 +1,0 @@
-unique_name: Estimate BM US Hours
-object_type: metric_calc
-label: Estimate BM US Hours
-expression: ([Measures].[BMUSHours]) / ([Measures].[.EAC Display Estimate])
-folder: Estimate
-format: '#,0.00'

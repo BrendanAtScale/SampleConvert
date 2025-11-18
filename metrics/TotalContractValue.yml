@@ -1,7 +1,0 @@
-unique_name: TotalContractValue
-object_type: metric
-label: TotalContractValue
-calculation_method: sum
-column: TotalContractValue
-dataset: dataset_Estimates
-unrelated_dimensions_handling: repeat

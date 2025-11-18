@@ -1,8 +1,0 @@
-unique_name: .EAC Hours-EO
-object_type: metric_calc
-label: .EAC Hours-EO
-expression: >-
-  0 /*CALCULATE([.EAC Hours],FILTER('Resources',Resources[Resource
-  Name]="People")) TODO: Update with valid MDX expression*/
-folder: Forecast\At Completion
-format: '#,0.00'

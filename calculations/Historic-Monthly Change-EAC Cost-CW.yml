@@ -1,9 +1,0 @@
-unique_name: Historic-Monthly Change-EAC Cost-CW
-object_type: metric_calc
-label: Historic-Monthly Change-EAC Cost-CW
-expression: >-
-  0 /*DIVIDE(([Historic-EAC Cost-CW]-[Historic-PM-EAC
-  Cost-CW]),[ActualRowCount4])*[ActualRowCount4] TODO: Update with valid MDX
-  expression*/
-folder: Estimate at Completion (EAC)\Monthly Changes
-format: '""#,0.00;(""#,0.00);""#,0.00'

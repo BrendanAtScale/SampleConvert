@@ -1,8 +1,0 @@
-unique_name: .Current Budget Hours Full Time Equivalent
-object_type: metric_calc
-label: .Current Budget Hours Full Time Equivalent
-expression: >-
-  0 /*IF([FTEDateFilterCheck], DIVIDE([.Current Budget Hours],([Weekday
-  Count]*8)), BLANK()) TODO: Update with valid MDX expression*/
-folder: Budget\Incremental\Current
-format: '#,0.00'

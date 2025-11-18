@@ -1,7 +1,0 @@
-unique_name: LaborBillValueIncTechFee
-object_type: metric
-label: LaborBillValueIncTechFee
-calculation_method: sum
-column: LaborBillValueIncTechFee
-dataset: dataset_Estimates
-unrelated_dimensions_handling: repeat

@@ -1,6 +1,0 @@
-unique_name: .Actual % Margin
-object_type: metric_calc
-label: .Actual % Margin
-expression: ([Measures].[.Actual Gross Profit]) / ([Measures].[.Actual Revenue])
-folder: Actual\Incremental
-format: 0.0%;-0.0%;0.0%

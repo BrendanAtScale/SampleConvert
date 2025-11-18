@@ -1,8 +1,0 @@
-unique_name: Historic-EAC Gross Profit-Best Case
-object_type: metric_calc
-label: Historic-EAC Gross Profit-Best Case
-expression: >-
-  [Measures].[Historic-EAC Revenue]-[Measures].[Historic-EAC
-  Cost]+[Measures].[Historic-EAC Cost-CW]
-folder: Estimate at Completion (EAC)
-format: '""#,0.00;(""#,0.00);""#,0.00'

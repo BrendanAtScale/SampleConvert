@@ -1,8 +1,0 @@
-unique_name: .Actual+Intercompany Hours
-object_type: metric_calc
-label: .Actual+Intercompany Hours
-expression: >-
-  0 /*[.Actual Hours]+[.Actual Hours-Intercompany] TODO: Update with valid MDX
-  expression*/
-folder: Actual\Incremental
-format: '#,0.00'

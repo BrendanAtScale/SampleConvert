@@ -1,7 +1,0 @@
-unique_name: IsLaborDetailFiltered
-object_type: metric_calc
-label: IsLaborDetailFiltered
-expression: >-
-  0 /*ISFILTERED(Resources[Labor Detail])||ISFILTERED(Resources[Resource Name])
-  TODO: Update with valid MDX expression*/
-is_hidden: true

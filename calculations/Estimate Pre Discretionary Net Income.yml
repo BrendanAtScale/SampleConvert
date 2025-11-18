@@ -1,8 +1,0 @@
-unique_name: Estimate Pre Discretionary Net Income
-object_type: metric_calc
-label: Estimate Pre Discretionary Net Income
-expression: >-
-  [Measures].[Estimate Gross Profit] - [Measures].[Estimate EO Lug] -
-  [Measures].[Estimate CWK Lug]
-folder: Estimate
-format: '""#,0.00;(""#,0.00);""#,0.00'

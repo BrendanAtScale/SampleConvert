@@ -1,9 +1,0 @@
-unique_name: .ETC Cost-Expense
-object_type: metric_calc
-label: .ETC Cost-Expense
-expression: >-
-  0 /*IF([HasOneCurrency],CALCULATE(Sum('Current'[ETC
-  COST]),FILTER('Resources','Resources'[Labor-NonLabor Flag]<>"Labor"))) TODO:
-  Update with valid MDX expression*/
-folder: ETC\Incremental
-format: '""#,0.00;(""#,0.00);""#,0.00'

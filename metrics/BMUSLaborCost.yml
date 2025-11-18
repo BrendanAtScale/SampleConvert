@@ -1,7 +1,0 @@
-unique_name: BMUSLaborCost
-object_type: metric
-label: BMUSLaborCost
-calculation_method: sum
-column: BMUSLaborCost
-dataset: dataset_Estimates
-unrelated_dimensions_handling: repeat

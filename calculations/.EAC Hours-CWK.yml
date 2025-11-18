@@ -1,8 +1,0 @@
-unique_name: .EAC Hours-CWK
-object_type: metric_calc
-label: .EAC Hours-CWK
-expression: >-
-  0 /*CALCULATE([.EAC Hours], FILTER('Resources', Resources[Resource
-  Category]="Contract Labor")) TODO: Update with valid MDX expression*/
-folder: Forecast\At Completion
-format: '#,0.00'

@@ -1,6 +1,6 @@
-version: 1
-unique_name: PFM
+unique_name: atscaleModeler_rakk_dev2.catalog
 object_type: catalog
-label: PFM
+label: atscaleModeler
+version: 1.2
 aggressive_agg_promotion: false
 build_speculative_aggs: false

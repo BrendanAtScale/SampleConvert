@@ -1,6 +1,0 @@
-unique_name: EAC Full Time Equivalent - CWK
-object_type: metric_calc
-label: EAC Full Time Equivalent - CWK
-expression: '0 /*DIVIDE([.EAC Hours-CWK], 2088) TODO: Update with valid MDX expression*/'
-folder: PDIP
-format: '#,0.00'

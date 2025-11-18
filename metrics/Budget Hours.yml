@@ -1,7 +1,0 @@
-unique_name: Budget Hours
-object_type: metric
-label: Budget Hours
-calculation_method: sum
-column: Budget Hours
-dataset: dataset_Budget
-unrelated_dimensions_handling: repeat

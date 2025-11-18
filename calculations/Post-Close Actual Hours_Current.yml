@@ -1,6 +1,0 @@
-unique_name: Post-Close Actual Hours_Current
-object_type: metric_calc
-label: Post-Close Actual Hours
-expression: '[Measures].[Post-Close Actual Hours]'
-folder: Model Statistics
-format: '""#,0.00;(""#,0.00);""#,0.00'

@@ -1,7 +1,0 @@
-unique_name: Actual Revenue
-object_type: metric
-label: Actual Revenue
-calculation_method: sum
-column: Actual Revenue
-dataset: dataset_Current
-unrelated_dimensions_handling: repeat

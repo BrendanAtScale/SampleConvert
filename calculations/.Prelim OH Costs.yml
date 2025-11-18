@@ -1,6 +1,0 @@
-unique_name: .Prelim OH Costs
-object_type: metric_calc
-label: .Prelim OH Costs
-expression: '0 /*BLANK() TODO: Update with valid MDX expression*/'
-format: '""#,0.00;(""#,0.00);""#,0.00'
-is_hidden: true

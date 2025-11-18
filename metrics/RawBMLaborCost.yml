@@ -1,7 +1,0 @@
-unique_name: RawBMLaborCost
-object_type: metric
-label: RawBMLaborCost
-calculation_method: sum
-column: RawBMLaborCost
-dataset: dataset_Estimates
-unrelated_dimensions_handling: repeat

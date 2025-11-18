@@ -1,8 +1,0 @@
-unique_name: .Forecast Hours-EO
-object_type: metric_calc
-label: .Forecast Hours-EO
-expression: >-
-  0 /*CALCULATE([.Forecast Hours],FILTER('Resources',Resources[Resource
-  Name]="People")) TODO: Update with valid MDX expression*/
-folder: Forecast\Incremental
-format: '#,0.00'

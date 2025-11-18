@@ -1,8 +1,0 @@
-unique_name: Whitelist Row (count)
-object_type: metric_calc
-label: Whitelist Row (count)
-expression: >-
-  0 /*CALCULATE(COUNTROWS(ProjectWhitelist), ALL(ProjectWhitelist)) TODO: Update
-  with valid MDX expression*/
-folder: Model Statistics
-format: '#,0'

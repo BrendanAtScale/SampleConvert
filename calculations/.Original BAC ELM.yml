@@ -1,8 +1,0 @@
-unique_name: .Original BAC ELM
-object_type: metric_calc
-label: .Original BAC ELM
-expression: >-
-  ([Measures].[.Original BAC Gross Profit]+[Measures].[.Original BAC
-  Cost-Labor-EO-Burdened]) / ([Measures].[.Original BAC Cost-Labor-EO-Raw])
-folder: Budget\At Completion\Original
-format: '""#,0.00;(""#,0.00);""#,0.00'

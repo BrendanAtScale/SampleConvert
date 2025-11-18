@@ -1,8 +1,0 @@
-unique_name: .Total ETC Cost
-object_type: metric_calc
-label: .Total ETC Cost
-expression: >-
-  0 /*DIVIDE(CALCULATE([.ETC Cost],ALL(Dates)),[.EAC Display])*[.EAC Display]
-  TODO: Update with valid MDX expression*/
-folder: ETC\Total Non Time Phased
-format: '""#,0.00;(""#,0.00);""#,0.00'

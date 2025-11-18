@@ -1,7 +1,0 @@
-unique_name: TotalCost
-object_type: metric
-label: TotalCost
-calculation_method: sum
-column: TotalCost
-dataset: dataset_Estimates
-unrelated_dimensions_handling: repeat

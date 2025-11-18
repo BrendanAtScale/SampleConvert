@@ -1,4 +1,0 @@
-unique_name: .Actual Net Revenue
-object_type: metric_calc
-label: .Actual Net Revenue
-expression: '[Measures].[.Actual Revenue]-[Measures].[Actual Cost-NonLabor]'

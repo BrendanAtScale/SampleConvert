@@ -1,9 +1,0 @@
-unique_name: Historic-EAC ELM
-object_type: metric_calc
-label: Historic-EAC ELM
-expression: >-
-  ([Measures].[Historic-EAC Gross Profit]+[Measures].[Historic-EAC
-  Cost-Labor-EO-Raw]+[Measures].[Historic-EAC Cost-Labor-EO-Burden]) /
-  ([Measures].[Historic-EAC Cost-Labor-EO-Raw])
-folder: Estimate at Completion (EAC)
-format: '""#,0.00;(""#,0.00);""#,0.00'

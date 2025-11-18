@@ -1,7 +1,0 @@
-unique_name: Fee
-object_type: metric
-label: Fee
-calculation_method: sum
-column: Fee
-dataset: dataset_Estimates
-unrelated_dimensions_handling: repeat

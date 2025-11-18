@@ -1,7 +1,0 @@
-unique_name: Received
-object_type: metric
-label: Received
-calculation_method: sum
-column: Received
-dataset: dataset_Receipts
-unrelated_dimensions_handling: repeat

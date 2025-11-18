@@ -1,9 +1,0 @@
-unique_name: EAC Pre-Discretionary Net Income - Best Case
-object_type: metric_calc
-label: EAC Pre-Discretionary Net Income - Best Case
-expression: >-
-  0 /*DIVIDE( [.EAC Gross Profit-Best Case] - [EAC Overhead Lug Employee Owner]
-  - [EAC Overhead Lug CWK] - [EAC Overhead Lug Craft] ,
-  NOT([IsResourceFiltered])) TODO: Update with valid MDX expression*/
-folder: PDIP
-format: '""#,0.00;(""#,0.00);""#,0.00'

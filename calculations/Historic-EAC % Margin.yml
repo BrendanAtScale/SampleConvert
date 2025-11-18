@@ -1,6 +1,0 @@
-unique_name: Historic-EAC % Margin
-object_type: metric_calc
-label: Historic-EAC % Margin
-expression: ([Measures].[Historic-EAC Gross Profit]) / ([Measures].[Historic-EAC Revenue])
-folder: Estimate at Completion (EAC)
-format: '""#,0.00;(""#,0.00);""#,0.00'

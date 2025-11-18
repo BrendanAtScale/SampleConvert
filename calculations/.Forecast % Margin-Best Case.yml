@@ -1,8 +1,0 @@
-unique_name: .Forecast % Margin-Best Case
-object_type: metric_calc
-label: .Forecast % Margin-Best Case
-expression: >-
-  ([Measures].[.Forecast Gross Profit-Best Case]) / ([Measures].[.Forecast
-  Revenue])
-folder: Forecast\Incremental
-format: 0.0%;-0.0%;0.0%

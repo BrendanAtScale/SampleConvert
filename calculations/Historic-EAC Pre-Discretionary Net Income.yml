@@ -1,9 +1,0 @@
-unique_name: Historic-EAC Pre-Discretionary Net Income
-object_type: metric_calc
-label: Historic-EAC Pre-Discretionary Net Income
-expression: >-
-  [Measures].[Historic-EAC Gross Profit] - [Measures].[Historic EAC Overhead Lug
-  Employee Owner] - [Measures].[Historic EAC Overhead Lug CWK] -
-  [Measures].[Historic EAC Overhead Lug Craft]
-folder: PDIP
-format: '""#,0.00;(""#,0.00);""#,0.00'

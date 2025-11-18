@@ -1,9 +1,0 @@
-unique_name: countrows1
-object_type: metric
-label: countrows1
-calculation_method: sum
-column: countrows1
-dataset: dataset_Current
-format: '#,##0'
-is_hidden: true
-unrelated_dimensions_handling: repeat

@@ -1,6 +1,0 @@
-unique_name: Project Count
-object_type: metric_calc
-label: Project Count
-expression: '[Measures].[ProjectID_Projects]'
-folder: Model Statistics
-format: '#,0'

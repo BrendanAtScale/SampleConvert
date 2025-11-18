@@ -1,6 +1,0 @@
-unique_name: Historic-EAC Gross Profit
-object_type: metric_calc
-label: Historic-EAC Gross Profit
-expression: '[Measures].[Historic-EAC Revenue]-[Measures].[Historic-EAC Cost]'
-folder: Estimate at Completion (EAC)
-format: '""#,0.00;(""#,0.00);""#,0.00'

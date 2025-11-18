@@ -1,9 +1,0 @@
-unique_name: .ETC ELM-Best Case
-object_type: metric_calc
-label: .ETC ELM-Best Case
-expression: >-
-  0 /*DIVIDE(DIVIDE(([.ETC Gross Profit]+[.ETC Cost-Labor-EO-Burdened]+[.ETC
-  Cost-CW]),[.ETC Cost-Labor-EO-Raw]), NOT([IsTaskLevelFiltered]) &&
-  NOT([IsResourceFiltered])) TODO: Update with valid MDX expression*/
-folder: ETC\Incremental
-format: '#,0.00'

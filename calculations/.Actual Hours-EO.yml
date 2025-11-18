@@ -1,8 +1,0 @@
-unique_name: .Actual Hours-EO
-object_type: metric_calc
-label: .Actual Hours-EO
-expression: >-
-  0 /*CALCULATE([.Actual Hours],FILTER('Resources',Resources[Resource
-  Name]="People")) TODO: Update with valid MDX expression*/
-folder: Actual\Incremental
-format: '#,0.00'

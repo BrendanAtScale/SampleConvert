@@ -1,9 +1,0 @@
-unique_name: Historic-EAC Pre-Discretionary Net Income - Best Case
-object_type: metric_calc
-label: Historic-EAC Pre-Discretionary Net Income - Best Case
-expression: >-
-  [Measures].[Historic-EAC Gross Profit-Best Case] - [Measures].[Historic EAC
-  Overhead Lug Employee Owner] - [Measures].[Historic EAC Overhead Lug CWK] -
-  [Measures].[Historic EAC Overhead Lug Craft]
-folder: PDIP
-format: '""#,0.00;(""#,0.00);""#,0.00'

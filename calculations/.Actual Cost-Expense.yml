@@ -1,9 +1,0 @@
-unique_name: .Actual Cost-Expense
-object_type: metric_calc
-label: .Actual Cost-Expense
-expression: >-
-  0 /*[.Actual Cost] - [.Actual Cost-Labor-EO-Burdened] - [.Actual
-  Cost-Labor-CWK] - [.Actual Cost-Labor-Craft-Labor-Burdened] TODO: Update with
-  valid MDX expression*/
-folder: Actual\Incremental
-format: '""#,0.00;(""#,0.00);""#,0.00'

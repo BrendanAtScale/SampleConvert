@@ -1,6 +1,0 @@
-unique_name: Actual Cost & Revenue Through (date)
-object_type: metric_calc
-label: Actual Cost & Revenue Through (date)
-expression: '[Measures].[Forecast ETC Start (date)]-1'
-folder: Model Statistics
-format: short date

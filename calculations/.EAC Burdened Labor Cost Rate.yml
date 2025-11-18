@@ -1,8 +1,0 @@
-unique_name: .EAC Burdened Labor Cost Rate
-object_type: metric_calc
-label: .EAC Burdened Labor Cost Rate
-expression: >-
-  0 /*CALCULATE([.Forecast Total Burdened Labor Cost Rate],ALL(Dates)) TODO:
-  Update with valid MDX expression*/
-folder: Forecast\At Completion
-format: '""#,0.00;(""#,0.00);""#,0.00'

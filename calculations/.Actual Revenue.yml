@@ -1,9 +1,0 @@
-unique_name: .Actual Revenue
-object_type: metric_calc
-label: .Actual Revenue
-expression: >-
-  0 /*DIVIDE(Sum('Current'[Actual Revenue]), NOT([IsTaskLevelFiltered]) &&
-  NOT([IsResourceFiltered]) && [HasOneCurrency]) TODO: Update with valid MDX
-  expression*/
-folder: Actual\Incremental
-format: '""#,0.00;(""#,0.00);""#,0.00'

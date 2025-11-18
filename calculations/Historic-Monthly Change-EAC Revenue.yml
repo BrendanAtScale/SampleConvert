@@ -1,9 +1,0 @@
-unique_name: Historic-Monthly Change-EAC Revenue
-object_type: metric_calc
-label: Historic-Monthly Change-EAC Revenue
-expression: >-
-  0 /*DIVIDE(([Historic-EAC Revenue]-[Historic-PM-EAC
-  Revenue]),[ActualRowCount4])*[ActualRowCount4] TODO: Update with valid MDX
-  expression*/
-folder: Estimate at Completion (EAC)\Monthly Changes
-format: '""#,0.00;(""#,0.00);""#,0.00'

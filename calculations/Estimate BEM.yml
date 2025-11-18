@@ -1,8 +1,0 @@
-unique_name: Estimate BEM
-object_type: metric_calc
-label: Estimate BEM
-expression: >-
-  0 /*[Estimate ELM] - DIVIDE([Estimate Net Income], [Estimate Raw Cost]) TODO:
-  Update with valid MDX expression*/
-folder: Estimate
-format: '""#,0.00;(""#,0.00);""#,0.00'

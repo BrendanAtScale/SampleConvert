@@ -1,7 +1,0 @@
-unique_name: GrossProfit
-object_type: metric
-label: GrossProfit
-calculation_method: sum
-column: GrossProfit
-dataset: dataset_Estimates
-unrelated_dimensions_handling: repeat

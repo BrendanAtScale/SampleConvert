@@ -1,6 +1,0 @@
-unique_name: .Original BAC Hours
-object_type: metric_calc
-label: .Original BAC Hours
-expression: '[Measures].[Original BAC Hours]'
-folder: Budget\At Completion\Original
-format: '""#,0.00;(""#,0.00);""#,0.00'

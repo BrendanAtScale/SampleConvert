@@ -1,6 +1,0 @@
-unique_name: .EAC % Net Income-Best Case
-object_type: metric_calc
-label: .EAC % Net Income-Best Case
-expression: ([Measures].[.EAC Net Income-Best Case]) / ([Measures].[.EAC Revenue])
-folder: Forecast\At Completion
-format: 0.0%;-0.0%;0.0%

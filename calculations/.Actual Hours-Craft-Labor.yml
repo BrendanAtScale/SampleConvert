@@ -1,8 +1,0 @@
-unique_name: .Actual Hours-Craft-Labor
-object_type: metric_calc
-label: .Actual Hours-Craft-Labor
-expression: >-
-  0 /*CALCULATE([.Actual Hours],FILTER('Resources',Resources[Resource
-  Name]="Craft Labor")) TODO: Update with valid MDX expression*/
-folder: Actual\Incremental
-format: '#,0.00'

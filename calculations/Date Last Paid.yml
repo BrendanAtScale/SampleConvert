@@ -1,9 +1,0 @@
-unique_name: Date Last Paid
-object_type: metric_calc
-label: Date Last Paid
-expression: >-
-  0
-  /*CALCULATE(Max('Receipts'[DateLastPaid]),FILTER(ALL('Dates'[Date]),'Dates'[Date]<=Max('Dates'[Date])))
-  TODO: Update with valid MDX expression*/
-folder: Actual\Inception to Date-ITD
-format: short date

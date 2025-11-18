@@ -1,9 +1,0 @@
-unique_name: .Forecast Gross Profit-Best Case
-object_type: metric_calc
-label: .Forecast Gross Profit-Best Case
-expression: >-
-  0 /*DIVIDE([.Actual Gross Profit]+[.ETC Gross Profit-Best Case],
-  NOT([IsTaskLevelFiltered]) && NOT([IsResourceFiltered])) TODO: Update with
-  valid MDX expression*/
-folder: Forecast\Incremental
-format: '""#,0.00;(""#,0.00);""#,0.00'

@@ -1,8 +1,0 @@
-unique_name: Post-Close Actual Cost
-object_type: metric_calc
-label: Post-Close Actual Cost
-expression: >-
-  0 /*if([HasOneCurrency],CALCULATE(Sum('Actuals After LCM'[Post-Close Actual
-  Cost]))) TODO: Update with valid MDX expression*/
-folder: Model Statistics
-format: '""#,0.00;(""#,0.00);""#,0.00'

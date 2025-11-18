@@ -1,6 +1,0 @@
-unique_name: Project Account Groups
-object_type: connection
-label: Project Account Groups
-as_connection: con1
-database: '<TODO: FIll THIS IN>'
-schema: '<TODO: FIll THIS IN>'

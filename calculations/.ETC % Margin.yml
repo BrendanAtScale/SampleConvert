@@ -1,6 +1,0 @@
-unique_name: .ETC % Margin
-object_type: metric_calc
-label: .ETC % Margin
-expression: ([Measures].[.ETC Gross Profit]) / ([Measures].[.ETC Revenue (backlog)])
-folder: ETC\Incremental
-format: 0.0%;-0.0%;0.0%

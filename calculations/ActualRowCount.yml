@@ -1,9 +1,0 @@
-unique_name: ActualRowCount
-object_type: metric_calc
-label: ActualRowCount
-expression: >-
-  0
-  /*CALCULATE(Sum(Dates[TDARowCount]),FILTER(ALL(Dates[Date]),Dates[Date]>=MIN(Dates[Date])))
-  TODO: Update with valid MDX expression*/
-folder: Display
-is_hidden: true

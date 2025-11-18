@@ -1,8 +1,0 @@
-unique_name: Historic-EAC PDIP
-object_type: metric_calc
-label: Historic-EAC PDIP
-expression: >-
-  0 /*DIVIDE([Historic-EAC Pre-Discretionary Net Income], [Historic-EAC Full
-  Time Equivalent - EO]) TODO: Update with valid MDX expression*/
-folder: PDIP
-format: '""#,0.00;(""#,0.00);""#,0.00'

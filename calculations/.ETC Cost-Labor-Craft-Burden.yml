@@ -1,9 +1,0 @@
-unique_name: .ETC Cost-Labor-Craft-Burden
-object_type: metric_calc
-label: .ETC Cost-Labor-Craft-Burden
-expression: >-
-  0 /*if([HasOneCurrency],CALCULATE(Sum('Current'[ETC
-  Cost]),FILTER('Resources','Resources'[Labor Detail]="Burden-Craft"))) TODO:
-  Update with valid MDX expression*/
-folder: ETC\Incremental
-format: '""#,0.00;(""#,0.00);""#,0.00'

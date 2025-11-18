@@ -1,6 +1,0 @@
-unique_name: Historic-ETC Cost-Cond Contingency
-object_type: metric_calc
-label: Historic-ETC Cost-Cond Contingency
-expression: '[Measures].[Historic-EAC Cost-Cond Contingency]'
-folder: Estimate to Complete (ETC)
-format: '""#,0.00;(""#,0.00);""#,0.00'

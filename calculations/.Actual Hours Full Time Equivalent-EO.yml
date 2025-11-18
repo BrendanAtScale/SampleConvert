@@ -1,9 +1,0 @@
-unique_name: .Actual Hours Full Time Equivalent-EO
-object_type: metric_calc
-label: .Actual Hours Full Time Equivalent-EO
-expression: >-
-  0 /*CALCULATE([.Actual Hours Full Time
-  Equivalent],FILTER('Resources',Resources[Resource Name]="People")) TODO:
-  Update with valid MDX expression*/
-folder: Actual\Incremental
-format: '#,0.00'

@@ -1,8 +1,0 @@
-unique_name: Historic-EAC Cost-Overruns
-object_type: metric_calc
-label: Historic-EAC Cost-Overruns
-expression: >-
-  [Measures].[Historic-EAC Cost-Overruns Labor]+[Measures].[Historic-EAC
-  Cost-Overruns NonLabor]
-folder: Estimate at Completion (EAC)
-format: '""#,0.00;(""#,0.00);""#,0.00'

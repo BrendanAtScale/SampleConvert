@@ -1,9 +1,0 @@
-unique_name: .ETC Cost-Labor-Total-Burdened
-object_type: metric_calc
-label: .ETC Cost-Labor-Total-Burdened
-expression: >-
-  0 /*if([HasOneCurrency],CALCULATE(Sum('Current'[ETC
-  Cost]),'Resources'[Labor-NonLabor Flag]="Labor")) TODO: Update with valid MDX
-  expression*/
-format: '""#,0.00;(""#,0.00);""#,0.00'
-is_hidden: true

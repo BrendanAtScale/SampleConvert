@@ -1,9 +1,0 @@
-unique_name: .Current Budget Hours Full Time Equivalent-EO
-object_type: metric_calc
-label: .Current Budget Hours Full Time Equivalent-EO
-expression: >-
-  0 /*CALCULATE([.Current Budget Hours Full Time
-  Equivalent],FILTER('Resources',Resources[Resource Name]="People")) TODO:
-  Update with valid MDX expression*/
-folder: Budget\Incremental\Current
-format: '#,0.00'

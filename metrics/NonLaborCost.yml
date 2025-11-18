@@ -1,7 +1,0 @@
-unique_name: NonLaborCost
-object_type: metric
-label: NonLaborCost
-calculation_method: sum
-column: NonLaborCost
-dataset: dataset_Estimates
-unrelated_dimensions_handling: repeat

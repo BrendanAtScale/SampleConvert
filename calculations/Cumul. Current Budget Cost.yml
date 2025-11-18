@@ -1,9 +1,0 @@
-unique_name: Cumul. Current Budget Cost
-object_type: metric_calc
-label: Cumul. Current Budget Cost
-expression: >-
-  0 /*DIVIDE(CALCULATE([.Current Budget
-  Cost],FILTER(ALL('Dates'[Date]),'Dates'[Date]<=Max('Dates'[Date]))),[FutureBudgetRecordCount])*[FutureBudgetRecordCount]
-  TODO: Update with valid MDX expression*/
-folder: Budget\Cumulative\Current
-format: '""#,0.00;(""#,0.00);""#,0.00'

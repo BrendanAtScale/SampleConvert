@@ -1,7 +1,0 @@
-unique_name: Actual Hours
-object_type: metric
-label: Actual Hours
-calculation_method: sum
-column: Actual Hours
-dataset: dataset_TDA_Cost
-unrelated_dimensions_handling: repeat

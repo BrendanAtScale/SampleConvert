@@ -1,8 +1,0 @@
-unique_name: .ETC % Margin-Best Case
-object_type: metric_calc
-label: .ETC % Margin-Best Case
-expression: >-
-  ([Measures].[.ETC Gross Profit-Best Case]) / ([Measures].[.ETC Revenue
-  (backlog)])
-folder: ETC\Incremental
-format: 0.0%;-0.0%;0.0%

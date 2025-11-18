@@ -1,6 +1,0 @@
-unique_name: IsTaskLevelFiltered
-object_type: metric_calc
-label: IsTaskLevelFiltered
-expression: '0 /*ISFILTERED(Tasks) TODO: Update with valid MDX expression*/'
-folder: Display
-is_hidden: true

@@ -1,4 +1,0 @@
-unique_name: SalesRecordCount
-object_type: metric_calc
-label: SalesRecordCount
-expression: '[Measures].[SalesRowCount]'

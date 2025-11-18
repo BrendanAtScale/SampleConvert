@@ -1,7 +1,0 @@
-unique_name: NetIncome
-object_type: metric
-label: NetIncome
-calculation_method: sum
-column: NetIncome
-dataset: dataset_Estimates
-unrelated_dimensions_handling: repeat

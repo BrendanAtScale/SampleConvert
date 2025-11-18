@@ -1,6 +1,0 @@
-unique_name: EAC Full Time Equivalent - EO
-object_type: metric_calc
-label: EAC Full Time Equivalent - EO
-expression: ([Measures].[.EAC Hours-EO]) / (2088)
-folder: PDIP
-format: '#,0.00'

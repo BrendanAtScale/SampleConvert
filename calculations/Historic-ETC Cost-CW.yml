@@ -1,6 +1,0 @@
-unique_name: Historic-ETC Cost-CW
-object_type: metric_calc
-label: Historic-ETC Cost-CW
-expression: '[Measures].[Historic-EAC Cost-CW]'
-folder: Estimate to Complete (ETC)
-format: '""#,0.00;(""#,0.00);""#,0.00'

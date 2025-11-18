@@ -1,8 +1,0 @@
-unique_name: EAC PDIP - Best Case
-object_type: metric_calc
-label: EAC PDIP - Best Case
-expression: >-
-  0 /*DIVIDE([EAC Pre-Discretionary Net Income - Best Case], [EAC Full Time
-  Equivalent - EO]) TODO: Update with valid MDX expression*/
-folder: PDIP
-format: '""#,0.00;(""#,0.00);""#,0.00'

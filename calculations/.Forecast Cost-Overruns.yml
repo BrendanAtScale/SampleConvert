@@ -1,6 +1,0 @@
-unique_name: .Forecast Cost-Overruns
-object_type: metric_calc
-label: .Forecast Cost-Overruns
-expression: '[Measures].[Actual Cost-Overruns]+[Measures].[.ETC Cost-Overruns]'
-folder: Forecast\Incremental
-format: '""#,0.00;(""#,0.00);""#,0.00'

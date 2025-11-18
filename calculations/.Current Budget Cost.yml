@@ -1,8 +1,0 @@
-unique_name: .Current Budget Cost
-object_type: metric_calc
-label: .Current Budget Cost
-expression: >-
-  0 /*if([HasOneCurrency],Sum(Budget[Budget Cost])) TODO: Update with valid MDX
-  expression*/
-folder: Budget\Incremental\Current
-format: '""#,0.00;(""#,0.00);""#,0.00'

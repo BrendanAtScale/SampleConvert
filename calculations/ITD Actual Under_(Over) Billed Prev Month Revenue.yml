@@ -1,9 +1,0 @@
-unique_name: ITD Actual Under_(Over) Billed Prev Month Revenue
-object_type: metric_calc
-label: ITD Actual Under/(Over) Billed Prev Month Revenue
-expression: >-
-  0 /*if([DateFiltered],DIVIDE(([ITD Actual Revenue Prev Month] - [ITD Actual
-  Billings]),[ActualRowCount2])*[ActualRowCount2]) TODO: Update with valid MDX
-  expression*/
-folder: Actual\Inception to Date-ITD
-format: '""#,0.00;(""#,0.00);""#,0.00'

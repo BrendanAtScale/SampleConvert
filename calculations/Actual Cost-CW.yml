@@ -1,9 +1,0 @@
-unique_name: Actual Cost-CW
-object_type: metric_calc
-label: Actual Cost-CW
-expression: >-
-  0 /*if([HasOneCurrency],CALCULATE(Sum('TDA Cost'[Actual
-  Cost]),'Resources'[Reserve Type]="BMcD")) TODO: Update with valid MDX
-  expression*/
-format: '""#,0.00;(""#,0.00);""#,0.00'
-is_hidden: true

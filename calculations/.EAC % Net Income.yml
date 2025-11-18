@@ -1,6 +1,0 @@
-unique_name: .EAC % Net Income
-object_type: metric_calc
-label: .EAC % Net Income
-expression: ([Measures].[.EAC Net Income]) / ([Measures].[.EAC Revenue])
-folder: Forecast\At Completion
-format: 0.0%;-0.0%;0.0%

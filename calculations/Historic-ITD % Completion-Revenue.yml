@@ -1,7 +1,0 @@
-unique_name: Historic-ITD % Completion-Revenue
-object_type: metric_calc
-label: Historic-ITD % Completion-Revenue
-expression: >-
-  0 /*If(NOT([IsTaskLevelFiltered]) && NOT([IsResourceFiltered]) &&
-  [HasOneCurrency] && [DateFiltered], DIVIDE([ITD Actual Revenue],[HISTORIC-EAC
-  REVENUE])) TODO: Update with valid MDX expression*/

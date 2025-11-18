@@ -1,8 +1,0 @@
-unique_name: Estimate % Net Income
-object_type: metric_calc
-label: Estimate % Net Income
-expression: >-
-  0 /*DIVIDE([Estimate Net Income], [Estimate Revenue]) TODO: Update with valid
-  MDX expression*/
-folder: Estimate
-format: 0.0%;-0.0%;0.0%

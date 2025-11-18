@@ -1,8 +1,0 @@
-unique_name: Estimate Net Income_AFTE
-object_type: metric_calc
-label: Estimate Net Income/AFTE
-expression: >-
-  0 /*DIVIDE([Estimate Net Income], DIVIDE([Estimate BM US Hours], 2088)) TODO:
-  Update with valid MDX expression*/
-folder: Estimate
-format: '""#,0.00;(""#,0.00);""#,0.00'

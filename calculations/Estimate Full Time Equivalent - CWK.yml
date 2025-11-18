@@ -1,6 +1,0 @@
-unique_name: Estimate Full Time Equivalent - CWK
-object_type: metric_calc
-label: Estimate Full Time Equivalent - CWK
-expression: ([Measures].[Estimate CWK Hours]) / (2088)
-folder: Estimate
-format: '#,0.00'

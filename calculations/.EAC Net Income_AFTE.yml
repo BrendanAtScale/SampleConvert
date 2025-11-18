@@ -1,6 +1,0 @@
-unique_name: .EAC Net Income_AFTE
-object_type: metric_calc
-label: .EAC Net Income/AFTE
-expression: ([Measures].[.EAC Net Income]) / ([Measures].[EAC Full Time Equivalent - EO])
-folder: Forecast\At Completion
-format: '""#,0.00;(""#,0.00);""#,0.00'

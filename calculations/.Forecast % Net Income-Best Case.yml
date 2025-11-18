@@ -1,8 +1,0 @@
-unique_name: .Forecast % Net Income-Best Case
-object_type: metric_calc
-label: .Forecast % Net Income-Best Case
-expression: >-
-  ([Measures].[.Forecast Net Income-Best Case]) / ([Measures].[.Forecast
-  Revenue])
-folder: Forecast\Incremental
-format: 0.0%;-0.0%;0.0%

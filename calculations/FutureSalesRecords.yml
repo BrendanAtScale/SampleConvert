@@ -1,7 +1,0 @@
-unique_name: FutureSalesRecords
-object_type: metric_calc
-label: FutureSalesRecords
-expression: >-
-  0 /*CALCULATE([SalesRecordCount],FILTER(ALL(Dates),Dates[Date] >=
-  Min(Dates[Date]))) TODO: Update with valid MDX expression*/
-is_hidden: true

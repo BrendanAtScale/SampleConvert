@@ -1,8 +1,0 @@
-unique_name: YTD Actual Hours-EO
-object_type: metric_calc
-label: YTD Actual Hours-EO
-expression: >-
-  0 /*CALCULATE([YTD Actual Hours],FILTER('Resources',Resources[Resource
-  Name]="People")) TODO: Update with valid MDX expression*/
-folder: Actual\Year to Date-YTD
-format: '#,0.00'

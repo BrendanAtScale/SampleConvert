@@ -1,9 +1,0 @@
-unique_name: .Original BAC ELM-Best Case
-object_type: metric_calc
-label: .Original BAC ELM-Best Case
-expression: >-
-  0 /*DIVIDE(([.Original BAC Gross Profit-Best Case]+[.Original BAC
-  Cost-Labor-EO-Burdened]),[.Original BAC Cost-Labor-EO-Raw]) TODO: Update with
-  valid MDX expression*/
-folder: Budget\At Completion\Original
-format: '""#,0.00;(""#,0.00);""#,0.00'

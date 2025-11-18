@@ -1,7 +1,0 @@
-unique_name: BMUSHours
-object_type: metric
-label: BMUSHours
-calculation_method: sum
-column: BMUSHours
-dataset: dataset_Estimates
-unrelated_dimensions_handling: repeat

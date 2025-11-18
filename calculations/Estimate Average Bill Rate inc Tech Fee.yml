@@ -1,8 +1,0 @@
-unique_name: Estimate Average Bill Rate inc Tech Fee
-object_type: metric_calc
-label: Estimate Average Bill Rate inc Tech Fee
-expression: >-
-  0 /*DIVIDE([Estimate Labor Bill Value inc Tech Fee], [Estimate Hours]) TODO:
-  Update with valid MDX expression*/
-folder: Estimate
-format: '""#,0.00;(""#,0.00);""#,0.00'

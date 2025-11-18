@@ -1,8 +1,0 @@
-unique_name: .EAC % Margin
-object_type: metric_calc
-label: .EAC % Margin
-expression: >-
-  0 /*DIVIDE([.EAC Gross Profit],[.EAC Revenue]) TODO: Update with valid MDX
-  expression*/
-folder: Forecast\At Completion
-format: 0.0%;-0.0%;0.0%

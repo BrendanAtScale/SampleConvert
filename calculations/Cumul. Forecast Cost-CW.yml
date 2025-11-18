@@ -1,9 +1,0 @@
-unique_name: Cumul. Forecast Cost-CW
-object_type: metric_calc
-label: Cumul. Forecast Cost-CW
-expression: >-
-  0 /*DIVIDE(CALCULATE([.Forecast
-  Cost-CW],FILTER(ALL('Dates'[Date]),'Dates'[Date]<=Max('Dates'[Date]))),[FutureForecastRecordCount])*[FutureForecastRecordCount]
-  TODO: Update with valid MDX expression*/
-folder: Forecast\Cumulative
-format: '""#,0.00;(""#,0.00);""#,0.00'

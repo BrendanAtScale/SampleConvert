@@ -1,9 +1,0 @@
-unique_name: .EAC CW % of Total EAC Revenue
-object_type: metric_calc
-label: .EAC CW % of Total EAC Revenue
-expression: >-
-  0 /*DIVIDE(DIVIDE([.EAC Cost-CW],[.EAC Revenue]), NOT([IsTaskLevelFiltered])
-  && NOT([IsResourceFiltered]) && [HasOneCurrency]) TODO: Update with valid MDX
-  expression*/
-folder: Forecast\At Completion
-format: 0.0%;-0.0%;0.0%

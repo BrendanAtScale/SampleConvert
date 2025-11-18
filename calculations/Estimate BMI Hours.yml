@@ -1,6 +1,0 @@
-unique_name: Estimate BMI Hours
-object_type: metric_calc
-label: Estimate BMI Hours
-expression: ([Measures].[BMIHours]) / ([Measures].[.EAC Display Estimate])
-folder: Estimate
-format: '#,0.00'

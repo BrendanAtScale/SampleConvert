@@ -1,8 +1,0 @@
-unique_name: .EAC Net Income-Best Case_AFTE
-object_type: metric_calc
-label: .EAC Net Income-Best Case/AFTE
-expression: >-
-  ([Measures].[.EAC Net Income-Best Case]) / ([Measures].[EAC Full Time
-  Equivalent - EO])
-folder: Forecast\At Completion
-format: '""#,0.00;(""#,0.00);""#,0.00'

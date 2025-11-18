@@ -1,6 +1,0 @@
-unique_name: .Forecast % Net Income
-object_type: metric_calc
-label: .Forecast % Net Income
-expression: ([Measures].[.Forecast Net Income]) / ([Measures].[.Forecast Revenue])
-folder: Forecast\Incremental
-format: 0.0%;-0.0%;0.0%

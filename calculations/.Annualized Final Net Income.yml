@@ -1,9 +1,0 @@
-unique_name: .Annualized Final Net Income
-object_type: metric_calc
-label: .Annualized Final Net Income
-expression: >-
-  0 /*DIVIDE(CALCULATE(Sum('Net Income'[ANP]),'Net Income'[Net Income Period
-  Type]="ITD"), NOT([IsTaskLevelFiltered]) && NOT([IsResourceFiltered]) &&
-  [HasOneCurrency]) TODO: Update with valid MDX expression*/
-format: '""#,0.00;(""#,0.00);""#,0.00'
-is_hidden: true

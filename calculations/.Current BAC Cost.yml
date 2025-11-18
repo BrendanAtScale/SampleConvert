@@ -1,8 +1,0 @@
-unique_name: .Current BAC Cost
-object_type: metric_calc
-label: .Current BAC Cost
-expression: >-
-  0 /*DIVIDE(CALCULATE([.Current Budget Cost],ALL(Dates)),[.Current BAC
-  Display])*[.Current BAC Display] TODO: Update with valid MDX expression*/
-folder: Budget\At Completion\Current
-format: '""#,0.00;(""#,0.00);""#,0.00'

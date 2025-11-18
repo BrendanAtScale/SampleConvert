@@ -1,8 +1,0 @@
-unique_name: Whitelist Member (count)
-object_type: metric_calc
-label: Whitelist Member (count)
-expression: >-
-  0 /*CALCULATE(DISTINCTCOUNT(ProjectWhitelist[Username]),
-  ALL(ProjectWhitelist)) TODO: Update with valid MDX expression*/
-folder: Model Statistics
-format: '#,0'

@@ -1,8 +1,0 @@
-unique_name: .Current BAC Hours-EO
-object_type: metric_calc
-label: .Current BAC Hours-EO
-expression: >-
-  0 /*CALCULATE([.Current BAC Hours],FILTER('Resources',Resources[Resource
-  Name]="People")) TODO: Update with valid MDX expression*/
-folder: Budget\At Completion\Current
-format: '#,0.00'

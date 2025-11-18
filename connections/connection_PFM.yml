@@ -1,6 +1,0 @@
-unique_name: connection_PFM
-object_type: connection
-label: connection_PFM
-as_connection: con1
-database: '<TODO: FIll THIS IN>'
-schema: '<TODO: FIll THIS IN>'

@@ -1,6 +1,0 @@
-unique_name: Historic-EAC CW % of Total EAC Revenue
-object_type: metric_calc
-label: Historic-EAC CW % of Total EAC Revenue
-expression: ([Measures].[Historic-EAC Cost-CW]) / ([Measures].[Historic-EAC Revenue])
-folder: Estimate at Completion (EAC)
-format: 0.0%;-0.0%;0.0%

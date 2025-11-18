@@ -1,9 +1,0 @@
-unique_name: Cumul. Current Budget Hours-EO
-object_type: metric_calc
-label: Cumul. Current Budget Hours-EO
-expression: >-
-  0 /*CALCULATE([Cumul. Current Budget
-  Hours],FILTER('Resources',Resources[Resource Name]="People")) TODO: Update
-  with valid MDX expression*/
-folder: Budget\Cumulative\Current
-format: '#,0.00'

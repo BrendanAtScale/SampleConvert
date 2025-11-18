@@ -1,9 +1,0 @@
-unique_name: Estimate ELM
-object_type: metric_calc
-label: Estimate ELM
-expression: >-
-  0 /*DIVIDE(([Estimate Gross Profit]+[Estimate
-  Cost-Labor-EO-Burdened]),[Estimate Raw Cost]) TODO: Update with valid MDX
-  expression*/
-folder: Estimate
-format: '#,0.00'

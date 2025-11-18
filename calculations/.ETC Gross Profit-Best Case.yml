@@ -1,9 +1,0 @@
-unique_name: .ETC Gross Profit-Best Case
-object_type: metric_calc
-label: .ETC Gross Profit-Best Case
-expression: >-
-  0 /*DIVIDE([.ETC Revenue (backlog)]-[.ETC Cost]+[.ETC Cost-CW],
-  NOT([IsTaskLevelFiltered]) && NOT([IsResourceFiltered])) TODO: Update with
-  valid MDX expression*/
-folder: ETC\Incremental
-format: '""#,0.00;(""#,0.00);""#,0.00'

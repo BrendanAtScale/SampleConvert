@@ -1,8 +1,0 @@
-unique_name: Estimate PDIP
-object_type: metric_calc
-label: Estimate PDIP
-expression: >-
-  0 /*DIVIDE([Estimate Pre Discretionary Net Income], DIVIDE([Estimate BM US
-  Hours], 2088)) TODO: Update with valid MDX expression*/
-folder: Estimate
-format: '""#,0.00;(""#,0.00);""#,0.00'

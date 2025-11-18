@@ -1,6 +1,0 @@
-unique_name: Forecast ETC Start (date)
-object_type: metric_calc
-label: Forecast ETC Start (date)
-expression: '[Measures].[ETCStartDate]'
-folder: Model Statistics
-format: short date

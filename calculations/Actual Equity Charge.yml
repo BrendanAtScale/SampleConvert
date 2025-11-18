@@ -1,9 +1,0 @@
-unique_name: Actual Equity Charge
-object_type: metric_calc
-label: Actual Equity Charge
-expression: >-
-  0 /*DIVIDE( CALCULATE(SUM(PDIPAccounts[Net]), FILTER(PDIPAccounts,
-  PDIPAccounts[Account] = "EQCH")) , NOT([IsResourceFiltered]) &&
-  [HasOneCurrency]) TODO: Update with valid MDX expression*/
-folder: Actual
-format: '""#,0.00;(""#,0.00);""#,0.00'

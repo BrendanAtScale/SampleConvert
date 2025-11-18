@@ -1,8 +1,0 @@
-unique_name: PFM Freshness Age (hours)
-object_type: metric_calc
-label: PFM Freshness Age (hours)
-expression: >-
-  0 /*DATEDIFF([PFM Processed On (date time)],NOW(), HOUR) TODO: Update with
-  valid MDX expression*/
-folder: Model Statistics
-format: '#,0'

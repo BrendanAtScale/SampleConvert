@@ -1,6 +1,0 @@
-unique_name: Estimate Count
-object_type: metric_calc
-label: Estimate Count
-expression: '[Measures].[EstimateID]'
-folder: Estimate
-format: '#,0'

@@ -1,6 +1,0 @@
-unique_name: PFM Processed On (date time)
-object_type: metric_calc
-label: PFM Processed On (date time)
-expression: '[Measures].[TPFProcessDate]'
-folder: Model Statistics
-format: M/d/yyyy h:mm:ss AM/PM

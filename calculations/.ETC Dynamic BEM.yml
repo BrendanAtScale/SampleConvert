@@ -1,8 +1,0 @@
-unique_name: .ETC Dynamic BEM
-object_type: metric_calc
-label: .ETC Dynamic BEM
-expression: >-
-  0 /*[.ETC ELM] - DIVIDE([.ETC Net Income],[.ETC Cost-Labor-EO-Raw]) TODO:
-  Update with valid MDX expression*/
-folder: ETC\Incremental
-format: '""#,0.00;(""#,0.00);""#,0.00'

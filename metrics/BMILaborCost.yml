@@ -1,7 +1,0 @@
-unique_name: BMILaborCost
-object_type: metric
-label: BMILaborCost
-calculation_method: sum
-column: BMILaborCost
-dataset: dataset_Estimates
-unrelated_dimensions_handling: repeat
