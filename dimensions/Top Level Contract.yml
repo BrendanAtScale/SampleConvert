@@ -19,7 +19,6 @@ hierarchies:
       - unique_name: Top Level Contract First Trade Date
 
       - unique_name: Top Level Contract Level
-        is_hidden: true
 
         secondary_attributes:
 
@@ -97,7 +96,6 @@ hierarchies:
       - unique_name: Top Level Contract Last Trade Date
 
       - unique_name: Top Level Contract Level
-        is_hidden: true
 
 level_attributes:
 

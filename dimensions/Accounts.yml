@@ -40,7 +40,6 @@ hierarchies:
             sort_column: ATTAIN_KEY
 
       - unique_name: Accounts Level
-        is_hidden: true
 
         secondary_attributes:
 
@@ -93,7 +92,6 @@ hierarchies:
       - unique_name: Account
 
       - unique_name: Accounts Level
-        is_hidden: true
 
   - unique_name: By Country
     label: By Country
@@ -104,7 +102,6 @@ hierarchies:
       - unique_name: Account
 
       - unique_name: Accounts Level
-        is_hidden: true
 
 level_attributes:
 

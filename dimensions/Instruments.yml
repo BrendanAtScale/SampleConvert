@@ -49,7 +49,6 @@ hierarchies:
             sort_column: DESCRIPTION
 
       - unique_name: Instruments Level
-        is_hidden: true
 
         secondary_attributes:
 
@@ -187,7 +186,6 @@ hierarchies:
       - unique_name: Instrument
 
       - unique_name: Instruments Level
-        is_hidden: true
 
   - unique_name: By Sector
     label: By Sector
@@ -198,7 +196,6 @@ hierarchies:
       - unique_name: Sector Name
 
       - unique_name: Instruments Level
-        is_hidden: true
 
 level_attributes:
 

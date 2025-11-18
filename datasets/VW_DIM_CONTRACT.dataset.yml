@@ -38,9 +38,6 @@ columns:
     data_type: "decimal(38,0)"
   - name: COMMERCIAL_TRADER_SEGMENT_NAME
     data_type: string
-  - name: CON_LAST_TRADE_DATE
-    data_type: date
-    sql: "TO_DATE (contract_last_trade_date::string, 'YYYY-MM-DD') AS converted_date"
   - name: CONTRACT_CREATED_DATE
     data_type: date
   - name: CONTRACT_CREATED_YEAR

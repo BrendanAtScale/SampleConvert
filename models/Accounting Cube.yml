@@ -143,6 +143,15 @@ relationships:
       dimension: Dates
       level: Date1
 
+  - unique_name: VW_REAL_EARNINGS.dataset_General_Ledger_Accounts_Structure
+    from:
+      dataset: VW_REAL_EARNINGS.dataset
+      join_columns:
+        - GLOBAL_LEDGER_KEY
+    to:
+      dimension: General Ledger Accounts Structure
+      level: General Ledger Accounts Structure Level
+
   - unique_name: VW_REAL_EARNINGS.dataset_Originating_Tool_Hint
     from:
       dataset: VW_REAL_EARNINGS.dataset
@@ -151,15 +160,6 @@ relationships:
     to:
       dimension: Originating Tool Hint
       level: Originating Tool Hint Schema Id Key
-
-  - unique_name: VW_REAL_EARNINGS.dataset_General_Ledger_Accounts
-    from:
-      dataset: VW_REAL_EARNINGS.dataset
-      join_columns:
-        - GLOBAL_LEDGER_KEY
-    to:
-      dimension: General Ledger Accounts
-      level: General Ledger Accounts Level
 
   - unique_name: VW_REAL_EARNINGS.dataset_Order_Placement_Tools_OrderPlacementTools
     from:

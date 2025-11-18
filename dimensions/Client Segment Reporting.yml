@@ -19,7 +19,6 @@ hierarchies:
       - unique_name: Segment Reporting Level 5
 
       - unique_name: Client Segment Reporting Level
-        is_hidden: true
 
 level_attributes:
 

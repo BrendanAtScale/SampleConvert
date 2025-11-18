@@ -72,7 +72,6 @@ hierarchies:
             sort_column: EGO_ATTAIN_KEY
 
       - unique_name: Real Earnings Hierarchies Level
-        is_hidden: true
 
         secondary_attributes:
 

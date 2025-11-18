@@ -11,7 +11,6 @@ hierarchies:
     levels:
 
       - unique_name: Originating Tool Hint Schema Id Key
-        is_hidden: true
 
         secondary_attributes:
 

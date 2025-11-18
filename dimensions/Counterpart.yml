@@ -51,7 +51,6 @@ hierarchies:
             sort_column: COUNTERPART_ID
 
       - unique_name: Counterpart Level
-        is_hidden: true
 
         secondary_attributes:
 
@@ -87,7 +86,6 @@ hierarchies:
       - unique_name: Counterpart ID
 
       - unique_name: Counterpart Level
-        is_hidden: true
 
 level_attributes:
 

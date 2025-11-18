@@ -38,17 +38,8 @@ hierarchies:
             sort_column: CONTRACT_NAME
 
       - unique_name: HKCompositeContract
-        is_hidden: true
 
         secondary_attributes:
-
-          - unique_name: Contract Secondary Attribute
-            label: Contract Secondary Attribute
-            associated_hierarchy: By Commercial Solution Group
-            dataset: VW_DIM_CONTRACT.dataset
-            key_columns:
-              - CONTRACT_LAST_TRADE_DATE
-            name_column: CONTRACT_LAST_TRADE_DATE
 
           - unique_name: d_BUSINESS_LINE_NAME
             label: Business Line
@@ -90,7 +81,7 @@ hierarchies:
             name_column: CONTRACT_ID
             sort_column: CONTRACT_ID
 
-          - unique_name: d_CONTRACT_LAST_TRADE_DATE_RAKK
+          - unique_name: d_CONTRACT_LAST_TRADE_DATE
             label: Last Trade Date
             folder: Events
             associated_hierarchy: By Commercial Solution Group
@@ -170,7 +161,6 @@ hierarchies:
             sort_column: CONTRACTUAL_SOLUTION_NAME
 
       - unique_name: HKCompositeContract
-        is_hidden: true
 
   - unique_name: By Top Level Contract
     label: By Top Level Contract
@@ -181,7 +171,6 @@ hierarchies:
       - unique_name: ContractName
 
       - unique_name: HKCompositeContract
-        is_hidden: true
 
   - unique_name: By Creation
     label: By Creation
@@ -208,7 +197,6 @@ hierarchies:
             sort_column: CONTRACT_CREATED_DATE
 
       - unique_name: HKCompositeContract
-        is_hidden: true
 
   - unique_name: By First Trade
     label: By First Trade
@@ -235,7 +223,6 @@ hierarchies:
             sort_column: CONTRACT_FIRST_TRADE_DATE
 
       - unique_name: HKCompositeContract
-        is_hidden: true
 
 level_attributes:
 

@@ -16,7 +16,6 @@ hierarchies:
       - unique_name: Office
 
       - unique_name: Office Level
-        is_hidden: true
 
   - unique_name: By Reporting Office
     label: By Reporting Office
@@ -33,7 +32,6 @@ hierarchies:
       - unique_name: Office
 
       - unique_name: Office Level
-        is_hidden: true
 
 level_attributes:
 
