@@ -1,0 +1,259 @@
+unique_name: Instrument
+object_type: dimension
+label: Instrument
+type: standard
+
+hierarchies:
+
+  - unique_name: By Base Currency
+    label: By Base Currency
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: By Base Currency Level
+
+        secondary_attributes:
+
+          - unique_name: d_TRADED_CURRENCY_CATEGORY_2
+            label: Base Currency Category
+            dataset: VW_INSTRUMENT.dataset
+            key_columns:
+              - TRADED_CURRENCY_CATEGORY
+            name_column: TRADED_CURRENCY_CATEGORY
+            sort_column: TRADED_CURRENCY_CATEGORY
+
+      - unique_name: Base Currency
+
+        secondary_attributes:
+
+          - unique_name: d_TRADED_CURRENCY_CODE_2
+            label: Base Currency
+            dataset: VW_INSTRUMENT.dataset
+            key_columns:
+              - TRADED_CURRENCY_CODE
+            name_column: TRADED_CURRENCY_CODE
+            sort_column: TRADED_CURRENCY_CODE
+
+      - unique_name: Description1
+
+        secondary_attributes:
+
+          - unique_name: d_DESCRIPTION
+            label: Instrument
+            associated_hierarchy: By Base Currency
+            dataset: VW_INSTRUMENT.dataset
+            key_columns:
+              - DESCRIPTION
+            name_column: DESCRIPTION
+            sort_column: DESCRIPTION
+
+      - unique_name: HK_Composite_Instrument
+        is_hidden: true
+
+        secondary_attributes:
+
+          - unique_name: d_CODES_ISIN
+            label: ISIN Code
+            associated_hierarchy: By Base Currency
+            dataset: VW_INSTRUMENT.dataset
+            key_columns:
+              - CODES_ISIN
+            name_column: CODES_ISIN
+            sort_column: CODES_ISIN
+
+          - unique_name: d_CODES_RIC
+            label: Reuters Code
+            associated_hierarchy: By Base Currency
+            dataset: VW_INSTRUMENT.dataset
+            key_columns:
+              - CODES_RIC
+            name_column: CODES_RIC
+            sort_column: CODES_RIC
+
+          - unique_name: d_DESK_CURRENCY_PAIR_CATEGORY_NAME
+            label: Desk Currency Pair Category
+            associated_hierarchy: By Base Currency
+            dataset: VW_INSTRUMENT.dataset
+            key_columns:
+              - DESK_CURRENCY_PAIR_CATEGORY_NAME
+            name_column: DESK_CURRENCY_PAIR_CATEGORY_NAME
+            sort_column: DESK_CURRENCY_PAIR_CATEGORY_NAME
+
+          - unique_name: d_EXCHANGE_CODES
+            label: Exchange Code
+            associated_hierarchy: By Base Currency
+            dataset: VW_INSTRUMENT.dataset
+            key_columns:
+              - EXCHANGE_CODES
+            name_column: EXCHANGE_CODES
+            sort_column: EXCHANGE_CODES
+
+          - unique_name: d_EXCHANGE_COUNTRY_NAME
+            label: Exchange Country Name
+            associated_hierarchy: By Base Currency
+            dataset: VW_INSTRUMENT.dataset
+            key_columns:
+              - EXCHANGE_COUNTRY_NAME
+            name_column: EXCHANGE_COUNTRY_NAME
+            sort_column: EXCHANGE_COUNTRY_NAME
+
+          - unique_name: d_EXCHANGE_DISPLAY_DESCRIPTION
+            label: Exchange
+            associated_hierarchy: By Base Currency
+            dataset: VW_INSTRUMENT.dataset
+            key_columns:
+              - EXCHANGE_DISPLAY_DESCRIPTION
+            name_column: EXCHANGE_DISPLAY_DESCRIPTION
+            sort_column: EXCHANGE_DISPLAY_DESCRIPTION
+
+          - unique_name: d_INSTRUMENT_SUB_TYPE_NAME
+            label: Instrument Sub Type Name
+            associated_hierarchy: By Base Currency
+            dataset: VW_INSTRUMENT.dataset
+            key_columns:
+              - INSTRUMENT_SUB_TYPE_NAME
+            name_column: INSTRUMENT_SUB_TYPE_NAME
+            sort_column: INSTRUMENT_SUB_TYPE_NAME
+
+          - unique_name: d_SYMBOL_CODE
+            label: Symbol Code
+            associated_hierarchy: By Base Currency
+            dataset: VW_INSTRUMENT.dataset
+            key_columns:
+              - SYMBOL_CODE
+            name_column: SYMBOL_CODE
+            sort_column: SYMBOL_CODE
+
+          - unique_name: d_TRADING_IS_CRYPTO
+            label: Is Crypto
+            associated_hierarchy: By Base Currency
+            dataset: VW_INSTRUMENT.dataset
+            key_columns:
+              - TRADING_IS_CRYPTO
+            name_column: TRADING_IS_CRYPTO
+            sort_column: TRADING_IS_CRYPTO
+
+  - unique_name: QC Currency category
+    label: By Quoted Currency
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: QC Currency category
+
+        secondary_attributes:
+
+          - unique_name: d_TRADED_CURRENCY_CATEGORY
+            label: Quoted Currency Category
+            dataset: VW_INSTRUMENT.dataset
+            key_columns:
+              - SYMBOL_CURRENCY_CATEGORY
+            name_column: SYMBOL_CURRENCY_CATEGORY
+            sort_column: SYMBOL_CURRENCY_CATEGORY
+
+      - unique_name: QA Currency
+
+        secondary_attributes:
+
+          - unique_name: d_TRADED_CURRENCY_CODE
+            label: Quoted Currency
+            dataset: VW_INSTRUMENT.dataset
+            key_columns:
+              - SYMBOL_CURRENCY_CODE
+            name_column: SYMBOL_CURRENCY_CODE
+            sort_column: SYMBOL_CURRENCY_CODE
+
+      - unique_name: Description1
+
+      - unique_name: HK_Composite_Instrument
+        is_hidden: true
+
+  - unique_name: By Sector
+    label: By Sector
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: By Sector Level
+
+      - unique_name: HK_Composite_Instrument
+        is_hidden: true
+
+  - unique_name: Futures Attributes
+    label: Futures Attributes
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: Futures Attributes Level
+
+      - unique_name: Base Contract Name
+
+      - unique_name: HK_Composite_Instrument
+        is_hidden: true
+
+level_attributes:
+
+  - unique_name: Base Contract Name
+    label: Base Contract Name
+    dataset: VW_INSTRUMENT.dataset
+    key_columns:
+      - INSTRUMENT_BASE_CONTRACT_NAME
+    name_column: INSTRUMENT_BASE_CONTRACT_NAME
+
+  - unique_name: Base Currency
+    label: Base Currency
+    dataset: VW_INSTRUMENT.dataset
+    key_columns:
+      - TRADED_CURRENCY_CODE
+    name_column: TRADED_CURRENCY_CODE
+
+  - unique_name: By Base Currency Level
+    label: Base Currency Category
+    dataset: VW_INSTRUMENT.dataset
+    key_columns:
+      - TRADED_CURRENCY_CATEGORY
+    name_column: TRADED_CURRENCY_CATEGORY
+
+  - unique_name: By Sector Level
+    label: Sector Name
+    dataset: VW_INSTRUMENT.dataset
+    key_columns:
+      - SECTOR_NAME
+    name_column: SECTOR_NAME
+
+  - unique_name: Description1
+    label: Instrument
+    dataset: VW_INSTRUMENT.dataset
+    key_columns:
+      - DESCRIPTION
+    name_column: DESCRIPTION
+
+  - unique_name: Futures Attributes Level
+    label: Base Contract Identifier
+    dataset: VW_INSTRUMENT.dataset
+    key_columns:
+      - INSTRUMENT_BASE_CONTRACT_IDENTIFIER
+    name_column: INSTRUMENT_BASE_CONTRACT_IDENTIFIER
+
+  - unique_name: HK_Composite_Instrument
+    label: HK_Composite_Instrument
+    dataset: VW_INSTRUMENT.dataset
+    key_columns:
+      - HK_COMPOSITE_INSTRUMENT
+    name_column: HK_COMPOSITE_INSTRUMENT
+
+  - unique_name: QA Currency
+    label: QA Currency
+    dataset: VW_INSTRUMENT.dataset
+    key_columns:
+      - SYMBOL_CURRENCY_CODE
+    name_column: SYMBOL_CURRENCY_CODE
+
+  - unique_name: QC Currency category
+    label: QC Currency category
+    dataset: VW_INSTRUMENT.dataset
+    key_columns:
+      - SYMBOL_CURRENCY_CATEGORY
+    name_column: SYMBOL_CURRENCY_CATEGORY

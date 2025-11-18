@@ -1,0 +1,165 @@
+unique_name: SCML CUBE
+object_type: model
+label: SCML CUBE
+description: SCML CUBE
+include_default_drillthrough: true
+visible: true
+
+relationships:
+
+  - unique_name: VW_OPEN_POSITION_SCML.dataset_instrument_isin
+    from:
+      dataset: VW_OPEN_POSITION_SCML.dataset
+      join_columns:
+        - TRADE_DATE
+        - INSTRUMENT_UIC
+    to:
+      dimension: instrument_isin
+      level: ISIN Code
+
+  - unique_name: VW_OPEN_POSITION_SCML.dataset_Instrument
+    from:
+      dataset: VW_OPEN_POSITION_SCML.dataset
+      join_columns:
+        - HK_COMPOSITE_INSTRUMENT
+    to:
+      dimension: Instrument
+      level: HK_Composite_Instrument
+
+  - unique_name: VW_OPEN_POSITION_SCML.dataset_Contract
+    from:
+      dataset: VW_OPEN_POSITION_SCML.dataset
+      join_columns:
+        - HK_COMPOSITE_CONTRACT
+    to:
+      dimension: Contract
+      level: Contract Level
+
+  - unique_name: VW_OPEN_POSITION_SCML.dataset_Trade_Dates
+    from:
+      dataset: VW_OPEN_POSITION_SCML.dataset
+      join_columns:
+        - TRADE_DATE
+    to:
+      dimension: Trade Dates
+      level: Date
+
+  - unique_name: VW_OPEN_POSITION_SCML.dataset_Counterpart
+    from:
+      dataset: VW_OPEN_POSITION_SCML.dataset
+      join_columns:
+        - HK_COMPOSITE_COUNTERPART
+    to:
+      dimension: Counterpart
+      level: Counterpart Level
+
+  - unique_name: VW_OPEN_POSITION_SCML.dataset_Product_Category
+    from:
+      dataset: VW_OPEN_POSITION_SCML.dataset
+      join_columns:
+        - PRODUCT_CATEGORY_ID
+    to:
+      dimension: Product Category
+      level: Product Category Level
+
+  - unique_name: VW_VALUE_DATED_OPEN_POSITION_SCML.dataset_instrument_isin
+    from:
+      dataset: VW_VALUE_DATED_OPEN_POSITION_SCML.dataset
+      join_columns:
+        - TRADE_DATE
+        - INSTRUMENT_UIC
+    to:
+      dimension: instrument_isin
+      level: ISIN Code
+
+  - unique_name: VW_VALUE_DATED_OPEN_POSITION_SCML.dataset_Instrument
+    from:
+      dataset: VW_VALUE_DATED_OPEN_POSITION_SCML.dataset
+      join_columns:
+        - HK_COMPOSITE_INSTRUMENT
+    to:
+      dimension: Instrument
+      level: HK_Composite_Instrument
+
+  - unique_name: VW_VALUE_DATED_OPEN_POSITION_SCML.dataset_Contract
+    from:
+      dataset: VW_VALUE_DATED_OPEN_POSITION_SCML.dataset
+      join_columns:
+        - HK_COMPOSITE_CONTRACT
+    to:
+      dimension: Contract
+      level: Contract Level
+
+  - unique_name: VW_VALUE_DATED_OPEN_POSITION_SCML.dataset_Trade_Dates
+    from:
+      dataset: VW_VALUE_DATED_OPEN_POSITION_SCML.dataset
+      join_columns:
+        - TRADE_DATE
+    to:
+      dimension: Trade Dates
+      level: Date
+
+  - unique_name: VW_VALUE_DATED_OPEN_POSITION_SCML.dataset_Counterpart
+    from:
+      dataset: VW_VALUE_DATED_OPEN_POSITION_SCML.dataset
+      join_columns:
+        - HK_COMPOSITE_COUNTERPART
+    to:
+      dimension: Counterpart
+      level: Counterpart Level
+
+  - unique_name: VW_VALUE_DATED_OPEN_POSITION_SCML.dataset_Product_Category
+    from:
+      dataset: VW_VALUE_DATED_OPEN_POSITION_SCML.dataset
+      join_columns:
+        - PRODUCT_CATEGORY_ID
+    to:
+      dimension: Product Category
+      level: Product Category Level
+
+  - unique_name: VW_ACCOUNT_BALANCE_SCML.dataset_Contract
+    from:
+      dataset: VW_ACCOUNT_BALANCE_SCML.dataset
+      join_columns:
+        - HK_COMPOSITE_CONTRACT
+    to:
+      dimension: Contract
+      level: Contract Level
+
+  - unique_name: VW_ACCOUNT_BALANCE_SCML.dataset_Trade_Dates
+    from:
+      dataset: VW_ACCOUNT_BALANCE_SCML.dataset
+      join_columns:
+        - TRADE_DATE
+    to:
+      dimension: Trade Dates
+      level: Date
+
+  - unique_name: VW_ACCOUNT_BALANCE_SCML.dataset_Counterpart
+    from:
+      dataset: VW_ACCOUNT_BALANCE_SCML.dataset
+      join_columns:
+        - HK_COMPOSITE_COUNTERPART
+    to:
+      dimension: Counterpart
+      level: Counterpart Level
+
+metrics:
+
+  - unique_name: End_Of_Period_Account_Balances_EUR_SUM
+    folder: Account Balances
+
+  - unique_name: End_of_Period_Open_ Positions_EOD_Value_QC
+    folder: Open Positions
+
+  - unique_name: m_AMOUNT_sum
+    folder: Open Positions
+
+  - unique_name: m_OPEN_POSITIONS_EOD_VALUE_EUR_sum
+    folder: Open Positions
+
+  - unique_name: m_UNREALIZED_PROFIT_LOSS_EUR_sum
+    folder: Open Positions
+
+  - unique_name: value_dated_open_position_amount
+    folder: Value dated Open Position
