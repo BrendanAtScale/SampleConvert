@@ -1,0 +1,6 @@
+unique_name: Snowflake Cubes.catalog_rohn1.catalog
+object_type: catalog
+label: Snowflake Cubes
+version: 1.2
+aggressive_agg_promotion: false
+build_speculative_aggs: false
