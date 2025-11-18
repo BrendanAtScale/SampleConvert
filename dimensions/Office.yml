@@ -1,0 +1,92 @@
+unique_name: Office
+object_type: dimension
+label: Office
+type: standard
+
+hierarchies:
+
+  - unique_name: By Reporting Office
+    label: By Reporting Office
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: Office Level
+
+      - unique_name: Office Level1
+
+      - unique_name: Office Level 2
+
+      - unique_name: Office
+
+      - unique_name: HK Office
+        is_hidden: true
+
+level_attributes:
+
+  - unique_name: HK Office
+    label: HK Office
+    dataset: VW_OFFICE.dataset
+    key_columns:
+      - HK_OFFICE
+    name_column: HK_OFFICE
+    allowed_calcs_for_dma:
+      - Ancestor
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - Range
+      - Siblings
+
+  - unique_name: Office Level 2
+    label: Office Level 2
+    dataset: VW_OFFICE.dataset
+    key_columns:
+      - OFFICE_LEVEL2_NAME
+    name_column: OFFICE_LEVEL2_NAME
+    allowed_calcs_for_dma:
+      - Ancestor
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - Range
+      - Siblings
+
+  - unique_name: Office Level
+    label: Reporting Region
+    dataset: VW_OFFICE.dataset
+    key_columns:
+      - REPORTING_REGION
+    name_column: REPORTING_REGION
+
+  - unique_name: Office Level1
+    label: Office Level 1
+    dataset: VW_OFFICE.dataset
+    key_columns:
+      - OFFICE_LEVEL1_NAME
+    name_column: OFFICE_LEVEL1_NAME
+    allowed_calcs_for_dma:
+      - Ancestor
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - Range
+      - Siblings
+
+  - unique_name: Office
+    label: Office
+    dataset: VW_OFFICE.dataset
+    key_columns:
+      - OFFICE
+    name_column: OFFICE
+    allowed_calcs_for_dma:
+      - Ancestor
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - Range
+      - Siblings
+
+modeler_metadata:
+  version: "0"
+  modified: "false"

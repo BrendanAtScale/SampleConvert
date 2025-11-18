@@ -1,0 +1,308 @@
+unique_name: Trade Dates
+object_type: dimension
+label: Trade Dates
+type: time
+
+hierarchies:
+
+  - unique_name: By Month
+    label: By Month
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: Year
+
+        secondary_attributes:
+
+          - unique_name: d_YEAR
+            label: Year
+            dataset: VW_DATES.dataset
+            key_columns:
+              - YEAR
+            name_column: YEAR
+            sort_column: YEAR
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+      - unique_name: Quarter
+
+        secondary_attributes:
+
+          - unique_name: d_QUARTER
+            label: Quarter
+            dataset: VW_DATES.dataset
+            key_columns:
+              - QUARTER_NAME
+            name_column: QUARTER_NAME
+            sort_column: QUARTER_NAME
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+      - unique_name: Month
+
+        secondary_attributes:
+
+          - unique_name: d_MONTH_NAME
+            label: Month
+            dataset: VW_DATES.dataset
+            key_columns:
+              - MONTH_NAME
+            name_column: MONTH_NAME
+            sort_column: MONTH_NAME
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+      - unique_name: Date
+
+        secondary_attributes:
+
+          - unique_name: d_DATE_STRING
+            label: Date
+            associated_hierarchy: By Month
+            dataset: VW_DATES.dataset
+            key_columns:
+              - DATE_STRING
+            name_column: DATE_STRING
+            sort_column: DATE_STRING
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+          - unique_name: d_IS_CURRENT_MONTH
+            label: Is Current Month
+            folder: Predefined Filters
+            associated_hierarchy: By Month
+            dataset: VW_DATES.dataset
+            key_columns:
+              - IS_CURRENT_MONTH
+            name_column: IS_CURRENT_MONTH
+            sort_column: IS_CURRENT_MONTH
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+          - unique_name: d_IS_CURRENT_QUARTER
+            label: Is Current Quarter
+            folder: Predefined Filters
+            associated_hierarchy: By Month
+            dataset: VW_DATES.dataset
+            key_columns:
+              - IS_CURRENT_QUARTER
+            name_column: IS_CURRENT_QUARTER
+            sort_column: IS_CURRENT_QUARTER
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+          - unique_name: d_IS_CURRENT_WEEK
+            label: Is Current Week
+            folder: Predefined Filters
+            associated_hierarchy: By Month
+            dataset: VW_DATES.dataset
+            key_columns:
+              - IS_CURRENT_WEEK
+            name_column: IS_CURRENT_WEEK
+            sort_column: IS_CURRENT_WEEK
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+          - unique_name: d_IS_CURRENT_YEAR
+            label: Is Current Year
+            folder: Predefined Filters
+            associated_hierarchy: By Month
+            dataset: VW_DATES.dataset
+            key_columns:
+              - IS_CURRENT_YEAR
+            name_column: IS_CURRENT_YEAR
+            sort_column: IS_CURRENT_YEAR
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+          - unique_name: d_IS_LAST_TRADE_DATE
+            label: Is Last Trade Date
+            folder: Predefined Filters
+            associated_hierarchy: By Month
+            dataset: VW_DATES.dataset
+            key_columns:
+              - IS_LAST_TRADE_DATE
+            name_column: IS_LAST_TRADE_DATE
+            sort_column: IS_LAST_TRADE_DATE
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+          - unique_name: d_IS_PREVIOUS_TRADE_DATE
+            label: Is Previous Trade Date
+            associated_hierarchy: By Month
+            dataset: VW_DATES.dataset
+            key_columns:
+              - IS_PREVIOUS_TRADE_DATE
+            name_column: IS_PREVIOUS_TRADE_DATE
+            sort_column: IS_PREVIOUS_TRADE_DATE
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+          - unique_name: d_IS_TRADING_DAY
+            label: Is Trading Day
+            folder: Predefined Filters
+            associated_hierarchy: By Month
+            dataset: VW_DATES.dataset
+            key_columns:
+              - IS_TRADING_DAY
+            name_column: IS_TRADING_DAY
+            sort_column: IS_TRADING_DAY
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+  - unique_name: By Week
+    label: By Week
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: By Week Level
+
+        secondary_attributes:
+
+          - unique_name: d_WEEK_YEAR
+            label: Week Year
+            dataset: VW_DATES.dataset
+            key_columns:
+              - WEEK_YEAR
+            name_column: WEEK_YEAR
+            sort_column: WEEK_YEAR
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+      - unique_name: Week
+
+      - unique_name: Date
+
+level_attributes:
+
+  - unique_name: By Week Level
+    label: Week Year
+    dataset: VW_DATES.dataset
+    key_columns:
+      - WEEK_YEAR
+    name_column: WEEK_YEAR
+    allowed_calcs_for_dma:
+      - Ancestor
+      - DatesPeriodsToDate
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - PeriodsToDate
+      - Range
+      - Siblings
+    time_unit: year
+
+  - unique_name: Date
+    label: Date
+    dataset: VW_DATES.dataset
+    key_columns:
+      - DATE
+    name_column: DATE_STRING
+    allowed_calcs_for_dma:
+      - Ancestor
+      - DatesPeriodsToDate
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - PeriodsToDate
+      - Range
+      - Siblings
+    time_unit: day
+
+  - unique_name: Month
+    label: Month
+    dataset: VW_DATES.dataset
+    key_columns:
+      - MONTH_NAME
+    name_column: MONTH_NAME
+    allowed_calcs_for_dma:
+      - Ancestor
+      - DatesPeriodsToDate
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - PeriodsToDate
+      - Range
+      - Siblings
+    time_unit: month
+
+  - unique_name: Quarter
+    label: Quarter
+    dataset: VW_DATES.dataset
+    key_columns:
+      - QUARTER_NAME
+    name_column: QUARTER_NAME
+    allowed_calcs_for_dma:
+      - Ancestor
+      - DatesPeriodsToDate
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - PeriodsToDate
+      - Range
+      - Siblings
+    time_unit: quarter
+
+  - unique_name: Week
+    label: Week
+    dataset: VW_DATES.dataset
+    key_columns:
+      - WEEK_NAME
+    name_column: WEEK_NAME
+    allowed_calcs_for_dma:
+      - Ancestor
+      - DatesPeriodsToDate
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - PeriodsToDate
+      - Range
+      - Siblings
+    time_unit: week
+
+  - unique_name: Year
+    label: Year
+    dataset: VW_DATES.dataset
+    key_columns:
+      - YEAR
+    name_column: YEAR
+    allowed_calcs_for_dma:
+      - Ancestor
+      - DatesPeriodsToDate
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - PeriodsToDate
+      - Range
+      - Siblings
+    time_unit: year
+
+modeler_metadata:
+  version: "0"
+  modified: "false"

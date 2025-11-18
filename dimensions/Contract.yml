@@ -1,0 +1,121 @@
+unique_name: Contract
+object_type: dimension
+label: Contract
+type: standard
+
+hierarchies:
+
+  - unique_name: Contract Hierarchy
+    label: Contract
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: Contract Level
+        is_hidden: true
+
+        secondary_attributes:
+
+          - unique_name: d_BUSINESS_LINE_NAME
+            label: Business Line
+            folder: Attributes
+            dataset: VW_CONTRACT_SCML.dataset
+            key_columns:
+              - BUSINESS_LINE_ID
+            name_column: BUSINESS_LINE_NAME
+            sort_column: BUSINESS_LINE_NAME
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+          - unique_name: d_CLOSING_OFFICE_NAME
+            label: Closing Office Name
+            folder: Attributes
+            dataset: VW_CONTRACT_SCML.dataset
+            key_columns:
+              - CLOSING_OFFICE_NAME
+            name_column: CLOSING_OFFICE_NAME
+            sort_column: CLOSING_OFFICE_NAME
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+          - unique_name: d_CONTRACT_ID
+            label: Contractual Counterpart ID
+            folder: Attributes
+            dataset: VW_CONTRACT_SCML.dataset
+            key_columns:
+              - CONTRACT_ID
+            name_column: CONTRACT_ID
+            sort_column: CONTRACT_ID
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+          - unique_name: d_CONTRACT_TYPE
+            label: Contract Type
+            folder: Attributes
+            dataset: VW_CONTRACT_SCML.dataset
+            key_columns:
+              - CONTRACT_TYPE
+            name_column: CONTRACT_TYPE
+            sort_column: CONTRACT_TYPE
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+          - unique_name: d_LEGAL_ENTITY_NAME
+            label: Legal Entity
+            folder: Attributes
+            dataset: VW_CONTRACT_SCML.dataset
+            key_columns:
+              - LEGAL_ENTITY_ID
+            name_column: LEGAL_ENTITY_NAME
+            sort_column: LEGAL_ENTITY_NAME
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+level_attributes:
+
+  - unique_name: Contract Level
+    label: HKCompositeContract
+    dataset: VW_CONTRACT_SCML.dataset
+    key_columns:
+      - HK_COMPOSITE_CONTRACT
+    name_column: HK_COMPOSITE_CONTRACT
+
+relationships:
+
+  - unique_name: Contract_Office
+    from:
+      hierarchy: Contract Hierarchy
+      level: Contract Level
+      dataset: VW_CONTRACT_SCML.dataset
+      join_columns:
+        - HK_REPORTING_OFFICE
+    to:
+      dimension: Office
+      level: HK Office
+    type: embedded
+
+  - unique_name: Contract_Office_1
+    from:
+      hierarchy: Contract Hierarchy
+      level: Contract Level
+      dataset: VW_CONTRACT_SCML.dataset
+      join_columns:
+        - HK_CLOSING_OFFICE
+    to:
+      dimension: Office
+      level: HK Office
+    type: embedded
+
+modeler_metadata:
+  version: "0"
+  modified: "false"
