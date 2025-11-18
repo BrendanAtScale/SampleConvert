@@ -1,0 +1,108 @@
+unique_name: Originating Tool Hint
+object_type: dimension
+label: Originating Tool Hint
+type: standard
+
+hierarchies:
+
+  - unique_name: Originating Tool Hint Hierarchy
+    label: Originating Tool Hint Hierarchy
+
+    levels:
+
+      - unique_name: Originating Tool Hint Schema Id Key
+        is_hidden: true
+
+        secondary_attributes:
+
+          - unique_name: d1_PLATFORM
+            label: D1
+            dataset: VW_ORIGINATING_TOOL_HINT.dataset
+            key_columns:
+              - PLATFORM
+            name_column: PLATFORM
+            sort_column: PLATFORM
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+          - unique_name: d2_OPERATING_SYSTEM
+            label: D2
+            dataset: VW_ORIGINATING_TOOL_HINT.dataset
+            key_columns:
+              - OPERATING_SYSTEM
+            name_column: OPERATING_SYSTEM
+            sort_column: OPERATING_SYSTEM
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+          - unique_name: d3_BROWSER
+            label: D3
+            dataset: VW_ORIGINATING_TOOL_HINT.dataset
+            key_columns:
+              - BROWSER
+            name_column: BROWSER
+            sort_column: BROWSER
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+          - unique_name: d4_MODULE
+            label: D4
+            dataset: VW_ORIGINATING_TOOL_HINT.dataset
+            key_columns:
+              - MODULE
+            name_column: MODULE
+            sort_column: MODULE
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+          - unique_name: d_ORIGINATING_TOOL_HINT_ID
+            label: Originating Tool Hint ID
+            dataset: VW_ORIGINATING_TOOL_HINT.dataset
+            key_columns:
+              - ORIGINATING_TOOL_HINT_ID
+            name_column: ORIGINATING_TOOL_HINT_ID
+            sort_column: ORIGINATING_TOOL_HINT_ID
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+          - unique_name: d_ORIGINATING_TOOL_HINT_SCHEMA_ID
+            label: Tool Hint Schema ID
+            dataset: VW_ORIGINATING_TOOL_HINT.dataset
+            key_columns:
+              - ORIGINATING_TOOL_HINT_SCHEMA_ID
+            name_column: ORIGINATING_TOOL_HINT_SCHEMA_ID
+            sort_column: ORIGINATING_TOOL_HINT_SCHEMA_ID
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+level_attributes:
+
+  - unique_name: Originating Tool Hint Schema Id Key
+    label: Originating Tool Hint Schema Id Key
+    dataset: VW_ORIGINATING_TOOL_HINT.dataset
+    key_columns:
+      - ORIGINATING_TOOL_HINT_SCHEMA_ID_KEY
+    name_column: ORIGINATING_TOOL_HINT_SCHEMA_ID_KEY
+    allowed_calcs_for_dma:
+      - Ancestor
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - Range
+      - Siblings
+
+modeler_metadata:
+  version: "0"
+  modified: "false"

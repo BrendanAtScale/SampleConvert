@@ -1,0 +1,193 @@
+unique_name: Counterpart
+object_type: dimension
+label: Counterpart
+type: standard
+
+hierarchies:
+
+  - unique_name: By Counterpart Type
+    label: By Counterpart Type
+
+    levels:
+
+      - unique_name: Counterpart Type
+
+        secondary_attributes:
+
+          - unique_name: d_COUNTERPART_TYPE
+            label: Counterpart Type
+            folder: Attribute
+            dataset: VW_DIM_COUNTERPART.dataset
+            key_columns:
+              - COUNTERPART_TYPE
+            name_column: COUNTERPART_TYPE
+            sort_column: COUNTERPART_TYPE
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+      - unique_name: Counterpart Sub Type
+
+        secondary_attributes:
+
+          - unique_name: d_COUNTERPART_SUB_TYPE
+            label: Counterpart Sub Type
+            folder: Attribute
+            dataset: VW_DIM_COUNTERPART.dataset
+            key_columns:
+              - COUNTERPART_SUB_TYPE
+            name_column: COUNTERPART_SUB_TYPE
+            sort_column: COUNTERPART_SUB_TYPE
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+      - unique_name: Counterpart ID
+
+        secondary_attributes:
+
+          - unique_name: d_COUNTERPART_ID
+            label: Counterpart ID
+            folder: Attribute
+            associated_hierarchy: By Owner
+            dataset: VW_DIM_COUNTERPART.dataset
+            key_columns:
+              - COUNTERPART_ID
+            name_column: COUNTERPART_ID
+            sort_column: COUNTERPART_ID
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+      - unique_name: Counterpart Level
+        is_hidden: true
+
+        secondary_attributes:
+
+          - unique_name: d_ENTITY_TYPE
+            label: Entity Type
+            folder: Attribute
+            associated_hierarchy: By Counterpart Type
+            dataset: VW_DIM_COUNTERPART.dataset
+            key_columns:
+              - ENTITY_TYPE
+            name_column: ENTITY_TYPE
+            sort_column: ENTITY_TYPE
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+  - unique_name: By Owner
+    label: By Owner
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: Owner ID
+
+        secondary_attributes:
+
+          - unique_name: d_COUNTERPART_OWNER_ID
+            label: Owner ID
+            folder: Attribute
+            dataset: VW_DIM_COUNTERPART.dataset
+            key_columns:
+              - COUNTERPART_OWNER_ID
+            name_column: COUNTERPART_OWNER_ID
+            sort_column: COUNTERPART_OWNER_ID
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+      - unique_name: Counterpart ID
+
+      - unique_name: Counterpart Level
+
+level_attributes:
+
+  - unique_name: Counterpart ID
+    label: Counterpart ID
+    dataset: VW_DIM_COUNTERPART.dataset
+    key_columns:
+      - COUNTERPART_ID
+    name_column: COUNTERPART_ID
+    allowed_calcs_for_dma:
+      - Ancestor
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - Range
+      - Siblings
+
+  - unique_name: Counterpart Level
+    label: Counterpart Level
+    is_unique_key: true
+    dataset: VW_DIM_COUNTERPART.dataset
+    key_columns:
+      - HK_COMPOSITE_COUNTERPART
+    name_column: HK_COMPOSITE_COUNTERPART
+
+  - unique_name: Counterpart Sub Type
+    label: Counterpart Sub Type
+    dataset: VW_DIM_COUNTERPART.dataset
+    key_columns:
+      - COUNTERPART_SUB_TYPE
+    name_column: COUNTERPART_SUB_TYPE
+    allowed_calcs_for_dma:
+      - Ancestor
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - Range
+      - Siblings
+
+  - unique_name: Counterpart Type
+    label: Counterpart Type
+    dataset: VW_DIM_COUNTERPART.dataset
+    key_columns:
+      - COUNTERPART_TYPE
+    name_column: COUNTERPART_TYPE
+    allowed_calcs_for_dma:
+      - Ancestor
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - Range
+      - Siblings
+
+  - unique_name: Owner ID
+    label: Owner ID
+    dataset: VW_DIM_COUNTERPART.dataset
+    key_columns:
+      - COUNTERPART_OWNER_ID
+    name_column: COUNTERPART_OWNER_ID
+    allowed_calcs_for_dma:
+      - Ancestor
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - Range
+      - Siblings
+
+relationships:
+
+  - unique_name: Counterpart_ClientSegmentReporting
+    from:
+      hierarchy: By Counterpart Type
+      level: Counterpart Level
+      dataset: VW_DIM_COUNTERPART.dataset
+      join_columns:
+        - HK_CLIENT_SEGMENT_REPORTING_HIERARCHY
+    to:
+      dimension: Client Segment Reporting
+      level: Client Segment Reporting Level
+    type: embedded
+
+modeler_metadata:
+  version: "0"
+  modified: "false"
