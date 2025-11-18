@@ -1,6 +1,0 @@
-unique_name: Snowflake SCML.catalog_rakk_scml.catalog
-object_type: catalog
-label: Snowflake SCML
-version: 1.2
-aggressive_agg_promotion: false
-build_speculative_aggs: false
