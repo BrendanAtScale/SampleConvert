@@ -1,0 +1,92 @@
+unique_name: Client Segment Reporting 1
+object_type: dimension
+label: Client Segment Reporting 1
+type: standard
+
+hierarchies:
+
+  - unique_name: Client Segment Reporting 1 Hierarchy
+    label: Client Segment Reporting Hierarchy
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: Client Segment Reporting 1 Level
+
+      - unique_name: Client Segment Reporting Level_3
+
+      - unique_name: Client Segment Reporting Level_4
+
+      - unique_name: Client Segment Reporting ID
+
+      - unique_name: HK Client Segment Reporting Hierarchy
+        is_hidden: true
+
+level_attributes:
+
+  - unique_name: Client Segment Reporting 1 Level
+    label: Client Segment Reporting Level 2
+    dataset: VW_CLIENT_SEGMENT_REPORTING_HIERARCHY.dataset
+    key_columns:
+      - CLIENT_SEGMENT_REPORTING_LEVEL_1_ID
+    name_column: CLIENT_SEGMENT_REPORTING_LEVEL_1_NAME
+
+  - unique_name: Client Segment Reporting ID
+    label: Client Segment Reporting Level 5
+    dataset: VW_CLIENT_SEGMENT_REPORTING_HIERARCHY.dataset
+    key_columns:
+      - CLIENT_SEGMENT_REPORTING_ID
+    name_column: CLIENT_SEGMENT_REPORTING_NAME
+    allowed_calcs_for_dma:
+      - Ancestor
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - Range
+      - Siblings
+
+  - unique_name: Client Segment Reporting Level_3
+    label: Client Segment Reporting Level 3
+    dataset: VW_CLIENT_SEGMENT_REPORTING_HIERARCHY.dataset
+    key_columns:
+      - CLIENT_SEGMENT_REPORTING_LEVEL_2_ID
+    name_column: CLIENT_SEGMENT_REPORTING_LEVEL_2_NAME
+    allowed_calcs_for_dma:
+      - Ancestor
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - Range
+      - Siblings
+
+  - unique_name: Client Segment Reporting Level_4
+    label: Client Segment Reporting Level 4
+    dataset: VW_CLIENT_SEGMENT_REPORTING_HIERARCHY.dataset
+    key_columns:
+      - CLIENT_SEGMENT_REPORTING_LEVEL_3_ID
+    name_column: CLIENT_SEGMENT_REPORTING_LEVEL_3_NAME
+    allowed_calcs_for_dma:
+      - Ancestor
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - Range
+      - Siblings
+
+  - unique_name: HK Client Segment Reporting Hierarchy
+    label: HK Client Segment Reporting Hierarchy
+    dataset: VW_CLIENT_SEGMENT_REPORTING_HIERARCHY.dataset
+    key_columns:
+      - HK_CLIENT_SEGMENT_REPORTING_HIERARCHY
+    name_column: HK_CLIENT_SEGMENT_REPORTING_HIERARCHY
+    allowed_calcs_for_dma:
+      - Ancestor
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - Range
+      - Siblings
+
+modeler_metadata:
+  version: "0"
+  modified: "false"

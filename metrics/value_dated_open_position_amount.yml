@@ -1,0 +1,8 @@
+unique_name: value_dated_open_position_amount
+object_type: metric
+label: Value Date Amount
+calculation_method: sum
+format: standard
+unrelated_dimensions_handling: repeat
+dataset: VW_VALUE_DATED_OPEN_POSITION_SCML.dataset
+column: VALUE_DATED_AMOUNT

@@ -1,6 +1,0 @@
-unique_name: m_WITHDRAWAL_DKK_sum
-object_type: metric
-label: Withdrawal DKK
-calculation_method: sum
-dataset: VW_FUNDINGS.dataset
-column: WITHDRAWAL_DKK

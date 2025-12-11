@@ -1,0 +1,97 @@
+unique_name: VW_OPEN_POSITION_SCML.dataset
+object_type: dataset
+label: VW_OPEN_POSITION_SCML
+connection_id: snowflake.connection
+table: VW_OPEN_POSITION_SCML
+incremental:
+  column: TRADE_DATE_ID
+  grace_period: 1s
+immutable: true
+
+columns:
+  - name: ACCOUNT_ID
+    data_type: "decimal(30,0)"
+  - name: ACTUAL
+    data_type: "decimal(38,0)"
+  - name: AMOUNT
+    data_type: "decimal(30,6)"
+  - name: BUSINESS_LINE_ID
+    data_type: "decimal(38,0)"
+  - name: CLIENT_SEGMENT_REPORTING_LEVEL_1_ID
+    data_type: "decimal(38,0)"
+  - name: CLOSING_OFFICE_ID
+    data_type: "decimal(38,0)"
+  - name: CLOSING_RATE_EUR_DKK
+    data_type: "decimal(18,13)"
+  - name: CLOSING_RATE_EUR_QC
+    data_type: "decimal(18,13)"
+  - name: COUNTERPART_TYPE_ID
+    data_type: "decimal(38,0)"
+  - name: CURRENCY_CODE
+    data_type: string
+  - name: HK_COMPOSITE_ACCOUNT
+    data_type: string
+  - name: HK_COMPOSITE_CONTRACT
+    data_type: string
+  - name: HK_COMPOSITE_COUNTERPART
+    data_type: string
+  - name: HK_COMPOSITE_INSTRUMENT
+    data_type: string
+  - name: HK_COMPOSITE_ORIGINAL_ACCOUNT
+    data_type: string
+  - name: HK_COMPOSITE_ORIGINAL_CONTRACT
+    data_type: string
+  - name: HK_COMPOSITE_ORIGINAL_COUNTERPART
+    data_type: string
+  - name: INSTRUMENT_UIC
+    data_type: "decimal(30,0)"
+  - name: LEGAL_ENTITY_ID
+    data_type: "decimal(38,0)"
+  - name: LOAD_DATE
+    data_type: datetime
+  - name: OPEN_POSITIONS_EOD_VALUE_DKK
+    data_type: "decimal(38,19)"
+  - name: OPEN_POSITIONS_EOD_VALUE_EUR
+    data_type: "decimal(38,19)"
+  - name: OPEN_POSITIONS_EOD_VALUE_QC
+    data_type: "decimal(38,19)"
+  - name: OPEN_POSITIONS_ORIGINAL_VALUE_DKK
+    data_type: "decimal(38,19)"
+  - name: OPEN_POSITIONS_ORIGINAL_VALUE_EUR
+    data_type: "decimal(38,19)"
+  - name: OPEN_POSITIONS_ORIGINAL_VALUE_QC
+    data_type: "decimal(38,19)"
+  - name: ORDER_PLACEMENT_TOOL_ID
+    data_type: "decimal(38,0)"
+  - name: ORIGINAL_COUNTERPART_ID
+    data_type: "decimal(38,0)"
+  - name: ORIGINAL_TRADE_DATE_ID
+    data_type: "decimal(38,0)"
+  - name: POSITION_ID
+    data_type: "decimal(30,0)"
+  - name: PRICE
+    data_type: "decimal(30,6)"
+  - name: PRODUCT_CATEGORY_ID
+    data_type: "decimal(38,0)"
+  - name: PRODUCT_CODE
+    data_type: string
+  - name: SOURCE
+    data_type: "decimal(38,0)"
+  - name: TRADE_DATE
+    data_type: date
+  - name: TRADE_DATE_ID
+    data_type: "decimal(38,0)"
+  - name: TRADE_ID
+    data_type: "decimal(38,0)"
+  - name: TRADE_QUANTITY
+    data_type: double
+  - name: UNREALIZED_PROFIT_LOSS_AC
+    data_type: "decimal(38,19)"
+  - name: UNREALIZED_PROFIT_LOSS_DELTA_EUR
+    data_type: "decimal(38,19)"
+  - name: UNREALIZED_PROFIT_LOSS_DKK
+    data_type: "decimal(38,19)"
+  - name: UNREALIZED_PROFIT_LOSS_EUR
+    data_type: "decimal(38,19)"
+  - name: UNREALIZED_PROFIT_LOSS_QC
+    data_type: "decimal(38,19)"
