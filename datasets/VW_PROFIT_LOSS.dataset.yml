@@ -1,0 +1,47 @@
+unique_name: VW_PROFIT_LOSS.dataset
+object_type: dataset
+label: VW_PROFIT_LOSS
+connection_id: snowflake.connection
+table: VW_PROFIT_LOSS
+incremental:
+  column: UNIX_TIMESTAMP
+  grace_period: 86400s
+immutable: true
+
+columns:
+  - name: AMOUNT_DELTA_DKK
+    data_type: double
+  - name: AMOUNT_DKK
+    data_type: double
+  - name: AMOUNT_EUR
+    data_type: double
+  - name: BOOKKEEPING_AMOUNT_TYPE_ID
+    data_type: "decimal(38,0)"
+  - name: CURRENCY_CODE
+    data_type: string
+  - name: DW_CREATE_DATE
+    data_type: "decimal(38,0)"
+  - name: HK_COMPOSITE_CONTRACT
+    data_type: string
+  - name: HK_COMPOSITE_COUNTERPART
+    data_type: string
+  - name: HK_COMPOSITE_ORIGINAL_ACCOUNT
+    data_type: string
+  - name: HK_COMPOSITE_TARGET_ACCOUNT
+    data_type: string
+  - name: PRODUCT_CATEGORY_ID
+    data_type: "decimal(38,0)"
+  - name: PROFIT_LOSS_NO_REVAL_AC
+    data_type: double
+  - name: PROFIT_LOSS_NO_REVAL_QC
+    data_type: double
+  - name: TOTAL_PROFIT_LOSS_NO_REVAL_DKK
+    data_type: double
+  - name: TOTAL_PROFIT_LOSS_NO_REVAL_EUR
+    data_type: double
+  - name: TRADE_DATE
+    data_type: date
+  - name: TRADING_ACCOUNT_ID
+    data_type: "decimal(38,0)"
+  - name: UNIX_TIMESTAMP
+    data_type: "decimal(38,0)"

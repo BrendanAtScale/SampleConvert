@@ -19,9 +19,9 @@ hierarchies:
             label: Subsidiaries
             dataset: VW_SUBSIDIARIES.dataset
             key_columns:
-              - SUBSIDIARYNAME
-            name_column: SUBSIDIARYNAME
-            sort_column: SUBSIDIARYNAME
+              - SUBSIDIARY_NAME
+            name_column: SUBSIDIARY_NAME
+            sort_column: SUBSIDIARY_NAME
             allowed_calcs_for_dma:
               - Lag
               - Range
@@ -33,8 +33,8 @@ level_attributes:
     label: Subsidiaries Level
     dataset: VW_SUBSIDIARIES.dataset
     key_columns:
-      - SUBSIDIARYID
-    name_column: SUBSIDIARYID
+      - SUBSIDIARY_ID
+    name_column: SUBSIDIARY_ID
 
 modeler_metadata:
   version: "0"

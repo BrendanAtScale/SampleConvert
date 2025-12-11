@@ -3,6 +3,7 @@ object_type: dataset
 label: VW_BUY_SELL
 connection_id: snowflake.connection
 table: VW_BUY_SELL
+immutable: true
 
 columns:
   - name: BUYSELL

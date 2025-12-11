@@ -1,0 +1,6 @@
+unique_name: m_FIRST_FUNDINGS_NET_DKK_sum
+object_type: metric
+label: Fundings Net DKK
+calculation_method: sum
+dataset: VW_FUNDINGS.dataset
+column: FIRST_FUNDINGS_NET_DKK

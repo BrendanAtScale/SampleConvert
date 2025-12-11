@@ -3,6 +3,7 @@ object_type: dataset
 label: VW_MME_ALLOCATION_RULES
 connection_id: snowflake.connection
 table: VW_MME_ALLOCATION_RULES
+immutable: true
 
 columns:
   - name: MME_RULES_GENERAL_ALLOCATION_ID

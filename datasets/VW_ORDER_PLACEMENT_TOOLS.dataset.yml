@@ -3,6 +3,7 @@ object_type: dataset
 label: VW_ORDER_PLACEMENT_TOOLS
 connection_id: snowflake.connection
 table: VW_ORDER_PLACEMENT_TOOLS
+immutable: true
 
 columns:
   - name: COMMENT

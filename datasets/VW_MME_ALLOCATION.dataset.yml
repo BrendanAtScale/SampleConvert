@@ -5,7 +5,7 @@ connection_id: snowflake.connection
 table: VW_MME_ALLOCATION
 incremental:
   column: UNIX_TIMESTAMP
-  grace_period: 10368000s
+  grace_period: 5356800s
 immutable: true
 
 columns:

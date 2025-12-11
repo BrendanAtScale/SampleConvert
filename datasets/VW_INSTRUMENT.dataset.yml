@@ -2,7 +2,7 @@ unique_name: VW_INSTRUMENT.dataset
 object_type: dataset
 label: VW_INSTRUMENT
 connection_id: snowflake.connection
-table: VW_INSTRUMENT_ACCOUNTING
+table: VW_INSTRUMENT
 immutable: true
 
 columns:

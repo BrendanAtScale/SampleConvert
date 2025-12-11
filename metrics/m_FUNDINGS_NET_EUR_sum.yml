@@ -1,0 +1,6 @@
+unique_name: m_FUNDINGS_NET_EUR_sum
+object_type: metric
+label: Fundings Net EUR
+calculation_method: sum
+dataset: VW_FUNDINGS.dataset
+column: FUNDINGS_NET_EUR

@@ -55,6 +55,10 @@ columns:
     data_type: "decimal(38,0)"
   - name: PRODUCT_CATEGORY_ID
     data_type: "decimal(38,0)"
+  - name: PSH_ID
+    data_type: "decimal(38,0)"
+  - name: REAL_EARNINGS_HIERARCHY_ID
+    data_type: string
   - name: TRADE_ID
     data_type: "decimal(38,0)"
   - name: TRE_DKK

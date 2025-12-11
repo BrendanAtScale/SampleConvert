@@ -1,0 +1,6 @@
+unique_name: m_FUNDING_FIRST_30_DAYS_NET_DKK_sum
+object_type: metric
+label: Funding First 30 Days Net DKK
+calculation_method: sum
+dataset: VW_FUNDINGS.dataset
+column: FUNDING_FIRST_30_DAYS_NET_DKK

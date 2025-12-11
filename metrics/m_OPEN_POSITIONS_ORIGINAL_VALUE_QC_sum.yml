@@ -1,0 +1,6 @@
+unique_name: m_OPEN_POSITIONS_ORIGINAL_VALUE_QC_sum
+object_type: metric
+label: End of Period Open Positions Original Value QC
+calculation_method: sum
+dataset: VW_OPEN_POSITION.dataset
+column: OPEN_POSITIONS_ORIGINAL_VALUE_QC

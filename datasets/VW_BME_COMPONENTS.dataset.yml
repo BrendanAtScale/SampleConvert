@@ -3,6 +3,7 @@ object_type: dataset
 label: VW_BME_COMPONENTS
 connection_id: snowflake.connection
 table: VW_BME_COMPONENTS
+immutable: true
 
 columns:
   - name: AGG_AMOUNT_TYPE_ID
