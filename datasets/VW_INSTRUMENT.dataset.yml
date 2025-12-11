@@ -1,8 +1,9 @@
 unique_name: VW_INSTRUMENT.dataset
 object_type: dataset
 label: VW_INSTRUMENT
-connection_id: snowflake_REPORTING_DATA.connection
-table: VW_INSTRUMENT
+connection_id: snowflake.connection
+table: VW_INSTRUMENT_ACCOUNTING
+immutable: true
 
 columns:
   - name: ACTIVE

@@ -1,0 +1,6 @@
+unique_name: m_TRE_EUR_sum
+object_type: metric
+label: TRE EUR
+calculation_method: sum
+dataset: VW_DETAILED_TRE.dataset
+column: TRE_EUR

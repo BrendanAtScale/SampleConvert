@@ -1,0 +1,15 @@
+unique_name: VW_GENERAL_LEDGER_ACCOUNTS_INTERNAL.dataset
+object_type: dataset
+label: VW_GENERAL_LEDGER_ACCOUNTS_INTERNAL
+connection_id: snowflake.connection
+table: VW_GENERAL_LEDGER_ACCOUNTS_INTERNAL
+
+columns:
+  - name: COMPANY_IDENTIFIER
+    data_type: string
+  - name: COMPANY_NAME
+    data_type: string
+  - name: GENERAL_LEDGER_ACCOUNT_CODE
+    data_type: string
+  - name: GLOBAL_LEDGER_KEY
+    data_type: string

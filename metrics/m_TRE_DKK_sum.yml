@@ -1,0 +1,6 @@
+unique_name: m_TRE_DKK_sum
+object_type: metric
+label: TRE DKK
+calculation_method: sum
+dataset: VW_DETAILED_TRE.dataset
+column: TRE_DKK

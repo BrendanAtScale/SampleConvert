@@ -1,7 +1,7 @@
 unique_name: VW_PRODUCT_CATEGORY.dataset
 object_type: dataset
 label: VW_PRODUCT_CATEGORY
-connection_id: snowflake_REPORTING_DATA.connection
+connection_id: snowflake.connection
 table: VW_PRODUCT_CATEGORY
 
 columns:
@@ -14,7 +14,7 @@ columns:
   - name: PRODUCT_CATEGORY_ID_LEVEL_1
     data_type: "decimal(38,0)"
   - name: PRODUCT_CATEGORY_ID_LEVEL_2
-    data_type: "decimal(38,5)"
+    data_type: "decimal(38,0)"
   - name: PRODUCT_CATEGORY_ID_LEVEL_3
     data_type: "decimal(38,0)"
   - name: PRODUCT_CATEGORY_LEVEL_1
