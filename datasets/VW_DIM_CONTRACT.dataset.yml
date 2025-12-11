@@ -1,9 +1,8 @@
-unique_name: VW_CONTRACT_SCML.dataset
+unique_name: VW_DIM_CONTRACT.dataset
 object_type: dataset
-label: VW_CONTRACT_SCML
+label: VW_DIM_CONTRACT
 connection_id: snowflake.connection
-table: VW_CONTRACT_SCML
-immutable: true
+table: VW_CONTRACT
 
 columns:
   - name: ASSET_TYPE_NAME
@@ -38,14 +37,26 @@ columns:
     data_type: "decimal(38,0)"
   - name: COMMERCIAL_TRADER_SEGMENT_NAME
     data_type: string
-  - name: CONTRACT_CREATED_ON
-    data_type: datetime
+  - name: CONTRACT_CREATED_DATE
+    data_type: date
+  - name: CONTRACT_CREATED_YEAR
+    data_type: "decimal(4,0)"
+  - name: CONTRACT_CREATED_YEAR_MONTH
+    data_type: string
   - name: CONTRACT_FIRST_TRADE_DATE
     data_type: date
+  - name: CONTRACT_FIRST_TRADE_DATE_YEAR
+    data_type: "decimal(4,0)"
+  - name: CONTRACT_FIRST_TRADE_DATE_YEAR_MONTH
+    data_type: string
   - name: CONTRACT_ID
     data_type: "decimal(38,0)"
   - name: CONTRACT_IS_SEGREGATED
     data_type: boolean
+  - name: CONTRACT_LAST_TRADE_DATE
+    data_type: date
+  - name: CONTRACT_NAME
+    data_type: string
   - name: CONTRACT_RISK
     data_type: string
   - name: CONTRACT_START_TERMINATION
@@ -77,6 +88,8 @@ columns:
   - name: CONTRACTUAL_SOLUTION_ID
     data_type: "decimal(38,0)"
   - name: CONTRACTUAL_SOLUTION_NAME
+    data_type: string
+  - name: COUNTRY_OF_RESIDENCE
     data_type: string
   - name: COUNTRY_OF_RESIDENCE_ID
     data_type: string

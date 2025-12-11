@@ -1,20 +1,11 @@
-unique_name: VW_COUNTERPART_SCML.dataset
+unique_name: VW_DIM_COUNTERPART.dataset
 object_type: dataset
-label: VW_COUNTERPART_SCML
+label: VW_DIM_COUNTERPART
 connection_id: snowflake.connection
-table: VW_COUNTERPART_SCML
-immutable: true
+table: VW_COUNTERPART
 
 columns:
   - name: BASE_CURRENCY
-    data_type: string
-  - name: BASE_OWNER_ID
-    data_type: "decimal(38,0)"
-  - name: CLIENT_SEGMENT_REPORTING_ID
-    data_type: "decimal(38,0)"
-  - name: CLIENT_SEGMENT_REPORTING_LEVEL_1_ID
-    data_type: "decimal(38,0)"
-  - name: CLIENT_SEGMENT_REPORTING_LEVEL_1_NAME
     data_type: string
   - name: CONTRACT_ID
     data_type: "decimal(38,0)"
@@ -29,13 +20,13 @@ columns:
   - name: COUNTERPART_TYPE
     data_type: string
   - name: COUNTERPART_TYPE_ID
-    data_type: "decimal(1,0)"
+    data_type: "decimal(38,0)"
   - name: DEFAULT_ACCOUNT_ID
     data_type: string
   - name: DW_FROM_DATE
-    data_type: datetime
+    data_type: date
   - name: DW_IS_CURRENT
-    data_type: "decimal(2,0)"
+    data_type: "decimal(38,0)"
   - name: DW_TO_DATE
     data_type: datetime
   - name: ENTITY_TYPE

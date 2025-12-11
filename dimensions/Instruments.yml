@@ -1,21 +1,21 @@
-unique_name: Instrument
+unique_name: Instruments
 object_type: dimension
-label: Instrument
+label: Instruments
 type: standard
 
 hierarchies:
 
-  - unique_name: By Base Currency
+  - unique_name: Instruments Hierarchy
     label: By Base Currency
     filter_empty: "yes"
 
     levels:
 
-      - unique_name: By Base Currency Level
+      - unique_name: Base Currency Category
 
         secondary_attributes:
 
-          - unique_name: d_TRADED_CURRENCY_CATEGORY_2
+          - unique_name: d_SYMBOL_CURRENCY_CATEGORY
             label: Base Currency Category
             dataset: VW_INSTRUMENT.dataset
             key_columns:
@@ -31,7 +31,7 @@ hierarchies:
 
         secondary_attributes:
 
-          - unique_name: d_TRADED_CURRENCY_CODE_2
+          - unique_name: d_SYMBOL_CURRENCY_CODE
             label: Base Currency
             dataset: VW_INSTRUMENT.dataset
             key_columns:
@@ -43,16 +43,16 @@ hierarchies:
               - Range
               - Siblings
 
-      - unique_name: Description1
+      - unique_name: Instrument
 
         secondary_attributes:
 
           - unique_name: d_DESCRIPTION
             label: Instrument
-            associated_hierarchy: By Base Currency
+            associated_hierarchy: Instruments Hierarchy
             dataset: VW_INSTRUMENT.dataset
             key_columns:
-              - HK_COMPOSITE_INSTRUMENT
+              - DESCRIPTION
             name_column: DESCRIPTION
             sort_column: DESCRIPTION
             allowed_calcs_for_dma:
@@ -60,14 +60,14 @@ hierarchies:
               - Range
               - Siblings
 
-      - unique_name: HK_Composite_Instrument
+      - unique_name: Instruments Level
         is_hidden: true
 
         secondary_attributes:
 
           - unique_name: d_CODES_ISIN
-            label: 'ISIN Code '
-            associated_hierarchy: By Base Currency
+            label: ISIN Code
+            associated_hierarchy: Instruments Hierarchy
             dataset: VW_INSTRUMENT.dataset
             key_columns:
               - CODES_ISIN
@@ -78,22 +78,9 @@ hierarchies:
               - Range
               - Siblings
 
-          - unique_name: d_CODES_RIC
-            label: Reuters Code
-            associated_hierarchy: By Base Currency
-            dataset: VW_INSTRUMENT.dataset
-            key_columns:
-              - CODES_RIC
-            name_column: CODES_RIC
-            sort_column: CODES_RIC
-            allowed_calcs_for_dma:
-              - Lag
-              - Range
-              - Siblings
-
           - unique_name: d_DESK_CURRENCY_PAIR_CATEGORY_NAME
             label: Desk Currency Pair Category
-            associated_hierarchy: By Base Currency
+            associated_hierarchy: Instruments Hierarchy
             dataset: VW_INSTRUMENT.dataset
             key_columns:
               - DESK_CURRENCY_PAIR_CATEGORY_NAME
@@ -104,9 +91,9 @@ hierarchies:
               - Range
               - Siblings
 
-          - unique_name: d_EXCHANGE_CODES
+          - unique_name: d_EXCHANGE_CODES_2
             label: Exchange Code
-            associated_hierarchy: By Base Currency
+            associated_hierarchy: Instruments Hierarchy
             dataset: VW_INSTRUMENT.dataset
             key_columns:
               - EXCHANGE_CODES
@@ -119,7 +106,7 @@ hierarchies:
 
           - unique_name: d_EXCHANGE_COUNTRY_NAME
             label: Exchange Country Name
-            associated_hierarchy: By Base Currency
+            associated_hierarchy: Instruments Hierarchy
             dataset: VW_INSTRUMENT.dataset
             key_columns:
               - EXCHANGE_COUNTRY_NAME
@@ -132,7 +119,7 @@ hierarchies:
 
           - unique_name: d_EXCHANGE_DISPLAY_DESCRIPTION
             label: Exchange
-            associated_hierarchy: By Base Currency
+            associated_hierarchy: Instruments Hierarchy
             dataset: VW_INSTRUMENT.dataset
             key_columns:
               - EXCHANGE_DISPLAY_DESCRIPTION
@@ -143,9 +130,37 @@ hierarchies:
               - Range
               - Siblings
 
+          - unique_name: d_INSTRUMENT_BASE_CONTRACT_IDENTIFIER
+            label: Base Contract Identifier
+            folder: CFD and Futures Attributes
+            associated_hierarchy: Instruments Hierarchy
+            dataset: VW_INSTRUMENT.dataset
+            key_columns:
+              - INSTRUMENT_BASE_CONTRACT_IDENTIFIER
+            name_column: INSTRUMENT_BASE_CONTRACT_IDENTIFIER
+            sort_column: INSTRUMENT_BASE_CONTRACT_IDENTIFIER
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+          - unique_name: d_INSTRUMENT_BASE_CONTRACT_NAME
+            label: Base Contract Name
+            folder: CFD and Futures Attributes
+            associated_hierarchy: Instruments Hierarchy
+            dataset: VW_INSTRUMENT.dataset
+            key_columns:
+              - INSTRUMENT_BASE_CONTRACT_NAME
+            name_column: INSTRUMENT_BASE_CONTRACT_NAME
+            sort_column: INSTRUMENT_BASE_CONTRACT_NAME
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
           - unique_name: d_INSTRUMENT_SUB_TYPE_NAME
             label: Instrument Sub Type Name
-            associated_hierarchy: By Base Currency
+            associated_hierarchy: Instruments Hierarchy
             dataset: VW_INSTRUMENT.dataset
             key_columns:
               - INSTRUMENT_SUB_TYPE_NAME
@@ -156,9 +171,22 @@ hierarchies:
               - Range
               - Siblings
 
+          - unique_name: d_MARKET_SEGMENT_NAME
+            label: Market Segment
+            associated_hierarchy: Instruments Hierarchy
+            dataset: VW_INSTRUMENT.dataset
+            key_columns:
+              - MARKET_SEGMENT_NAME
+            name_column: MARKET_SEGMENT_NAME
+            sort_column: MARKET_SEGMENT_NAME
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
           - unique_name: d_SYMBOL_CODE
             label: Symbol Code
-            associated_hierarchy: By Base Currency
+            associated_hierarchy: Instruments Hierarchy
             dataset: VW_INSTRUMENT.dataset
             key_columns:
               - SYMBOL_CODE
@@ -171,7 +199,7 @@ hierarchies:
 
           - unique_name: d_TRADING_IS_CRYPTO
             label: Is Crypto
-            associated_hierarchy: By Base Currency
+            associated_hierarchy: Instruments Hierarchy
             dataset: VW_INSTRUMENT.dataset
             key_columns:
               - TRADING_IS_CRYPTO
@@ -182,13 +210,13 @@ hierarchies:
               - Range
               - Siblings
 
-  - unique_name: QC Currency category
+  - unique_name: By Quoted Currency
     label: By Quoted Currency
     filter_empty: "yes"
 
     levels:
 
-      - unique_name: QC Currency category
+      - unique_name: QC Currency Category
 
         secondary_attributes:
 
@@ -204,7 +232,7 @@ hierarchies:
               - Range
               - Siblings
 
-      - unique_name: QA Currency
+      - unique_name: QC Currency
 
         secondary_attributes:
 
@@ -220,9 +248,9 @@ hierarchies:
               - Range
               - Siblings
 
-      - unique_name: Description1
+      - unique_name: Instrument
 
-      - unique_name: HK_Composite_Instrument
+      - unique_name: Instruments Level
         is_hidden: true
 
   - unique_name: By Sector
@@ -231,32 +259,19 @@ hierarchies:
 
     levels:
 
-      - unique_name: By Sector Level
+      - unique_name: Sector Name
 
-      - unique_name: HK_Composite_Instrument
-        is_hidden: true
-
-  - unique_name: Futures Attributes
-    label: Futures Attributes
-    filter_empty: "yes"
-
-    levels:
-
-      - unique_name: Futures Attributes Level
-
-      - unique_name: Base Contract Name
-
-      - unique_name: HK_Composite_Instrument
+      - unique_name: Instruments Level
         is_hidden: true
 
 level_attributes:
 
-  - unique_name: Base Contract Name
-    label: Base Contract Name
+  - unique_name: Base Currency Category
+    label: Base Currency Category
     dataset: VW_INSTRUMENT.dataset
     key_columns:
-      - INSTRUMENT_BASE_CONTRACT_NAME
-    name_column: INSTRUMENT_BASE_CONTRACT_NAME
+      - TRADED_CURRENCY_CATEGORY
+    name_column: TRADED_CURRENCY_CATEGORY
     allowed_calcs_for_dma:
       - Ancestor
       - Descendants
@@ -279,35 +294,7 @@ level_attributes:
       - Range
       - Siblings
 
-  - unique_name: By Base Currency Level
-    label: Base Currency Category
-    dataset: VW_INSTRUMENT.dataset
-    key_columns:
-      - TRADED_CURRENCY_CATEGORY
-    name_column: TRADED_CURRENCY_CATEGORY
-    allowed_calcs_for_dma:
-      - Ancestor
-      - Descendants
-      - Lag
-      - ParallelPeriod
-      - Range
-      - Siblings
-
-  - unique_name: By Sector Level
-    label: Sector Name
-    dataset: VW_INSTRUMENT.dataset
-    key_columns:
-      - SECTOR_NAME
-    name_column: SECTOR_NAME
-    allowed_calcs_for_dma:
-      - Ancestor
-      - Descendants
-      - Lag
-      - ParallelPeriod
-      - Range
-      - Siblings
-
-  - unique_name: Description1
+  - unique_name: Instrument
     label: Instrument
     dataset: VW_INSTRUMENT.dataset
     key_columns:
@@ -321,12 +308,19 @@ level_attributes:
       - Range
       - Siblings
 
-  - unique_name: Futures Attributes Level
-    label: Base Contract Identifier
+  - unique_name: Instruments Level
+    label: By Base Currency
     dataset: VW_INSTRUMENT.dataset
     key_columns:
-      - INSTRUMENT_BASE_CONTRACT_IDENTIFIER
-    name_column: INSTRUMENT_BASE_CONTRACT_IDENTIFIER
+      - HK_COMPOSITE_INSTRUMENT
+    name_column: HK_COMPOSITE_INSTRUMENT
+
+  - unique_name: QC Currency Category
+    label: QC Currency Category
+    dataset: VW_INSTRUMENT.dataset
+    key_columns:
+      - SYMBOL_CURRENCY_CATEGORY
+    name_column: SYMBOL_CURRENCY_CATEGORY
     allowed_calcs_for_dma:
       - Ancestor
       - Descendants
@@ -335,15 +329,8 @@ level_attributes:
       - Range
       - Siblings
 
-  - unique_name: HK_Composite_Instrument
-    label: HK_Composite_Instrument
-    dataset: VW_INSTRUMENT.dataset
-    key_columns:
-      - HK_COMPOSITE_INSTRUMENT
-    name_column: HK_COMPOSITE_INSTRUMENT
-
-  - unique_name: QA Currency
-    label: QA Currency
+  - unique_name: QC Currency
+    label: QC Currency
     dataset: VW_INSTRUMENT.dataset
     key_columns:
       - SYMBOL_CURRENCY_CODE
@@ -356,12 +343,12 @@ level_attributes:
       - Range
       - Siblings
 
-  - unique_name: QC Currency category
-    label: QC Currency category
+  - unique_name: Sector Name
+    label: Sector Name
     dataset: VW_INSTRUMENT.dataset
     key_columns:
-      - SYMBOL_CURRENCY_CATEGORY
-    name_column: SYMBOL_CURRENCY_CATEGORY
+      - SECTOR_NAME
+    name_column: SECTOR_NAME
     allowed_calcs_for_dma:
       - Ancestor
       - Descendants

@@ -3,7 +3,6 @@ object_type: dataset
 label: VW_INSTRUMENT
 connection_id: snowflake.connection
 table: VW_INSTRUMENT
-immutable: true
 
 columns:
   - name: ACTIVE

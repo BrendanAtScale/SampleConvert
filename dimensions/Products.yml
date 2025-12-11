@@ -1,27 +1,27 @@
-unique_name: Product Category
+unique_name: Products
 object_type: dimension
-label: Product Category
+label: Products
 type: standard
 
 hierarchies:
 
-  - unique_name: Product Category Hierarchy
-    label: Product Category Hierarchy
+  - unique_name: Product Hierarchy
+    label: Product Hierarchy
 
     levels:
 
-      - unique_name: Level 1
+      - unique_name: Level 02
 
-      - unique_name: Level 2
+      - unique_name: Level 03
 
-      - unique_name: Product Category Id Level 3
+      - unique_name: Level 04
 
-      - unique_name: Product Category Level
+      - unique_name: Products Level
 
 level_attributes:
 
-  - unique_name: Level 1
-    label: Level 2
+  - unique_name: Level 02
+    label: Level 02
     dataset: VW_PRODUCT_CATEGORY.dataset
     key_columns:
       - PRODUCT_CATEGORY_ID_LEVEL_1
@@ -34,8 +34,8 @@ level_attributes:
       - Range
       - Siblings
 
-  - unique_name: Level 2
-    label: Level 3
+  - unique_name: Level 03
+    label: Level 03
     dataset: VW_PRODUCT_CATEGORY.dataset
     key_columns:
       - PRODUCT_CATEGORY_ID_LEVEL_2
@@ -48,8 +48,8 @@ level_attributes:
       - Range
       - Siblings
 
-  - unique_name: Product Category Id Level 3
-    label: Level 4
+  - unique_name: Level 04
+    label: Level 04
     dataset: VW_PRODUCT_CATEGORY.dataset
     key_columns:
       - PRODUCT_CATEGORY_ID_LEVEL_3
@@ -62,8 +62,8 @@ level_attributes:
       - Range
       - Siblings
 
-  - unique_name: Product Category Level
-    label: Level 5
+  - unique_name: Products Level
+    label: Level 05
     dataset: VW_PRODUCT_CATEGORY.dataset
     key_columns:
       - PRODUCT_CATEGORY_ID

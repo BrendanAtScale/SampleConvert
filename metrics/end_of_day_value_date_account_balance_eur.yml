@@ -1,8 +1,0 @@
-unique_name: end_of_day_value_date_account_balance_eur
-object_type: metric
-label: End of Day Value Date Account Balance EUR
-calculation_method: sum
-format: standard
-unrelated_dimensions_handling: repeat
-dataset: VW_ACCOUNT_BALANCE_SCML.dataset
-column: ADJUSTED_VALUE_DATE_ACCOUNT_BALANCE_EUR

@@ -1,9 +1,8 @@
-unique_name: VW_DATES.dataset
+unique_name: DIM_DATES.dataset
 object_type: dataset
-label: VW_DATES
+label: DIM_DATES
 connection_id: snowflake.connection
 table: VW_DATES
-immutable: true
 
 columns:
   - name: DATE
