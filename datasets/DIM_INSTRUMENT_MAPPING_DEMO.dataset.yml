@@ -1,0 +1,17 @@
+unique_name: DIM_INSTRUMENT_MAPPING_DEMO.dataset
+object_type: dataset
+label: DIM_INSTRUMENT_MAPPING_DEMO
+connection_id: snowflake.connection
+table: DIM_INSTRUMENT_MAPPING_DEMO
+
+columns:
+  - name: HK_EXCHANGE
+    data_type: string
+  - name: HK_INSTRUMENT
+    data_type: string
+  - name: HK_ISSUER
+    data_type: string
+  - name: HK_OPTIONROOT
+    data_type: string
+  - name: TRADE_DATE
+    data_type: date

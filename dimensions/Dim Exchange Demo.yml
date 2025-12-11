@@ -1,0 +1,43 @@
+unique_name: Dim Exchange Demo
+object_type: dimension
+label: Dim Exchange Demo
+type: standard
+
+hierarchies:
+
+  - unique_name: Dim Exchange Demo Hierarchy
+    label: Dim Exchange Demo Hierarchy
+    filter_empty: "yes"
+    folder: Ins
+
+    levels:
+
+      - unique_name: Dim Exchange Demo Level
+
+        secondary_attributes:
+
+          - unique_name: d_EXCHANGE_CODES
+            label: Exchange Code
+            folder: Ins
+            dataset: DIM_EXCHANGE_DEMO.dataset
+            key_columns:
+              - EXCHANGE_CODES
+            name_column: EXCHANGE_CODES
+            sort_column: EXCHANGE_CODES
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+level_attributes:
+
+  - unique_name: Dim Exchange Demo Level
+    label: Dim Exchange Demo Level
+    dataset: DIM_EXCHANGE_DEMO.dataset
+    key_columns:
+      - HK_EXCHANGE
+    name_column: HK_EXCHANGE
+
+modeler_metadata:
+  version: "0"
+  modified: "false"

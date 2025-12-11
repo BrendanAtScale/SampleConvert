@@ -1,0 +1,94 @@
+unique_name: DIM_DATES
+object_type: dimension
+label: DIM_DATES
+type: time
+
+hierarchies:
+
+  - unique_name: DIM_DATES Hierarchy
+    label: DIM_DATES Hierarchy
+
+    levels:
+
+      - unique_name: Year1
+
+      - unique_name: Quarter Name
+
+      - unique_name: Month Name
+
+      - unique_name: DIM_DATES Level
+
+level_attributes:
+
+  - unique_name: DIM_DATES Level
+    label: DIM_DATES Level
+    is_unique_key: true
+    dataset: VW_DATES.dataset
+    key_columns:
+      - DATE
+    name_column: DATE_STRING
+    sort_column: DATE
+    allowed_calcs_for_dma:
+      - Ancestor
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - PeriodsToDate
+      - Range
+      - Siblings
+    time_unit: day
+
+  - unique_name: Month Name
+    label: Month Name
+    dataset: VW_DATES.dataset
+    key_columns:
+      - MONTH_NAME
+    name_column: MONTH_NAME
+    allowed_calcs_for_dma:
+      - Ancestor
+      - DatesPeriodsToDate
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - PeriodsToDate
+      - Range
+      - Siblings
+    time_unit: month
+
+  - unique_name: Quarter Name
+    label: Quarter Name
+    dataset: VW_DATES.dataset
+    key_columns:
+      - QUARTER_NAME
+    name_column: QUARTER_NAME
+    allowed_calcs_for_dma:
+      - Ancestor
+      - DatesPeriodsToDate
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - PeriodsToDate
+      - Range
+      - Siblings
+    time_unit: month
+
+  - unique_name: Year1
+    label: Year
+    dataset: VW_DATES.dataset
+    key_columns:
+      - YEAR
+    name_column: YEAR
+    allowed_calcs_for_dma:
+      - Ancestor
+      - DatesPeriodsToDate
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - PeriodsToDate
+      - Range
+      - Siblings
+    time_unit: year
+
+modeler_metadata:
+  version: "0"
+  modified: "false"

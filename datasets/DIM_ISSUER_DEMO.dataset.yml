@@ -1,0 +1,37 @@
+unique_name: DIM_ISSUER_DEMO.dataset
+object_type: dataset
+label: DIM_ISSUER_DEMO
+connection_id: snowflake.connection
+table: DIM_ISSUER_DEMO
+
+columns:
+  - name: DOMICILE
+    data_type: string
+  - name: DW_BATCH_ID
+    data_type: "decimal(38,0)"
+  - name: DW_CREATE_DATE
+    data_type: datetime
+  - name: DW_FROM_DATE
+    data_type: datetime
+  - name: DW_HASH_DIFF
+    data_type: string
+  - name: DW_IS_CURRENT
+    data_type: boolean
+  - name: DW_TO_DATE
+    data_type: datetime
+  - name: DW_UPDATE_BATCH_ID
+    data_type: "decimal(38,0)"
+  - name: DW_UPDATE_DATE
+    data_type: datetime
+  - name: FULL_NAME
+    data_type: string
+  - name: HK_ISSUER
+    data_type: string
+  - name: ISSUER_STATUS
+    data_type: string
+  - name: ISSUER_TYPE
+    data_type: string
+  - name: LEI_CODE
+    data_type: string
+  - name: SHORT_NAME
+    data_type: string

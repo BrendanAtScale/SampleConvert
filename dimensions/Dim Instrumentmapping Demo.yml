@@ -1,0 +1,65 @@
+unique_name: Dim Instrumentmapping Demo
+object_type: dimension
+label: Dim Instrumentmapping Demo
+type: standard
+
+hierarchies:
+
+  - unique_name: Dim Instrumentmapping Demo Hierarchy
+    label: Dim Instrumentmapping Demo Hierarchy
+
+    levels:
+
+      - unique_name: Dim Instrumentmapping Demo Level
+
+level_attributes:
+
+  - unique_name: Dim Instrumentmapping Demo Level
+    label: Dim Instrumentmapping Demo Level
+    dataset: DIM_INSTRUMENT_MAPPING_DEMO.dataset
+    key_columns:
+      - HK_INSTRUMENT
+      - TRADE_DATE
+    name_column: HK_INSTRUMENT
+
+relationships:
+
+  - unique_name: DimInstrumentmappingDemo_DimIssuerDemo
+    from:
+      hierarchy: Dim Instrumentmapping Demo Hierarchy
+      level: Dim Instrumentmapping Demo Level
+      dataset: DIM_INSTRUMENT_MAPPING_DEMO.dataset
+      join_columns:
+        - HK_ISSUER
+    to:
+      dimension: Dim Issuer Demo
+      level: Dim Issuer Demo Level1
+    type: embedded
+
+  - unique_name: DimInstrumentmappingDemo_DimExchangeDemo
+    from:
+      hierarchy: Dim Instrumentmapping Demo Hierarchy
+      level: Dim Instrumentmapping Demo Level
+      dataset: DIM_INSTRUMENT_MAPPING_DEMO.dataset
+      join_columns:
+        - HK_EXCHANGE
+    to:
+      dimension: Dim Exchange Demo
+      level: Dim Exchange Demo Level
+    type: embedded
+
+  - unique_name: DimInstrumentmappingDemo_DimInstrumentDemo
+    from:
+      hierarchy: Dim Instrumentmapping Demo Hierarchy
+      level: Dim Instrumentmapping Demo Level
+      dataset: DIM_INSTRUMENT_MAPPING_DEMO.dataset
+      join_columns:
+        - HK_INSTRUMENT
+    to:
+      dimension: Dim Instrument Demo
+      level: Dim Instrument Demo Level
+    type: embedded
+
+modeler_metadata:
+  version: "0"
+  modified: "false"

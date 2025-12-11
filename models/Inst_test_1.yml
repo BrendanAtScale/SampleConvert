@@ -1,0 +1,42 @@
+unique_name: Inst_test_1
+object_type: model
+label: Inst_test_1
+include_default_drillthrough: true
+
+relationships:
+
+  - unique_name: VW_BENCHMARK_EARNINGS.dataset_Dim_Instrumentmapping_Demo
+    from:
+      dataset: VW_BENCHMARK_EARNINGS.dataset
+      join_columns:
+        - HK_COMPOSITE_INSTRUMENT
+        - TRADE_DATE
+    to:
+      dimension: Dim Instrumentmapping Demo
+      level: Dim Instrumentmapping Demo Level
+
+  - unique_name: VW_BENCHMARK_EARNINGS.dataset_DIM_DATES
+    from:
+      dataset: VW_BENCHMARK_EARNINGS.dataset
+      join_columns:
+        - TRADE_DATE
+    to:
+      dimension: DIM_DATES
+      level: DIM_DATES Level
+
+  - unique_name: VW_BENCHMARK_EARNINGS.dataset_DIM_Counterpart
+    from:
+      dataset: VW_BENCHMARK_EARNINGS.dataset
+      join_columns:
+        - HK_COMPOSITE_TARGET_COUNTERPART
+    to:
+      dimension: DIM_Counterpart
+      level: DIM_Counterpart Level
+
+metrics:
+
+  - unique_name: m_AMOUNT_EUR_sum
+    folder: BME
+
+  - unique_name: m_BENCHMARK_EARNING_DKK_sum
+    folder: BME

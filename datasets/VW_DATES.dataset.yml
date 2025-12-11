@@ -3,7 +3,6 @@ object_type: dataset
 label: VW_DATES
 connection_id: snowflake.connection
 table: VW_DATES
-immutable: true
 
 columns:
   - name: DATE
@@ -54,6 +53,8 @@ columns:
     data_type: "decimal(38,0)"
   - name: PREVIOUS_TRADING_DATE
     data_type: date
+  - name: PREVIOUS_TRADING_DATE_INT
+    data_type: "decimal(38,0)"
   - name: QUARTER
     data_type: "decimal(38,0)"
   - name: QUARTER_NAME

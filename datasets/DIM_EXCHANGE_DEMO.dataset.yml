@@ -1,0 +1,37 @@
+unique_name: DIM_EXCHANGE_DEMO.dataset
+object_type: dataset
+label: DIM_EXCHANGE_DEMO
+connection_id: snowflake.connection
+table: DIM_EXCHANGE_DEMO
+
+columns:
+  - name: DW_CREATE_DATE
+    data_type: datetime
+  - name: DW_FROM_DATE
+    data_type: datetime
+  - name: DW_IS_CURRENT
+    data_type: boolean
+  - name: DW_TO_DATE
+    data_type: datetime
+  - name: DW_UPDATE_DATE
+    data_type: datetime
+  - name: EXCHANGE_ACTIVE
+    data_type: boolean
+  - name: EXCHANGE_CODES
+    data_type: string
+  - name: EXCHANGE_COUNTRY_CODE
+    data_type: string
+  - name: EXCHANGE_CURRENCY_CODE
+    data_type: string
+  - name: EXCHANGE_DISPLAY_DESCRIPTION
+    data_type: string
+  - name: EXCHANGE_DISPLAY_SHORT_DESCRIPTION
+    data_type: string
+  - name: EXCHANGE_ID
+    data_type: "decimal(38,0)"
+  - name: EXCHANGE_ISO_MIC
+    data_type: string
+  - name: HK_EXCHANGE
+    data_type: string
+  - name: TRADING_REGULATED_MARKET_ESMA
+    data_type: boolean

@@ -1,0 +1,75 @@
+unique_name: DIM_Counterpart
+object_type: dimension
+label: DIM_Counterpart
+type: standard
+
+hierarchies:
+
+  - unique_name: DIM_Counterpart Hierarchy
+    label: By Counterpart Type
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: Counterpart Type
+
+      - unique_name: Counterpart Sub Type
+
+      - unique_name: Counterpart ID
+
+      - unique_name: DIM_Counterpart Level
+
+level_attributes:
+
+  - unique_name: Counterpart ID
+    label: Counterpart ID
+    dataset: VW_COUNTERPART.dataset
+    key_columns:
+      - COUNTERPART_ID
+    name_column: COUNTERPART_ID
+    allowed_calcs_for_dma:
+      - Ancestor
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - Range
+      - Siblings
+
+  - unique_name: Counterpart Sub Type
+    label: Counterpart Sub Type
+    dataset: VW_COUNTERPART.dataset
+    key_columns:
+      - COUNTERPART_SUB_TYPE
+    name_column: COUNTERPART_SUB_TYPE
+    allowed_calcs_for_dma:
+      - Ancestor
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - Range
+      - Siblings
+
+  - unique_name: Counterpart Type
+    label: Counterpart Type
+    dataset: VW_COUNTERPART.dataset
+    key_columns:
+      - COUNTERPART_TYPE
+    name_column: COUNTERPART_TYPE
+    allowed_calcs_for_dma:
+      - Ancestor
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - Range
+      - Siblings
+
+  - unique_name: DIM_Counterpart Level
+    label: DIM_Counterpart Level
+    dataset: VW_COUNTERPART.dataset
+    key_columns:
+      - HK_COMPOSITE_COUNTERPART
+    name_column: HK_COMPOSITE_COUNTERPART
+
+modeler_metadata:
+  version: "0"
+  modified: "false"

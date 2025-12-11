@@ -1,8 +1,0 @@
-unique_name: m_UNREALIZED_PROFIT_LOSS_EUR_sum
-object_type: metric
-label: End of Period Unrealized Profit Loss EUR
-calculation_method: sum
-format: standard
-unrelated_dimensions_handling: repeat
-dataset: VW_OPEN_POSITION_SCML.dataset
-column: UNREALIZED_PROFIT_LOSS_EUR

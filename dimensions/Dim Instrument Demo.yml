@@ -1,0 +1,110 @@
+unique_name: Dim Instrument Demo
+object_type: dimension
+label: Dim Instrument Demo
+type: standard
+
+hierarchies:
+
+  - unique_name: Dim Instrument Demo Hierarchy
+    label: Dim Instrument Demo Hierarchy
+
+    levels:
+
+      - unique_name: Dim Instrument Demo Level
+
+  - unique_name: By Base Currency
+    label: By Base Currency
+    filter_empty: "yes"
+    folder: Ins
+
+    levels:
+
+      - unique_name: Traded Currency Code
+
+      - unique_name: Instrument Uic
+
+        secondary_attributes:
+
+          - unique_name: d_CODES_ISIN
+            label: CodeS Isin
+            folder: Ins
+            dataset: DIM_INSTRUMENT_DEMO.dataset
+            key_columns:
+              - CODES_ISIN
+            name_column: CODES_ISIN
+            sort_column: CODES_ISIN
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+          - unique_name: d_INSTRUMENT_UIC
+            label: In Strument Uic
+            folder: Ins
+            dataset: DIM_INSTRUMENT_DEMO.dataset
+            key_columns:
+              - INSTRUMENT_UIC
+            name_column: INSTRUMENT_UIC
+            sort_column: INSTRUMENT_UIC
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+      - unique_name: By Base Currency Level
+        is_hidden: true
+
+level_attributes:
+
+  - unique_name: By Base Currency Level
+    label: By Base Currency Level
+    dataset: DIM_INSTRUMENT_DEMO.dataset
+    key_columns:
+      - HK_INSTRUMENT
+    name_column: HK_INSTRUMENT
+    allowed_calcs_for_dma:
+      - Ancestor
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - Range
+      - Siblings
+
+  - unique_name: Dim Instrument Demo Level
+    label: Dim Instrument Demo Level
+    dataset: DIM_INSTRUMENT_DEMO.dataset
+    key_columns:
+      - HK_INSTRUMENT
+    name_column: HK_INSTRUMENT
+
+  - unique_name: Instrument Uic
+    label: Instrument Uic
+    dataset: DIM_INSTRUMENT_DEMO.dataset
+    key_columns:
+      - INSTRUMENT_UIC
+    name_column: INSTRUMENT_UIC
+    allowed_calcs_for_dma:
+      - Ancestor
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - Range
+      - Siblings
+
+  - unique_name: Traded Currency Code
+    label: Traded Currency Code
+    dataset: DIM_INSTRUMENT_DEMO.dataset
+    key_columns:
+      - TRADED_CURRENCY_CODE
+    name_column: TRADED_CURRENCY_CODE
+    allowed_calcs_for_dma:
+      - Ancestor
+      - Descendants
+      - Lag
+      - ParallelPeriod
+      - Range
+      - Siblings
+
+modeler_metadata:
+  version: "0"
+  modified: "false"
