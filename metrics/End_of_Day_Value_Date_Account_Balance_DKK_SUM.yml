@@ -1,0 +1,12 @@
+unique_name: End_of_Day_Value_Date_Account_Balance_DKK_SUM
+object_type: metric
+label: End of Day Value Date Account Balance DKK
+calculation_method: sum
+format: standard
+unrelated_dimensions_handling: repeat
+semi_additive:
+  position: last
+  relationships:
+    - VW_ACCOUNT_BALANCE_SCML.dataset_Dates
+dataset: VW_ACCOUNT_BALANCE_SCML.dataset
+column: VALUE_DATE_ACCOUNT_BALANCE_DKK

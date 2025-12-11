@@ -1,0 +1,10 @@
+unique_name: End_of_Period_Open_ Positions_EOD_Value_DKK
+object_type: metric
+label: End of Period Open Positions EOD Value DKK
+calculation_method: sum
+semi_additive:
+  position: last
+  relationships:
+    - VW_OPEN_POSITION_SCML.dataset_Dates
+dataset: VW_OPEN_POSITION_SCML.dataset
+column: OPEN_POSITIONS_EOD_VALUE_DKK

@@ -3,4 +3,4 @@ label: snowflake
 object_type: connection
 as_connection: snowflake
 database: TST_DWH_FINANCE_APP
-schema: REPORTING_DATA
+schema: REF_DATA

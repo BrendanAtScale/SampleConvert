@@ -1,0 +1,6 @@
+unique_name: snowflake_REPORTING_DATA.connection
+label: snowflake_REPORTING_DATA
+object_type: connection
+as_connection: snowflake
+database: TST_DWH_FINANCE_APP
+schema: REPORTING_DATA

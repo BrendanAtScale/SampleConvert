@@ -1,7 +1,7 @@
 unique_name: VW_CLIENT_SEGMENT_REPORTING_HIERARCHY.dataset
 object_type: dataset
 label: VW_CLIENT_SEGMENT_REPORTING_HIERARCHY
-connection_id: snowflake.connection
+connection_id: snowflake_REPORTING_DATA.connection
 table: VW_CLIENT_SEGMENT_REPORTING_HIERARCHY
 
 columns:
